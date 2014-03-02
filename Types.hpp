@@ -16,26 +16,19 @@
  * along with SWP1.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef OBSERVER_HPP
-#define OBSERVER_HPP
+#ifndef TYPES_HPP
+#define TYPES_HPP
 
-class ISubject;
-
-class IObserver
-{
-public:
-	virtual ~IObserver(){}
-	virtual void Update(ISubject* subject) = 0;
+enum class ClockOperationFlags {
+	None = 0,
+	Seconds = 0x1,
+	Minutes = 0x2,
+	Hours = 0x4
 };
 
-class ISubject
-{
-public:
-	virtual ~ISubject(){}
-	virtual void Attach(IObserver* observer) = 0;
-	virtual void Detach(IObserver* observer) = 0;
-protected:
-	virtual void Notify() = 0;
+enum class ClockType {
+	Analog,
+	Digital
 };
 
 #endif
