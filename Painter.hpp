@@ -16,19 +16,22 @@
  * along with SWP1.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "DigitalClock.hpp"
-#include "Clock.hpp"
+#ifndef PAINTER_HPP
+#define PAINTER_HPP
 
-DigitalClock::DigitalClock()
-{
-	Clock::GetInstance().Attach(this);
-}
+#include "IDrawable.hpp"
 
-DigitalClock::~DigitalClock()
+class Painter
 {
-	Clock::GetInstance().Detach(this);
-}
+public:
+	Painter(IDrawable* drawable);
+	virtual ~Painter();
+	virtual void DrawPoint();
+	virtual void DrawLine();
+	virtual void DrawRectangle();
+	virtual void DrawCircle();
+private:
+	IDrawable* mDrawable = nullptr;
+};
 
-void DigitalClock::Update(ISubject* subject)
-{
-}
+#endif

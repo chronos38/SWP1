@@ -16,17 +16,31 @@
  * along with SWP1.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef DIGITALCLOCK_HPP
-#define DIGITALCLOCK_HPP
+#ifndef CLOCKWINDOW_HPP
+#define CLOCKWINDOW_HPP
 
 #include "IObserver.hpp"
+#include "IDrawable.hpp"
 
-class DigitalClock : public IObserver
+struct SDL_Window;
+struct SDL_Renderer;
+
+class ClockWindow : public IObserver, public IDrawable
 {
 public:
-	DigitalClock();
-	virtual ~DigitalClock();
-	virtual void Update(ISubject* subject) final;
+	ClockWindow();
+	virtual ~ClockWindow();
+	virtual void Initialize(const char* title, int x = -1, int y = -1);
+	virtual void Update(ISubject* subject) override;
+	virtual void Draw() override;
+	virtual void Dispose();
+	virtual bool IsDisposed() const;
+	virtual SDL_Renderer* Renderer() override;
+private:
+	virtual bool CreateWindow(const char* title, int x = -1, int y = -1);
+private:
+	SDL_Window* mWindow = nullptr;
+	SDL_Renderer* mRenderer = nullptr;
 };
 
 #endif

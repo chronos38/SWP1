@@ -16,11 +16,39 @@
  * along with SWP1.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "CommandAuto.hpp"
-#include "Clock.hpp"
+#include "Painter.hpp"
+#include <exception>
 
-void CommandAuto::Execute()
+Painter::Painter(IDrawable* drawable)
 {
-	// variables
-	Clock& clock = Clock::GetInstance();
+	if (!drawable) {
+		throw std::exception("null pointer encountered, painter needs a valid drawable object");
+	}
+
+	mDrawable = drawable;
+}
+
+Painter::~Painter()
+{
+	// do nothing
+}
+
+void Painter::DrawPoint()
+{
+	// TODO: add drawing logic
+}
+
+void Painter::DrawLine()
+{
+	// TODO: add drawing logic
+}
+
+void Painter::DrawRectangle()
+{
+	// TODO: add drawing logic
+}
+
+void Painter::DrawCircle()
+{
+	// TODO: add drawing logic
 }

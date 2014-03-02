@@ -28,7 +28,12 @@ enum class ClockOperationFlags {
 
 enum class ClockType {
 	Analog,
-	Digital
+	Digital,
+	AnalogLive,
+	DigitalLive
 };
+
+struct SDL_Window;
+struct SDL_Renderer;
 
 #endif

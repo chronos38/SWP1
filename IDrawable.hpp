@@ -16,17 +16,17 @@
  * along with SWP1.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef COMMANDAUTO_HPP
-#define COMMANDAUTO_HPP
+#ifndef IDRAWABLE_HPP
+#define IDRAWABLE_HPP
 
-#include "ICommand.hpp"
+struct SDL_Renderer;
 
-class CommandAuto : public ICommand
+class IDrawable
 {
 public:
-	CommandAuto() = default;
-	virtual ~CommandAuto() = default;
-	virtual void Execute() override;
+	virtual ~IDrawable(){}
+	virtual void Draw() = 0;
+	virtual SDL_Renderer* Renderer() = 0;
 };
 
 #endif

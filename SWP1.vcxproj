@@ -52,10 +52,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>lib\SDL2.lib;lib\SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -67,20 +69,18 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>lib\SDL2.lib;lib\SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="Clock.cpp" />
-    <ClCompile Include="CommandAuto.cpp" />
     <ClCompile Include="CommandDecrement.cpp" />
     <ClCompile Include="CommandHelp.cpp" />
     <ClCompile Include="CommandIncrement.cpp" />
@@ -89,14 +89,14 @@
     <ClCompile Include="CommandSet.cpp" />
     <ClCompile Include="CommandShow.cpp" />
     <ClCompile Include="CommandUndo.cpp" />
-    <ClCompile Include="DigitalClock.cpp" />
-    <ClCompile Include="SWP1.cpp" />
+    <ClCompile Include="ClockWindow.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Painter.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Clock.hpp" />
-    <ClInclude Include="CommandAuto.hpp" />
     <ClInclude Include="CommandReset.hpp" />
-    <ClInclude Include="DigitalClock.hpp" />
+    <ClInclude Include="ClockWindow.hpp" />
     <ClInclude Include="ICommand.hpp" />
     <ClInclude Include="CommandDecrement.hpp" />
     <ClInclude Include="CommandHelp.hpp" />
@@ -104,8 +104,10 @@
     <ClInclude Include="CommandRedo.hpp" />
     <ClInclude Include="CommandShow.hpp" />
     <ClInclude Include="CommandUndo.hpp" />
+    <ClInclude Include="IDrawable.hpp" />
     <ClInclude Include="IObserver.hpp" />
     <ClInclude Include="CommandSet.hpp" />
+    <ClInclude Include="Painter.hpp" />
     <ClInclude Include="Singleton.hpp" />
     <ClInclude Include="Types.hpp" />
   </ItemGroup>
