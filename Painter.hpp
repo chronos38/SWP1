@@ -21,17 +21,27 @@
 
 #include "IDrawable.hpp"
 
+struct SDL_Point;
+struct SDL_Color;
+struct SDL_Rect;
+struct _TTF_Font;
+
 class Painter
 {
 public:
 	Painter(IDrawable* drawable);
 	virtual ~Painter();
-	virtual void DrawPoint();
-	virtual void DrawLine();
-	virtual void DrawRectangle();
-	virtual void DrawCircle();
-	virtual void DrawText();
+	virtual void DrawPoint(const SDL_Point& position, const SDL_Color& color);
+	virtual void DrawLine(const SDL_Point& position, const SDL_Point& endPosition, const SDL_Color& color);
+	virtual void DrawRectangle(const SDL_Rect& rect, const SDL_Color& color);
+	virtual void DrawCircle(const SDL_Point& position, int radius, const SDL_Color& color);
+	virtual void DrawText(const SDL_Point& position, const char* text, const SDL_Color& color);
+protected:
+	static void Initialize();
+	static void Dispose();
+	static bool IsDisposed();
 private:
+	static _TTF_Font* sFont;
 	IDrawable* mDrawable = nullptr;
 };
 

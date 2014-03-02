@@ -50,6 +50,9 @@ void ClockWindow::Draw()
 	// present current renderer
 	SDL_RenderPresent(mRenderer);
 
+	// set black as drawing color
+	SDL_SetRenderDrawColor(mRenderer, 0, 0, 0, 255);
+
 	// clear renderer
 	SDL_RenderClear(mRenderer);
 }
@@ -107,9 +110,6 @@ bool ClockWindow::CreateWindow(const char* title, int x, int y)
 	if (!mRenderer) {
 		return false;
 	}
-
-	// set black as drawing color
-	SDL_SetRenderDrawColor(mRenderer, 0, 0, 0, 255);
 
 	return true;
 }

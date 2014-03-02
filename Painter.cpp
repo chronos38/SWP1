@@ -21,6 +21,8 @@
 #include <SDL2/SDL_ttf.h>
 #include <exception>
 
+TTF_Font* Painter::sFont = nullptr;
+
 Painter::Painter(IDrawable* drawable)
 {
 	if (!drawable) {
@@ -35,27 +37,99 @@ Painter::~Painter()
 	// do nothing
 }
 
-void Painter::DrawPoint()
+void Painter::DrawPoint(const SDL_Point& position, const SDL_Color& color)
+{
+	// variables
+	SDL_Renderer* renderer = mDrawable->Renderer();
+
+	// set black as drawing color
+	SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, 255);
+
+	// draw point
+	SDL_RenderDrawPoint(renderer, position.x, position.y);
+}
+
+void Painter::DrawLine(const SDL_Point& position, const SDL_Point& endPosition, const SDL_Color& color)
+{
+	// variables
+	SDL_Renderer* renderer = mDrawable->Renderer();
+
+	// set black as drawing color
+	SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, 255);
+
+	// draw line
+	SDL_RenderDrawLine(renderer, position.x, position.y, endPosition.x, endPosition.y);
+}
+
+void Painter::DrawRectangle(const SDL_Rect& rect, const SDL_Color& color)
+{
+	// variables
+	SDL_Renderer* renderer = mDrawable->Renderer();
+
+	// set black as drawing color
+	SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, 255);
+
+	// draw line
+	SDL_RenderDrawRect(renderer, &rect);
+}
+
+void Painter::DrawCircle(const SDL_Point& position, int radius, const SDL_Color& color)
 {
 	// TODO: add drawing logic
 }
 
-void Painter::DrawLine()
+void Painter::DrawText(const SDL_Point& position, const char* text, const SDL_Color& color)
 {
-	// TODO: add drawing logic
+	// check font
+	if (!sFont) {
+		return;
+	}
+
+	// variables
+	SDL_Surface* surface = nullptr;
+	SDL_Rect srcrect, dstrect;
+	SDL_Renderer* renderer = mDrawable->Renderer();
+
+	// draw text
+	surface = TTF_RenderText_Blended(sFont, text, color);
+
+	// check surface
+	if (!surface) {
+		return;
+	}
+
+	// set rectangles
+	srcrect = { 0, 0, surface->w, surface->h };
+	dstrect = { position.x, position.y, surface->w, surface->h };
+
+	// create texture
+	SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
+
+	// check texture
+	if (!texture) {
+		SDL_FreeSurface(surface);
+		return;
+	}
+
+	// render texture
+	SDL_RenderCopy(renderer, texture, &srcrect, &dstrect);
+
+	// delete allocated memory
+	SDL_FreeSurface(surface);
+	SDL_DestroyTexture(texture);
 }
 
-void Painter::DrawRectangle()
+void Painter::Initialize()
 {
-	// TODO: add drawing logic
+	sFont = TTF_OpenFont("Fonts/ATOMICCLOCKRADIO.TTF", 32);
 }
 
-void Painter::DrawCircle()
+void Painter::Dispose()
 {
-	// TODO: add drawing logic
+	if (sFont) TTF_CloseFont(sFont);
 }
 
-void Painter::DrawText()
+bool Painter::IsDisposed()
 {
-	static TTF_Font* sFont = TTF_OpenFont("Fonts/ATOMICCLOCKRADIO.TTF", 32);
+	return (sFont != nullptr);
 }
