@@ -80,6 +80,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Application.cpp" />
     <ClCompile Include="Clock.cpp" />
     <ClCompile Include="CommandDecrement.cpp" />
     <ClCompile Include="CommandHelp.cpp" />
@@ -94,6 +95,7 @@
     <ClCompile Include="Painter.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Application.h" />
     <ClInclude Include="Clock.hpp" />
     <ClInclude Include="CommandReset.hpp" />
     <ClInclude Include="ClockWindow.hpp" />

@@ -16,11 +16,15 @@
  * along with SWP1.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include "Application.h"
+#include <map>
 #include <cstdio>
 #include <cstdlib>
 
 int main(int argc, char* argv[])
 {
-	return EXIT_SUCCESS;
+	Application app;
+	app.Execute();
+	return app.ExitCode();
 }
 

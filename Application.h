@@ -16,39 +16,19 @@
  * along with SWP1.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef TYPES_HPP
-#define TYPES_HPP
+#ifndef APPLICATION_HPP
+#define APPLICATION_HPP
 
-#include <string>
-#include <map>
-class ICommand;
+#include "Types.hpp"
+#include "ICommand.hpp"
 
-enum class ClockOperationFlags {
-	None = 0,
-	Seconds = 0x1,
-	Minutes = 0x2,
-	Hours = 0x4
+class Application : public ICommand
+{
+public:
+	Application() = default;
+	virtual ~Application() = default;
+	virtual void Execute() override;
+	virtual int ExitCode() const;
 };
-
-enum class ClockType {
-	Analog,
-	Digital,
-	AnalogLive,
-	DigitalLive
-};
-
-static const int WINDOW_WIDTH = 256;
-static const int WINDOW_HEIGHT = 256;
-
-typedef std::map<std::string, ICommand*> Commands;
-
-static const std::string SET = "SET";
-static const std::string INC = "INC";
-static const std::string DEC = "DEC";
-static const std::string UNDO = "UNDO";
-static const std::string REDO = "REDO";
-static const std::string SHOW = "SHOW";
-static const std::string HELP = "HELP";
-static const std::string RESET = "RESET";
 
 #endif
