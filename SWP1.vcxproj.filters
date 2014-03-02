@@ -57,6 +57,9 @@
     <ClCompile Include="CommandReset.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="DigitalClock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Singleton.hpp">

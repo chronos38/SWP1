@@ -89,6 +89,7 @@
     <ClCompile Include="CommandSet.cpp" />
     <ClCompile Include="CommandShow.cpp" />
     <ClCompile Include="CommandUndo.cpp" />
+    <ClCompile Include="DigitalClock.cpp" />
     <ClCompile Include="SWP1.cpp" />
   </ItemGroup>
   <ItemGroup>
