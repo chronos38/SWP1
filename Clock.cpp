@@ -132,7 +132,8 @@ void Clock::Decrement(ClockOperationFlags flags)
 void Clock::Undo()
 {
 	// get previous operation
-	Operation operation = mUndoBuffer.back();
+	Operation operation = mUndoBuffer.front();
+	mUndoBuffer.pop();
 
 	// push into redo buffer
 	mRedoBuffer.push(operation);
@@ -151,7 +152,8 @@ void Clock::Redo()
 	}
 
 	// get previous operation
-	Operation operation = mRedoBuffer.back();
+	Operation operation = mRedoBuffer.front();
+	mRedoBuffer.pop();
 
 	// push into redo buffer
 	mUndoBuffer.push(operation);

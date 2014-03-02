@@ -34,15 +34,12 @@ ClockWindow::~ClockWindow()
 void ClockWindow::Initialize(const char* title, int x, int y)
 {
 	// create window
-	CreateWindow(title, x, y);
+	if (!CreateWindow(title, x, y)) {
+		throw std::exception("couldn't create window");
+	}
 
 	// attach to subject
 	Clock::GetInstance().Attach(this);
-}
-
-void ClockWindow::Update(ISubject* subject)
-{
-	// do nothing
 }
 
 void ClockWindow::Draw()

@@ -31,7 +31,6 @@ public:
 	ClockWindow();
 	virtual ~ClockWindow();
 	virtual void Initialize(const char* title, int x = -1, int y = -1);
-	virtual void Update(ISubject* subject) override;
 	virtual void Draw() override;
 	virtual void Dispose();
 	virtual bool IsDisposed() const;
