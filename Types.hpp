@@ -33,8 +33,7 @@ enum class ClockType {
 	DigitalLive
 };
 
-struct SDL_Window;
-struct SDL_Renderer;
-struct TTF_Font;
+static const int WINDOW_WIDTH = 256;
+static const int WINDOW_HEIGHT = 256;
 
 #endif

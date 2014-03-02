@@ -89,8 +89,8 @@ bool ClockWindow::CreateWindow(const char* title, int x, int y)
 	mWindow = SDL_CreateWindow(title,
 				   x == -1 ? SDL_WINDOWPOS_UNDEFINED : x,
 				   y == -1 ? SDL_WINDOWPOS_UNDEFINED : y,
-				   256,
-				   256,
+				   WINDOW_WIDTH,
+				   WINDOW_HEIGHT,
 				   SDL_WINDOW_SHOWN | SDL_WINDOW_OPENGL);
 
 	// check if window is a nullptr

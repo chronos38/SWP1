@@ -21,8 +21,6 @@
 
 #include "IDrawable.hpp"
 
-struct TTF_Font;
-
 class Painter
 {
 public:
