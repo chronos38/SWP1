@@ -21,6 +21,8 @@
 
 #include "IDrawable.hpp"
 
+struct TTF_Font;
+
 class Painter
 {
 public:
@@ -30,6 +32,7 @@ public:
 	virtual void DrawLine();
 	virtual void DrawRectangle();
 	virtual void DrawCircle();
+	virtual void DrawText();
 private:
 	IDrawable* mDrawable = nullptr;
 };

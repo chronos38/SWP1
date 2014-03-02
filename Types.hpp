@@ -35,5 +35,6 @@ enum class ClockType {
 
 struct SDL_Window;
 struct SDL_Renderer;
+struct TTF_Font;
 
 #endif

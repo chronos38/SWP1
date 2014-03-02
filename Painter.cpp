@@ -17,6 +17,8 @@
  */
 
 #include "Painter.hpp"
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_ttf.h>
 #include <exception>
 
 Painter::Painter(IDrawable* drawable)
@@ -51,4 +53,9 @@ void Painter::DrawRectangle()
 void Painter::DrawCircle()
 {
 	// TODO: add drawing logic
+}
+
+void Painter::DrawText()
+{
+	static TTF_Font* sFont = TTF_OpenFont("Fonts/ATOMICCLOCKRADIO.TTF", 32);
 }
