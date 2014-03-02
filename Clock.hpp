@@ -28,6 +28,7 @@
 
 class Clock : public Singleton<Clock>, public ISubject
 {
+	friend class Singleton<Clock>;
 public:
 	Clock(const Clock&) = delete;
 	Clock(Clock&&) = delete;
@@ -44,7 +45,7 @@ public:
 	virtual int Seconds() const final;
 	virtual int Minutes() const final;
 	virtual int Hours() const final;
-private:
+protected:
 	Clock();
 private:
 	typedef std::list<IObserver*> ObserverList;
