@@ -25,6 +25,9 @@
 #include "CommandShow.hpp"
 #include "CommandHelp.hpp"
 #include "CommandReset.hpp"
+#include "Painter.hpp"
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_ttf.h>
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -35,6 +38,7 @@
 
 Application::Application()
 {
+	// set commands
 	mCommands[SET] = new CommandSet();
 	mCommands[INC] = new CommandIncrement();
 	mCommands[DEC] = new CommandDecrement();
@@ -43,10 +47,26 @@ Application::Application()
 	mCommands[SHOW] = new CommandShow();
 	mCommands[HELP] = new CommandHelp();
 	mCommands[RESET] = new CommandReset();
+
+	// initialize sdl
+	if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER) != 0) {
+		throw std::exception(SDL_GetError());
+	} else if (TTF_Init() != 0) {
+		throw std::exception(TTF_GetError());
+	}
+
+	// initialize painter
+	Painter::Initialize();
 }
 
 Application::~Application()
 {
+	// dispose painter
+	Painter::Dispose();
+
+	// quit sdl
+	SDL_Quit();
+	TTF_Quit();
 }
 
 void Application::Execute()
@@ -89,6 +109,7 @@ void Application::Execute()
 
 int Application::ExitCode() const
 {
+	// return success
 	return (EXIT_SUCCESS);
 }
 

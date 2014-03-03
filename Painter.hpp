@@ -26,9 +26,11 @@ struct SDL_Point;
 struct SDL_Color;
 struct SDL_Rect;
 struct _TTF_Font;
+class Application;
 
 class Painter
 {
+	friend class Application;
 public:
 	Painter(IDrawable* drawable);
 	virtual ~Painter();
