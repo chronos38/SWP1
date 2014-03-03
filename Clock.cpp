@@ -59,6 +59,13 @@ Clock::Clock()
 	}
 }
 
+Clock::~Clock()
+{
+	for (auto& it : mObserver) {
+		delete it;
+	}
+}
+
 void Clock::Attach(IObserver* observer)
 {
 	if (observer) {

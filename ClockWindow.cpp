@@ -29,7 +29,17 @@ ClockWindow::ClockWindow()
 
 ClockWindow::~ClockWindow()
 {
-	Dispose();
+	// delete renderer
+	if (mRenderer) {
+		SDL_DestroyRenderer(mRenderer);
+		mRenderer = nullptr;
+	}
+
+	// delete window
+	if (mWindow) {
+		SDL_DestroyWindow(mWindow);
+		mWindow = nullptr;
+	}
 }
 
 void ClockWindow::Initialize(const char* title, int x, int y)
@@ -97,7 +107,7 @@ bool ClockWindow::CreateWindow(const char* title, int x, int y)
 				   y == -1 ? SDL_WINDOWPOS_UNDEFINED : y,
 				   WINDOW_WIDTH,
 				   WINDOW_HEIGHT,
-				   SDL_WINDOW_SHOWN | SDL_WINDOW_OPENGL);
+				   SDL_WINDOW_SHOWN);
 
 	// check if window is a nullptr
 	if (!mWindow) {

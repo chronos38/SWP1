@@ -25,6 +25,7 @@
 #include "IObserver.hpp"
 #include <list>
 #include <vector>
+#include <future>
 
 class Application : public Singleton<Application>
 {
@@ -42,6 +43,7 @@ protected:
 	void ProcessEvents();
 private:
 	Commands mCommands;
+	std::future<std::string> mThread;
 };
 
 #endif

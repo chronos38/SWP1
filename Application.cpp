@@ -35,6 +35,7 @@
 #include <sstream>
 #include <algorithm>
 #include <iterator>
+#include <chrono>
 #include <cstdlib>
 #include <cctype>
 
@@ -51,7 +52,7 @@ Application::Application()
 	mCommands[RESET] = new CommandReset();
 
 	// initialize sdl
-	if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER) != 0) {
+	if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
 		throw std::exception(SDL_GetError());
 	} else if (TTF_Init() != 0) {
 		throw std::exception(TTF_GetError());
@@ -59,6 +60,11 @@ Application::Application()
 
 	// initialize painter
 	Painter::Initialize();
+
+	// initialize future
+	mThread = std::async(std::launch::async, [] ()->std::string {
+		return "";
+	});
 }
 
 Application::~Application()
@@ -87,22 +93,30 @@ void Application::Execute()
 		std::cout << "Input: ";
 		std::cin >> string;
 
-		// case insensitive buffer
-		std::transform(string.begin(), string.end(), string.begin(), ::toupper);
-
 		// check for arguments
 		if (std::cin.eof()) {
 			std::cin.ignore();
 		}
-		
+
+		// case insensitive buffer
+		std::transform(string.begin(), string.end(), string.begin(), ::toupper);
+
+		// find command
 		auto it = mCommands.find(string);
 
-		if (string == "EXIT") {
+		if (string == "") {
+			continue;
+		} else if (string == "EXIT") {
 			break;
 		} else if (it != mCommands.end()) {
+			// read arguments
 			std::cin.getline(buffer, BUFFER_LENGTH - 1, '\n');
+			// execute command
 			it->second->Execute(CreateArguments(buffer));
+			// clear buffer
 			memset(buffer, 0, BUFFER_LENGTH);
+			// update changes
+			Clock::GetInstance().Notify();
 		} else {
 			std::cout << "Unknown command." << std::endl;
 		}
@@ -112,8 +126,7 @@ void Application::Execute()
 			ProcessEvents();
 		}
 
-		// notify all
-		Clock::GetInstance().Notify();
+		string = "";
 	}
 }
 

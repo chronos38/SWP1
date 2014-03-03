@@ -32,7 +32,7 @@ class Clock : public Singleton<Clock>, public ISubject
 public:
 	Clock(const Clock&) = delete;
 	Clock(Clock&&) = delete;
-	virtual ~Clock() = default;
+	virtual ~Clock();
 	virtual void Attach(IObserver* observer) final;
 	virtual void Detach(IObserver* observer) final;
 	virtual void Notify() final;

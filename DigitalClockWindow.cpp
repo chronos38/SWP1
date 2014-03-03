@@ -32,7 +32,7 @@ DigitalClockWindow::DigitalClockWindow(int timezone, int x, int y)
 
 DigitalClockWindow::~DigitalClockWindow()
 {
-	Dispose();
+	//Dispose();
 }
 
 void DigitalClockWindow::Update(ISubject* subject)
@@ -54,7 +54,7 @@ void DigitalClockWindow::Draw()
 
 	// set buffer
 	memset(buffer, 0, sizeof(buffer));
-	sscanf(buffer, "%02d:%02d:%02d", clock.Hours() + mTimezone, clock.Minutes(), clock.Seconds());
+	sprintf(buffer, "%02d:%02d:%02d", clock.Hours() + mTimezone, clock.Minutes(), clock.Seconds());
 
 	// draw text
 	painter.DrawText({ 32, 32 }, buffer, { 0, 192, 0, 0 });
