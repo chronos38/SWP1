@@ -17,10 +17,28 @@
  */
 
 #include "CommandHelp.hpp"
-#include "Clock.hpp"
+#include "Application.hpp"
+#include <iostream>
 
-void CommandHelp::Execute()
+using namespace std;
+
+void CommandHelp::Execute(const Args& args)
 {
 	// variables
-	Clock& clock = Clock::GetInstance();
+	Application& app = Application::GetInstance();
+	CommandList list = app.GetCommands();
+
+	// show commands
+	cout << "Commands are:\n";
+
+	for (auto& it : list) {
+		cout << "\t" << it->Name() << "\n";
+	}
+	
+	cout << "\tEXIT" << endl;
+}
+
+const char* CommandHelp::Name() const
+{
+	return HELP.c_str();
 }

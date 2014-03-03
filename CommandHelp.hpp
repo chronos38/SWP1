@@ -26,7 +26,8 @@ class CommandHelp : public ICommand
 public:
 	CommandHelp() = default;
 	virtual ~CommandHelp() = default;
-	virtual void Execute() override;
+	virtual void Execute(const Args& args) override;
+	virtual const char* Name() const override;
 };
 
 #endif

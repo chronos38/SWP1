@@ -19,8 +19,13 @@
 #include "CommandShow.hpp"
 #include "Clock.hpp"
 
-void CommandShow::Execute()
+void CommandShow::Execute(const Args& args)
 {
 	// variables
 	Clock& clock = Clock::GetInstance();
+}
+
+const char* CommandShow::Name() const
+{
+	return SHOW.c_str();
 }

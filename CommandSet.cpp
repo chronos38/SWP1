@@ -18,9 +18,34 @@
 
 #include "CommandSet.hpp"
 #include "Clock.hpp"
+#include "Application.hpp"
 
-void CommandSet::Execute()
+void CommandSet::Execute(const Args& args)
 {
 	// variables
 	Clock& clock = Clock::GetInstance();
+	int h = -1, m = -1, s = -1, index = -1;
+	
+	// check for hours
+	if ((index = Application::GetArgumentIndex(args, 'H')) != -1) {
+		h = std::stoi(args[index + 1]);
+	}
+
+	// check for minutes
+	if ((index = Application::GetArgumentIndex(args, 'M')) != -1) {
+		m = std::stoi(args[index + 1]);
+	}
+
+	// check for seconds
+	if ((index = Application::GetArgumentIndex(args, 'S')) != -1) {
+		s = std::stoi(args[index + 1]);
+	}
+
+	// execute command
+	clock.Set(h, m, s);
+}
+
+const char* CommandSet::Name() const
+{
+	return SET.c_str();
 }

@@ -21,6 +21,8 @@
 
 #include <string>
 #include <map>
+#include <list>
+#include <vector>
 class ICommand;
 
 enum class ClockOperationFlags {
@@ -37,10 +39,16 @@ enum class ClockType {
 	DigitalLive
 };
 
+static const int BUFFER_LENGTH = 1024;
+
 static const int WINDOW_WIDTH = 256;
 static const int WINDOW_HEIGHT = 256;
 
+typedef std::string Arg;
+typedef std::vector<std::string> Args;
+
 typedef std::map<std::string, ICommand*> Commands;
+typedef std::list<ICommand*> CommandList;
 
 static const std::string SET = "SET";
 static const std::string INC = "INC";

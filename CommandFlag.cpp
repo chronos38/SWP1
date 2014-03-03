@@ -16,19 +16,26 @@
  * along with SWP1.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef APPLICATION_HPP
-#define APPLICATION_HPP
+#include "CommandFlag.hpp"
+#include "Application.hpp"
 
-#include "Types.hpp"
-#include "ICommand.hpp"
-
-class Application : public ICommand
+ClockOperationFlags CommandFlag::GetFlags(const Args& args) const
 {
-public:
-	Application() = default;
-	virtual ~Application() = default;
-	virtual void Execute() override;
-	virtual int ExitCode() const;
-};
+	// variables
+	int flags = (int)ClockOperationFlags::None;
 
-#endif
+	// check for arguments
+	if (Application::GetArgumentIndex(args, 'H') != -1) {
+		flags |= (int)ClockOperationFlags::Hours;
+	}
+
+	if (Application::GetArgumentIndex(args, 'M') != -1) {
+		flags |= (int)ClockOperationFlags::Minutes;
+	}
+
+	if (Application::GetArgumentIndex(args, 'S') != -1) {
+		flags |= (int)ClockOperationFlags::Seconds;
+	}
+
+	return (ClockOperationFlags)flags;
+}

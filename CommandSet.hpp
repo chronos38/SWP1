@@ -26,7 +26,8 @@ class CommandSet : public ICommand
 public:
 	CommandSet() = default;
 	virtual ~CommandSet() = default;
-	virtual void Execute() override;
+	virtual void Execute(const Args& args) override;
+	virtual const char* Name() const override;
 };
 
 #endif

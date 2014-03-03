@@ -19,8 +19,12 @@
 #include "CommandIncrement.hpp"
 #include "Clock.hpp"
 
-void CommandIncrement::Execute()
+void CommandIncrement::Execute(const Args& args)
 {
-	// variables
-	Clock& clock = Clock::GetInstance();
+	Clock::GetInstance().Increment(GetFlags(args));
+}
+
+const char* CommandIncrement::Name() const
+{
+	return INC.c_str();
 }

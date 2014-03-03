@@ -19,7 +19,12 @@
 #include "CommandRedo.hpp"
 #include "Clock.hpp"
 
-void CommandRedo::Execute()
+void CommandRedo::Execute(const Args& args)
 {
 	Clock::GetInstance().Redo();
+}
+
+const char* CommandRedo::Name() const
+{
+	return REDO.c_str();
 }

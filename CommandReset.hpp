@@ -26,7 +26,8 @@ class CommandReset : public ICommand
 public:
 	CommandReset() = default;
 	virtual ~CommandReset() = default;
-	virtual void Execute() override;
+	virtual void Execute(const Args& args) override;
+	virtual const char* Name() const override;
 };
 
 #endif

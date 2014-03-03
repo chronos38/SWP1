@@ -19,11 +19,16 @@
 #ifndef ICOMMAND_HPP
 #define ICOMMAND_HPP
 
+#include "Types.hpp"
+#include <vector>
+#include <string>
+
 class ICommand
 {
 public:
 	virtual ~ICommand(){}
-	virtual void Execute() = 0;
+	virtual void Execute(const Args& args) = 0;
+	virtual const char* Name() const = 0;
 };
 
 #endif

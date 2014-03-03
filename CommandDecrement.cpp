@@ -17,10 +17,15 @@
  */
 
 #include "CommandDecrement.hpp"
+#include "Application.hpp"
 #include "Clock.hpp"
 
-void CommandDecrement::Execute()
+void CommandDecrement::Execute(const Args& args)
 {
-	// variables
-	Clock& clock = Clock::GetInstance();
+	Clock::GetInstance().Decrement(GetFlags(args));
+}
+
+const char* CommandDecrement::Name() const
+{
+	return DEC.c_str();
 }

@@ -26,7 +26,8 @@ class CommandUndo : public ICommand
 public:
 	CommandUndo() = default;
 	virtual ~CommandUndo() = default;
-	virtual void Execute() override;
+	virtual void Execute(const Args& args) override;
+	virtual const char* Name() const override;
 };
 
 #endif

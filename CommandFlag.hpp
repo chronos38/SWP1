@@ -16,18 +16,18 @@
  * along with SWP1.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef COMMANDSHOW_HPP
-#define COMMANDSHOW_HPP
+#ifndef COMMANDFLAG_HPP
+#define COMMANDFLAG_HPP
 
 #include "ICommand.hpp"
+#include "Types.hpp"
 
-class CommandShow : public ICommand
+class CommandFlag : public ICommand
 {
 public:
-	CommandShow() = default;
-	virtual ~CommandShow() = default;
-	virtual void Execute(const Args& args) override;
-	virtual const char* Name() const override;
+	CommandFlag() = default;
+	virtual ~CommandFlag() = default;
+	virtual ClockOperationFlags GetFlags(const Args& args) const;
 };
 
 #endif

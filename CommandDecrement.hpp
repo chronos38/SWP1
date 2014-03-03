@@ -19,14 +19,15 @@
 #ifndef COMMANDDECREMENT_HPP
 #define COMMANDDECREMENT_HPP
 
-#include "ICommand.hpp"
+#include "CommandFlag.hpp"
 
-class CommandDecrement : public ICommand
+class CommandDecrement : public CommandFlag
 {
 public:
 	CommandDecrement() = default;
 	virtual ~CommandDecrement() = default;
-	virtual void Execute() override;
+	virtual void Execute(const Args& args) override;
+	virtual const char* Name() const override;
 };
 
 #endif

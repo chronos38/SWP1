@@ -83,6 +83,7 @@
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="Clock.cpp" />
     <ClCompile Include="CommandDecrement.cpp" />
+    <ClCompile Include="CommandFlag.cpp" />
     <ClCompile Include="CommandHelp.cpp" />
     <ClCompile Include="CommandIncrement.cpp" />
     <ClCompile Include="CommandRedo.cpp" />
@@ -95,8 +96,9 @@
     <ClCompile Include="Painter.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Application.h" />
+    <ClInclude Include="Application.hpp" />
     <ClInclude Include="Clock.hpp" />
+    <ClInclude Include="CommandFlag.hpp" />
     <ClInclude Include="CommandReset.hpp" />
     <ClInclude Include="ClockWindow.hpp" />
     <ClInclude Include="ICommand.hpp" />

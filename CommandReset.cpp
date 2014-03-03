@@ -19,7 +19,12 @@
 #include "CommandReset.hpp"
 #include "Clock.hpp"
 
-void CommandReset::Execute()
+void CommandReset::Execute(const Args& args)
 {
 	Clock::GetInstance().Reset();
+}
+
+const char* CommandReset::Name() const
+{
+	return RESET.c_str();
 }

@@ -16,18 +16,30 @@
  * along with SWP1.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef COMMANDSHOW_HPP
-#define COMMANDSHOW_HPP
+#ifndef APPLICATION_HPP
+#define APPLICATION_HPP
 
+#include "Types.hpp"
+#include "Singleton.hpp"
 #include "ICommand.hpp"
+#include <list>
+#include <vector>
 
-class CommandShow : public ICommand
+class Application : public Singleton<Application>
 {
+	friend class Singleton<Application>;
 public:
-	CommandShow() = default;
-	virtual ~CommandShow() = default;
-	virtual void Execute(const Args& args) override;
-	virtual const char* Name() const override;
+	virtual ~Application();
+	virtual void Execute();
+	virtual int ExitCode() const;
+	virtual CommandList GetCommands() const;
+	static int GetArugment(const Args& args, const std::string& string);
+	static int GetArgumentIndex(const Args& args, char arg);
+protected:
+	Application();
+	Args CreateArguments(const std::string& buffer) const;
+private:
+	Commands mCommands;
 };
 
 #endif

@@ -19,7 +19,12 @@
 #include "CommandUndo.hpp"
 #include "Clock.hpp"
 
-void CommandUndo::Execute()
+void CommandUndo::Execute(const Args& args)
 {
 	Clock::GetInstance().Undo();
+}
+
+const char* CommandUndo::Name() const
+{
+	return UNDO.c_str();
 }

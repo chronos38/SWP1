@@ -16,14 +16,14 @@
  * along with SWP1.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "Application.h"
+#include "Application.hpp"
 #include <map>
 #include <cstdio>
 #include <cstdlib>
 
 int main(int argc, char* argv[])
 {
-	Application app;
+	Application& app = Application::GetInstance();
 	app.Execute();
 	return app.ExitCode();
 }
