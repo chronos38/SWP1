@@ -18,14 +18,54 @@
 
 #include "CommandShow.hpp"
 #include "Clock.hpp"
+#include "Application.hpp"
+#include "DigitalClockWindow.hpp"
+#include <iostream>
 
 void CommandShow::Execute(const Args& args)
 {
 	// variables
-	Clock& clock = Clock::GetInstance();
+	int index = -1;
+	int timezone = 0, x = -1, y = -1;
+
+	// parse arguments
+	ParseArgument(args, 'Z', timezone);
+	ParseArgument(args, 'X', x);
+	ParseArgument(args, 'Y', y);
+
+	// check for type
+	if ((index = Application::GetArgumentIndex(args, 'T')) != -1) {
+		std::string arg = args[index + 1];
+
+		if (arg == "DIGITAL") {
+			new DigitalClockWindow(timezone, x, y);
+		} else if (arg == "DIGITAL-LIVE") {
+		} else if (arg == "ANALOG") {
+		} else if (arg == "ANALOG-LIVE") {
+		}
+	} else {
+		std::cout << "No valid type given.\n" << std::endl;
+	}
 }
 
 const char* CommandShow::Name() const
 {
 	return SHOW.c_str();
+}
+
+int CommandShow::ParseArgument(const Args& args, char arg, int& result) const
+{
+	// variables
+	int index = -1;
+
+	// parse argument
+	if ((index = Application::GetArgumentIndex(args, arg)) != -1) {
+		try {
+			result = std::stoi(args[index + 1]);
+		} catch (std::invalid_argument&) {
+			// do nothing
+		}
+	}
+
+	return result;
 }

@@ -24,12 +24,13 @@
 class DigitalClockWindow : public ClockWindow
 {
 public:
-	DigitalClockWindow(int x = -1, int y = -1);
+	DigitalClockWindow(int timezone, int x, int y);
 	virtual ~DigitalClockWindow();
 	virtual void Update(ISubject* subject) override;
 	virtual void Draw() override;
 private:
-	Clock* mClock = nullptr;
+	bool mUpdate = false;
+	int mTimezone = 0;
 };
 
 #endif

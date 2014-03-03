@@ -92,6 +92,7 @@
     <ClCompile Include="CommandShow.cpp" />
     <ClCompile Include="CommandUndo.cpp" />
     <ClCompile Include="ClockWindow.cpp" />
+    <ClCompile Include="DigitalClockWindow.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Painter.cpp" />
   </ItemGroup>
@@ -101,8 +102,7 @@
     <ClInclude Include="CommandFlag.hpp" />
     <ClInclude Include="CommandReset.hpp" />
     <ClInclude Include="ClockWindow.hpp" />
-    <ClInclude Include="DigitalClock.hpp" />
-    <ClInclude Include="DigitalClock.cpp" />
+    <ClInclude Include="DigitalClockWindow.hpp" />
     <ClInclude Include="ICommand.hpp" />
     <ClInclude Include="CommandDecrement.hpp" />
     <ClInclude Include="CommandHelp.hpp" />

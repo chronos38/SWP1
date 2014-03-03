@@ -17,6 +17,7 @@
  */
 
 #include "Application.hpp"
+#include "Clock.hpp"
 #include "CommandSet.hpp"
 #include "CommandIncrement.hpp"
 #include "CommandDecrement.hpp"
@@ -26,6 +27,7 @@
 #include "CommandHelp.hpp"
 #include "CommandReset.hpp"
 #include "Painter.hpp"
+#include "ClockWindow.hpp"
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_ttf.h>
 #include <iostream>
@@ -104,6 +106,14 @@ void Application::Execute()
 		} else {
 			std::cout << "Unknown command." << std::endl;
 		}
+
+		// check for SDL events
+		if (SDL_HasEvent(SDL_WINDOWEVENT) == SDL_FALSE) {
+			ProcessEvents();
+		}
+
+		// notify all
+		Clock::GetInstance().Notify();
 	}
 }
 
@@ -128,11 +138,12 @@ Args Application::CreateArguments(const std::string& buffer) const
 {
 	// variables
 	std::string string = buffer;
-	std::istringstream iss(string);
+	std::istringstream iss;
 	Args args;
 
 	// case insensitive buffer
 	std::transform(string.begin(), string.end(), string.begin(), ::toupper);
+	iss = std::istringstream(string);
 
 	// result
 	std::copy(std::istream_iterator<std::string>(iss),
@@ -142,9 +153,13 @@ Args Application::CreateArguments(const std::string& buffer) const
 	return args;
 }
 
-int Application::GetArugment(const Args& args, const std::string& string)
+int Application::GetArgument(const Args& args, const std::string& string)
 {
 	for (auto& it : args) {
+		if (it[0] != '-' || it.size() != 2) {
+			continue;
+		}
+
 		for (auto& ch : string) {
 			auto& find = std::find(it.begin(), it.end(), ch);
 
@@ -159,7 +174,7 @@ int Application::GetArugment(const Args& args, const std::string& string)
 
 int Application::GetArgumentIndex(const Args& args, char arg)
 {
-	std::string string(arg, 1);
+	std::string string = ('-' + std::string(1, arg));
 
 	for (unsigned i = 0; i < args.size(); i++) {
 		if (args[i] == string) {
@@ -168,4 +183,27 @@ int Application::GetArgumentIndex(const Args& args, char arg)
 	}
 
 	return -1;
+}
+
+void Application::ProcessEvents()
+{
+	// variables
+	SDL_Event event;
+
+	// poll event queue
+	while (true) {
+		if (!SDL_PollEvent(&event)) {
+			break;
+		} else if (event.type != SDL_WINDOWEVENT) {
+			continue;
+		}
+
+		if (event.window.type == SDL_WINDOWEVENT_CLOSE) {
+			IObserver* observer = Clock::GetInstance().FindObserverFromWindow(event.window.windowID);
+
+			if (observer) {
+				delete observer;
+			}
+		}
+	}
 }

@@ -45,6 +45,7 @@ public:
 	virtual int Seconds() const final;
 	virtual int Minutes() const final;
 	virtual int Hours() const final;
+	IObserver* FindObserverFromWindow(int windowID);
 protected:
 	Clock();
 private:

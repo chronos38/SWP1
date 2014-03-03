@@ -18,12 +18,13 @@
 
 #include "ClockWindow.hpp"
 #include "Clock.hpp"
+#include "Application.hpp"
 #include <SDL2/SDL.h>
 #include <exception>
 
 ClockWindow::ClockWindow()
 {
-	Initialize("Default Clock");
+	//Initialize("Default Clock");
 }
 
 ClockWindow::~ClockWindow()
@@ -82,6 +83,11 @@ SDL_Renderer* ClockWindow::Renderer()
 	return mRenderer;
 }
 
+int ClockWindow::GetID() const
+{
+	return static_cast<int>(SDL_GetWindowID(mWindow));
+}
+
 bool ClockWindow::CreateWindow(const char* title, int x, int y)
 {
 
@@ -101,7 +107,7 @@ bool ClockWindow::CreateWindow(const char* title, int x, int y)
 	// create renderer
 	mRenderer = SDL_CreateRenderer(mWindow,
 				       -1,
-				       SDL_RENDERER_SOFTWARE | SDL_RENDERER_PRESENTVSYNC);
+				       SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 
 	// check if renderer is a nullptr
 	if (!mRenderer) {

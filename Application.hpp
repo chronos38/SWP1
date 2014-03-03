@@ -22,6 +22,7 @@
 #include "Types.hpp"
 #include "Singleton.hpp"
 #include "ICommand.hpp"
+#include "IObserver.hpp"
 #include <list>
 #include <vector>
 
@@ -33,11 +34,12 @@ public:
 	virtual void Execute();
 	virtual int ExitCode() const;
 	virtual CommandList GetCommands() const;
-	static int GetArugment(const Args& args, const std::string& string);
+	static int GetArgument(const Args& args, const std::string& string);
 	static int GetArgumentIndex(const Args& args, char arg);
 protected:
 	Application();
 	Args CreateArguments(const std::string& buffer) const;
+	void ProcessEvents();
 private:
 	Commands mCommands;
 };

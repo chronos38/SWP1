@@ -63,6 +63,9 @@
     <ClCompile Include="CommandFlag.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="DigitalClockWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Singleton.hpp">
@@ -119,11 +122,8 @@
     <ClInclude Include="CommandFlag.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DigitalClock.hpp">
+    <ClInclude Include="DigitalClockWindow.hpp">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DigitalClock.cpp">
-      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

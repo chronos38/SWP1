@@ -17,6 +17,7 @@
  */
 
 #include "Clock.hpp"
+#include "ClockWindow.hpp"
 #include <exception>
 #include <ctime>
 
@@ -60,18 +61,28 @@ Clock::Clock()
 
 void Clock::Attach(IObserver* observer)
 {
-	mObserver.push_back(observer);
+	if (observer) {
+		// add to list
+		mObserver.push_back(observer);
+	}
 }
 
 void Clock::Detach(IObserver* observer)
 {
-	mObserver.remove(observer);
+	if (observer) {
+		// remove from list
+		mObserver.remove(observer);
+
+		// delete observer
+		delete observer;
+	}
 }
 
 void Clock::Notify()
 {
 	for (auto& it : mObserver) {
 		it->Update(this);
+		dynamic_cast<IDrawable*>(it)->Draw();
 	}
 }
 
@@ -166,6 +177,7 @@ void Clock::Redo()
 
 void Clock::Reset()
 {
+	// create new clock
 	(*this) = Clock();
 }
 
@@ -187,4 +199,18 @@ int Clock::Hours() const
 Clock::Operation Clock::CreateOperation() const
 {
 	return std::make_tuple(mHours, mMinutes, mSeconds);
+}
+
+IObserver* Clock::FindObserverFromWindow(int windowID)
+{
+	for (auto& it : mObserver) {
+		ClockWindow* window = dynamic_cast<ClockWindow*>(it);
+		int id = window->GetID();
+
+		if (id == windowID) {
+			return window;
+		}
+	}
+
+	return nullptr;
 }

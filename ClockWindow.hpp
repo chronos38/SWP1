@@ -22,11 +22,13 @@
 #include "IObserver.hpp"
 #include "IDrawable.hpp"
 
+class Application;
 struct SDL_Window;
 struct SDL_Renderer;
 
 class ClockWindow : public IObserver, public IDrawable
 {
+	friend class Application;
 public:
 	ClockWindow();
 	virtual ~ClockWindow();
@@ -35,6 +37,7 @@ public:
 	virtual void Dispose();
 	virtual bool IsDisposed() const;
 	virtual SDL_Renderer* Renderer() override;
+	virtual int GetID() const;
 private:
 	virtual bool CreateWindow(const char* title, int x = -1, int y = -1);
 private:

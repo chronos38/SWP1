@@ -16,15 +16,18 @@
  * along with SWP1.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "DigitalClock.hpp"
+#include "DigitalClockWindow.hpp"
 #include "Clock.hpp"
 #include "Painter.hpp"
 #include <SDL2/SDL.h>
+#include <string>
 #include <cstdio>
 
-DigitalClockWindow::DigitalClockWindow(int x, int y)
+DigitalClockWindow::DigitalClockWindow(int timezone, int x, int y)
 {
+	mTimezone = timezone;
 	Initialize("Digital Clock", x, y);
+	Draw();
 }
 
 DigitalClockWindow::~DigitalClockWindow()
@@ -34,20 +37,31 @@ DigitalClockWindow::~DigitalClockWindow()
 
 void DigitalClockWindow::Update(ISubject* subject)
 {
-	// variables
-	mClock = dynamic_cast<Clock*>(subject);
+	mUpdate = true;
 }
 
 void DigitalClockWindow::Draw()
 {
+	// check if update is needed
+	if (!mUpdate) {
+		return;
+	}
+
 	// variables
+	Clock& clock = Clock::GetInstance();
 	char buffer[9];
 	Painter painter(this);
 
 	// set buffer
 	memset(buffer, 0, sizeof(buffer));
-	sscanf(buffer, "%02d:%02d:%02d", mClock->Hours(), mClock->Minutes(), mClock->Seconds());
+	sscanf(buffer, "%02d:%02d:%02d", clock.Hours() + mTimezone, clock.Minutes(), clock.Seconds());
 
 	// draw text
-	painter.DrawText({ 0, 0 }, buffer, { 0, 255, 0, 0 });
+	painter.DrawText({ 32, 32 }, buffer, { 0, 192, 0, 0 });
+
+	// base draw
+	ClockWindow::Draw();
+
+	// set update to false
+	mUpdate = false;
 }
