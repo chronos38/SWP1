@@ -78,7 +78,7 @@ void Painter::DrawCircle(const SDL_Point& position, int radius, const SDL_Color&
 	// TODO: add drawing logic
 }
 
-void Painter::DrawText(const SDL_Point& position, const char* text, const SDL_Color& color)
+void Painter::DrawText(const SDL_Point& position, const std::string& text, const SDL_Color& color)
 {
 	// check font
 	if (!sFont) {
@@ -91,7 +91,7 @@ void Painter::DrawText(const SDL_Point& position, const char* text, const SDL_Co
 	SDL_Renderer* renderer = mDrawable->Renderer();
 
 	// draw text
-	surface = TTF_RenderText_Blended(sFont, text, color);
+	surface = TTF_RenderText_Blended(sFont, text.c_str(), color);
 
 	// check surface
 	if (!surface) {

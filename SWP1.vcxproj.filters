@@ -119,6 +119,12 @@
     <ClInclude Include="CommandFlag.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="DigitalClock.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DigitalClock.cpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Singleton.inl">

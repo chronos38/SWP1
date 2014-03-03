@@ -20,6 +20,7 @@
 #define PAINTER_HPP
 
 #include "IDrawable.hpp"
+#include <string>
 
 struct SDL_Point;
 struct SDL_Color;
@@ -35,7 +36,7 @@ public:
 	virtual void DrawLine(const SDL_Point& position, const SDL_Point& endPosition, const SDL_Color& color);
 	virtual void DrawRectangle(const SDL_Rect& rect, const SDL_Color& color);
 	virtual void DrawCircle(const SDL_Point& position, int radius, const SDL_Color& color);
-	virtual void DrawText(const SDL_Point& position, const char* text, const SDL_Color& color);
+	virtual void DrawText(const SDL_Point& position, const std::string& text, const SDL_Color& color);
 protected:
 	static void Initialize();
 	static void Dispose();
