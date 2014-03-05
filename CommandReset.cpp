@@ -28,3 +28,8 @@ const char* CommandReset::Name() const
 {
 	return RESET.c_str();
 }
+
+const char* CommandReset::Help() const
+{
+	return "";
+}

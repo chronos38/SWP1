@@ -28,3 +28,8 @@ const char* CommandIncrement::Name() const
 {
 	return INC.c_str();
 }
+
+const char* CommandIncrement::Help() const
+{
+	return "\t\t-h: Increment hours.\n\t\t-m: Increment minutes.\n\t\t-s: Increment seconds.\n";
+}

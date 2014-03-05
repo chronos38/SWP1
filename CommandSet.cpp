@@ -49,3 +49,8 @@ const char* CommandSet::Name() const
 {
 	return SET.c_str();
 }
+
+const char* CommandSet::Help() const
+{
+	return "\t\t-h <value>: Set hours to value.\n\t\t-m <value>: Set minutes to value.\n\t\t-s <value>: Set seconds to value.\n";
+}

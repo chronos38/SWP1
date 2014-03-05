@@ -33,6 +33,7 @@ void CommandHelp::Execute(const Args& args)
 
 	for (auto& it : list) {
 		cout << "\t" << it->Name() << "\n";
+		cout << it->Help() << "\n";
 	}
 	
 	cout << "\tEXIT" << endl;
@@ -41,4 +42,9 @@ void CommandHelp::Execute(const Args& args)
 const char* CommandHelp::Name() const
 {
 	return HELP.c_str();
+}
+
+const char* CommandHelp::Help() const
+{
+	return "";
 }

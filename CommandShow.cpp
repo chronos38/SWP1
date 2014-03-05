@@ -39,9 +39,8 @@ void CommandShow::Execute(const Args& args)
 
 		if (arg == "DIGITAL") {
 			new DigitalClockWindow(timezone, x, y);
-		} else if (arg == "DIGITAL-LIVE") {
 		} else if (arg == "ANALOG") {
-		} else if (arg == "ANALOG-LIVE") {
+		} else {
 		}
 	} else {
 		std::cout << "No valid type given.\n" << std::endl;
@@ -51,6 +50,11 @@ void CommandShow::Execute(const Args& args)
 const char* CommandShow::Name() const
 {
 	return SHOW.c_str();
+}
+
+const char* CommandShow::Help() const
+{
+	return "\t\t-t <type>: Clock types are \"DIGITAL\", \"ANALOG\". This type is REQUIRED.\n\t\t-z <timezone>: Defines timezone for this clock.\n\t\t-x <value>: Sets x position to value.\n\t\t-y <value>: Sets y position to value.\n";
 }
 
 int CommandShow::ParseArgument(const Args& args, char arg, int& result) const

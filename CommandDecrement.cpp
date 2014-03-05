@@ -29,3 +29,8 @@ const char* CommandDecrement::Name() const
 {
 	return DEC.c_str();
 }
+
+const char* CommandDecrement::Help() const
+{
+	return "\t\t-h: Decrement hours.\n\t\t-m: Decrement minutes.\n\t\t-s: Decrement seconds.\n";
+}

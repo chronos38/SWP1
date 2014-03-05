@@ -29,6 +29,7 @@ public:
 	virtual ~ICommand(){}
 	virtual void Execute(const Args& args) = 0;
 	virtual const char* Name() const = 0;
+	virtual const char* Help() const = 0;
 };
 
 #endif

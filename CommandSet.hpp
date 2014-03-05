@@ -28,6 +28,7 @@ public:
 	virtual ~CommandSet() = default;
 	virtual void Execute(const Args& args) override;
 	virtual const char* Name() const override;
+	virtual const char* Help() const override;
 };
 
 #endif

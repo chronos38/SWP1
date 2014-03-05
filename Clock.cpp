@@ -114,15 +114,31 @@ void Clock::Increment(ClockOperationFlags flags)
 	// increment values
 
 	if (((int)flags & (int)ClockOperationFlags::Seconds) != 0) {
-		(mSeconds < 59) ? mSeconds++ : mSeconds = 0, mMinutes++;
+		if (mSeconds < 59) {
+			mSeconds++;
+		} else {
+			mSeconds = 0;
+			mMinutes++;
+		}
 	}
 
 	if (((int)flags & (int)ClockOperationFlags::Minutes) != 0) {
-		(mMinutes < 59) ? mMinutes++ : mMinutes = 0, mHours++;
+		if (mMinutes < 59) {
+			mMinutes++;
+		} else {
+			mMinutes = 0;
+			mHours++;
+		}
 	}
 
 	if (((int)flags & (int)ClockOperationFlags::Hours) != 0) {
-		(mHours < 23) ? mHours++ : mHours = 0, mMinutes = 0, mSeconds = 0;
+		if (mHours < 23) {
+			mHours++;
+		} else {
+			mSeconds = 0;
+			mMinutes = 0;
+			mHours = 0;
+		}
 	}
 }
 

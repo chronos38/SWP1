@@ -28,3 +28,8 @@ const char* CommandRedo::Name() const
 {
 	return REDO.c_str();
 }
+
+const char* CommandRedo::Help() const
+{
+	return "";
+}

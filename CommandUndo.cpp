@@ -28,3 +28,8 @@ const char* CommandUndo::Name() const
 {
 	return UNDO.c_str();
 }
+
+const char* CommandUndo::Help() const
+{
+	return "";
+}
