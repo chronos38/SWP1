@@ -40,10 +40,9 @@ public:
 protected:
 	Application();
 	Args CreateArguments(const std::string& buffer) const;
-	void ProcessEvents();
 private:
 	Commands mCommands;
-	std::future<std::string> mThread;
+	std::future<void> mThread;
 };
 
 #endif

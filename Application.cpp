@@ -62,13 +62,34 @@ Application::Application()
 	Painter::Initialize();
 
 	// initialize future
-	mThread = std::async(std::launch::async, [] ()->std::string {
-		return "";
+	mThread = std::async(std::launch::async, [] () {
+		// variables
+		SDL_Event event;
+
+		// poll event queue
+		while (true) {
+			if (!SDL_PollEvent(&event) || event.type != SDL_WINDOWEVENT) {
+				continue;
+			}
+
+			if (event.window.type == SDL_WINDOWEVENT_CLOSE) {
+				IObserver* observer = Clock::GetInstance().FindObserverFromWindow(event.window.windowID);
+
+				if (observer) {
+					ClockWindow* window = dynamic_cast<ClockWindow*>(observer);
+					window->Dispose();
+					delete window;
+				}
+			}
+		}
 	});
 }
 
 Application::~Application()
 {
+	// close thread
+	mThread = std::async(std::launch::sync, [] () {});
+
 	// dispose painter
 	Painter::Dispose();
 
@@ -119,11 +140,6 @@ void Application::Execute()
 			Clock::GetInstance().Notify();
 		} else {
 			std::cout << "Unknown command." << std::endl;
-		}
-
-		// check for SDL events
-		if (SDL_HasEvent(SDL_WINDOWEVENT) == SDL_FALSE) {
-			ProcessEvents();
 		}
 
 		string = "";
@@ -196,27 +212,4 @@ int Application::GetArgumentIndex(const Args& args, char arg)
 	}
 
 	return -1;
-}
-
-void Application::ProcessEvents()
-{
-	// variables
-	SDL_Event event;
-
-	// poll event queue
-	while (true) {
-		if (!SDL_PollEvent(&event)) {
-			break;
-		} else if (event.type != SDL_WINDOWEVENT) {
-			continue;
-		}
-
-		if (event.window.type == SDL_WINDOWEVENT_CLOSE) {
-			IObserver* observer = Clock::GetInstance().FindObserverFromWindow(event.window.windowID);
-
-			if (observer) {
-				delete observer;
-			}
-		}
-	}
 }
