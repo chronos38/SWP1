@@ -16,25 +16,8 @@ namespace SWP1
 		{
 			InitializeComponent();
 
-			// location
-			Point point = new Point();
-
-			if (x != -1) {
-				point.X = x;
-			} else {
-				point.X = Location.X;
-			}
-
-			if (y != -1) {
-				point.Y = y;
-			} else {
-				point.Y = Location.Y;
-			}
-
-			Location = point;
-
 			if (timeZoneInfo != null) {
-				mOffset = timeZoneInfo.BaseUtcOffset.Hours;
+				Offset = timeZoneInfo.BaseUtcOffset.Hours;
 			}
 		}
 
@@ -45,9 +28,29 @@ namespace SWP1
 
 		private void AnalogForm_Load(object sender, EventArgs e)
 		{
+			// variables
+			Clock clock = Clock.Instance;
 
+			// location
+			Point point = new Point();
+
+			if (X != -1) {
+				point.X = X;
+			} else {
+				point.X = Location.X;
+			}
+
+			if (Y != -1) {
+				point.Y = Y;
+			} else {
+				point.Y = Location.Y;
+			}
+
+			Location = point;
 		}
 
-		private int mOffset = 0;
+		private int Offset { set; get; }
+		private int X { set; get; }
+		private int Y { set; get; }
 	}
 }
