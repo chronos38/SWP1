@@ -29,6 +29,14 @@ namespace SWP1
 			mCommands.Add(this.btnSet, new CommandSet());
 			mCommands.Add(this.btnShow, new CommandShow());
 
+			// num upper bound
+			this.numSetHours.Maximum = 23;
+			this.numSetMinutes.Maximum = this.numSetSeconds.Maximum = 59;
+			// num lower bound
+			this.numSetHours.Minimum = this.numSetMinutes.Minimum = this.numSetSeconds.Minimum = -1;
+			// num default value
+			this.numSetHours.Value = this.numSetMinutes.Value = this.numSetSeconds.Value = -1;
+
 			// set combo boxes
 			this.cmbType.SelectedIndex = 0;
 
@@ -56,12 +64,10 @@ namespace SWP1
 			args.Second = (int)this.numSetSeconds.Value;
 			
 			// reset values
-			this.numSetHours.Value = this.numSetMinutes.Value = this.numSetSeconds.Value = 0;
+			this.numSetHours.Value = this.numSetMinutes.Value = this.numSetSeconds.Value = -1;
 
 			// call command
-			mLastCommand = mCommands[sender];
-			mLastCommand.Execute(args);
-			mLastArgs = args;
+			mCommands[sender].Execute(args);
 		}
 
 		private void btnInc_Click(object sender, EventArgs e)
@@ -74,13 +80,8 @@ namespace SWP1
 			args.Minute = this.chkMinutes.Checked;
 			args.Second = this.chkSeconds.Checked;
 
-			// reset values
-			this.chkHours.Checked = this.chkMinutes.Checked = this.chkSeconds.Checked = false;
-
 			// call command
-			mLastCommand = mCommands[sender];
-			mLastCommand.Execute(args);
-			mLastArgs = args;
+			mCommands[sender].Execute(args);
 		}
 
 		private void btnDec_Click(object sender, EventArgs e)
@@ -93,23 +94,18 @@ namespace SWP1
 			args.Minute = this.chkMinutes.Checked;
 			args.Second = this.chkSeconds.Checked;
 
-			// reset values
-			this.chkHours.Checked = this.chkMinutes.Checked = this.chkSeconds.Checked = false;
-
 			// call command
-			mLastCommand = mCommands[sender];
-			mLastCommand.Execute(args);
-			mLastArgs = args;
+			mCommands[sender].Execute(args);
 		}
 
 		private void btnUndo_Click(object sender, EventArgs e)
 		{
-			mLastCommand.Undo();
+			Clock.Instance.Undo();
 		}
 
 		private void btnRedo_Click(object sender, EventArgs e)
 		{
-			mLastCommand.Execute(mLastArgs);
+			Clock.Instance.Redo();
 		}
 
 		private void btnShow_Click(object sender, EventArgs e)
@@ -124,13 +120,9 @@ namespace SWP1
 			args.Y = (int)this.numPosY.Value;
 
 			// call command
-			mLastCommand = mCommands[sender];
-			mLastCommand.Execute(args);
-			mLastArgs = args;
+			mCommands[sender].Execute(args);
 		}
 
 		private Dictionary<object, ICommand> mCommands = new Dictionary<object, ICommand>();
-		private ICommand mLastCommand = null;
-		private EventArgs mLastArgs = null;
 	}
 }

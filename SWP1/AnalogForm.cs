@@ -52,5 +52,40 @@ namespace SWP1
 		private int Offset { set; get; }
 		private int X { set; get; }
 		private int Y { set; get; }
+
+		private void AnalogForm_Paint(object sender, PaintEventArgs e)
+		{
+			// variables
+			Graphics graphics = this.CreateGraphics();
+			Brush cyan = Brushes.Cyan;
+			Brush magenta = Brushes.Magenta;
+			Pen pen = new Pen(Color.Black);
+
+			// drawing
+			DrawClock(graphics, pen);
+			DrawSecond(graphics, pen);
+			DrawMinute(graphics, pen, cyan);
+			DrawHour(graphics, pen, magenta);
+		}
+
+		private void DrawHour(Graphics graphics, Pen pen, Brush magenta)
+		{
+			throw new NotImplementedException();
+		}
+
+		private void DrawMinute(Graphics graphics, Pen pen, Brush cyan)
+		{
+			throw new NotImplementedException();
+		}
+
+		private void DrawSecond(Graphics graphics, Pen pen)
+		{
+			throw new NotImplementedException();
+		}
+
+		private void DrawClock(Graphics graphics, Pen pen)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }

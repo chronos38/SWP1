@@ -38,6 +38,7 @@
 			this.Name = "AnalogForm";
 			this.Text = "AnalogForm";
 			this.Load += new System.EventHandler(this.AnalogForm_Load);
+			this.Paint += new System.Windows.Forms.PaintEventHandler(this.AnalogForm_Paint);
 			this.ResumeLayout(false);
 
 		}

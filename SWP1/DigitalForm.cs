@@ -27,9 +27,6 @@ namespace SWP1
 
 		public virtual void Update(ISubject subject)
 		{
-			// variables
-			Clock clock = (Clock)subject;
-
 			// invoke label
 			Invoke(new Action(UpdateClock));
 		}
@@ -56,13 +53,17 @@ namespace SWP1
 
 			Location = point;
 
+			// compute time
+			ComputeTime(clock.Hour + Offset);
+
 			// set time
-			this.lblClock.Text = String.Format("{0:00}:{1:00}:{2:00}", clock.Hour + Offset, clock.Minute, clock.Second);
+			this.lblClock.Text = String.Format(
+				"{0:00}:{1:00}:{2:00}",
+				Hour,
+				Minute,
+				Second);
 			this.lblClock.Left = this.Size.Width / 2 - this.lblClock.Size.Width / 2;
 			this.lblClock.Top = 16;
-
-			// register window
-			clock.Attach(this);
 		}
 
 		private void UpdateClock()
@@ -70,12 +71,41 @@ namespace SWP1
 			// variables
 			Clock clock = Clock.Instance;
 
+			// compute time
+			ComputeTime(clock.Hour + Offset);
+
 			// set time
-			this.lblClock.Text = String.Format("{0:00}:{1:00}:{2:00}", clock.Hour + Offset, clock.Minute, clock.Second);
+			this.lblClock.Text = String.Format(
+				"{0:00}:{1:00}:{2:00}",
+				Hour,
+				Minute,
+				Second);
 			this.lblClock.Left = this.Size.Width / 2 - this.lblClock.Size.Width / 2;
 		}
 
-		private int Offset { set; get; }
+		private void ComputeTime(int h)
+		{
+			// variables
+			Clock clock = Clock.Instance;
+
+			// compute result
+			if (h < 0) {
+				Hour = h + 24;
+			} else if (h > 23) {
+				Hour = h - 24;
+			} else {
+				Hour = h;
+			}
+
+			// minutes and seconds
+			Minute = clock.Minute;
+			Second = clock.Second;
+		}
+
+		private int Offset { get; set; }
+		private int Hour { get; set; }
+		private int Minute { get; set; }
+		private int Second { get; set; }
 		private int X { set; get; }
 		private int Y { set;get; }
 	}

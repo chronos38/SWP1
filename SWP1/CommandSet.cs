@@ -11,8 +11,12 @@ namespace SWP1
 		{
 		}
 
-		public virtual void Execute(EventArgs args)
+		public virtual void Execute(EventArgs a)
 		{
+			// variables
+			Clock clock = Clock.Instance;
+			SetEventArgs args = (SetEventArgs)a;
+			clock.Set(args.Hour, args.Minute, args.Second);
 		}
 
 		public virtual void Undo()
