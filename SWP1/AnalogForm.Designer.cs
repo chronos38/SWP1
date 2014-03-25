@@ -27,14 +27,26 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.pnlClock = new System.Windows.Forms.Panel();
 			this.SuspendLayout();
+			// 
+			// pnlClock
+			// 
+			this.pnlClock.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.pnlClock.Location = new System.Drawing.Point(0, 0);
+			this.pnlClock.Name = "pnlClock";
+			this.pnlClock.Size = new System.Drawing.Size(256, 256);
+			this.pnlClock.TabIndex = 0;
 			// 
 			// AnalogForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(240, 218);
+			this.ClientSize = new System.Drawing.Size(256, 256);
+			this.Controls.Add(this.pnlClock);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.MaximizeBox = false;
+			this.MinimizeBox = false;
 			this.Name = "AnalogForm";
 			this.Text = "AnalogForm";
 			this.Load += new System.EventHandler(this.AnalogForm_Load);
@@ -44,5 +56,7 @@
 		}
 
 		#endregion
+
+		private System.Windows.Forms.Panel pnlClock;
 	}
 }

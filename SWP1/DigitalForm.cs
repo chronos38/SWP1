@@ -53,17 +53,7 @@ namespace SWP1
 
 			Location = point;
 
-			// compute time
-			ComputeTime(clock.Hour + Offset);
-
-			// set time
-			this.lblClock.Text = String.Format(
-				"{0:00}:{1:00}:{2:00}",
-				Hour,
-				Minute,
-				Second);
-			this.lblClock.Left = this.Size.Width / 2 - this.lblClock.Size.Width / 2;
-			this.lblClock.Top = 16;
+			UpdateClock();
 		}
 
 		private void UpdateClock()
