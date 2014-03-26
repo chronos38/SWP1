@@ -43,6 +43,7 @@
 			this.btnDec = new System.Windows.Forms.Button();
 			this.btnInc = new System.Windows.Forms.Button();
 			this.grpUndoRedo = new System.Windows.Forms.GroupBox();
+			this.btnShowAll = new System.Windows.Forms.Button();
 			this.btnRedo = new System.Windows.Forms.Button();
 			this.btnUndo = new System.Windows.Forms.Button();
 			this.grpShow = new System.Windows.Forms.GroupBox();
@@ -55,7 +56,6 @@
 			this.label4 = new System.Windows.Forms.Label();
 			this.cmbType = new System.Windows.Forms.ComboBox();
 			this.btnShow = new System.Windows.Forms.Button();
-			this.btnShowAll = new System.Windows.Forms.Button();
 			this.grpSet.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numSetSeconds)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numSetMinutes)).BeginInit();
@@ -217,6 +217,16 @@
 			this.grpUndoRedo.TabStop = false;
 			this.grpUndoRedo.Text = "Undo / Redo / Makro";
 			// 
+			// btnShowAll
+			// 
+			this.btnShowAll.Location = new System.Drawing.Point(171, 19);
+			this.btnShowAll.Name = "btnShowAll";
+			this.btnShowAll.Size = new System.Drawing.Size(75, 23);
+			this.btnShowAll.TabIndex = 2;
+			this.btnShowAll.Text = "Show All";
+			this.btnShowAll.UseVisualStyleBackColor = true;
+			this.btnShowAll.Click += new System.EventHandler(this.btnShowAll_Click);
+			// 
 			// btnRedo
 			// 
 			this.btnRedo.Location = new System.Drawing.Point(89, 20);
@@ -356,16 +366,6 @@
 			this.btnShow.UseVisualStyleBackColor = true;
 			this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
 			// 
-			// btnShowAll
-			// 
-			this.btnShowAll.Location = new System.Drawing.Point(171, 19);
-			this.btnShowAll.Name = "btnShowAll";
-			this.btnShowAll.Size = new System.Drawing.Size(75, 23);
-			this.btnShowAll.TabIndex = 2;
-			this.btnShowAll.Text = "Show All";
-			this.btnShowAll.UseVisualStyleBackColor = true;
-			this.btnShowAll.Click += new System.EventHandler(this.btnShowAll_Click);
-			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -378,7 +378,7 @@
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.MaximizeBox = false;
 			this.Name = "Form1";
-			this.Text = "Form1";
+			this.Text = "SWP1";
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.grpSet.ResumeLayout(false);
 			this.grpSet.PerformLayout();
