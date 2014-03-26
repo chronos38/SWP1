@@ -31,12 +31,8 @@ namespace SWP1
 
 		public virtual void Update(ISubject subject)
 		{
-			try {
-				// invoke label
-				Invoke(new Action(UpdateClock));
-			} catch { 
-				// haha, there is no error handling here
-			}
+			// invoke label
+			Invoke(new Action(UpdateClock));
 		}
 
 		private void DigitalForm_Load(object sender, EventArgs e)
@@ -60,7 +56,7 @@ namespace SWP1
 			}
 
 			this.Location = point;
-			this.Text = String.Format("Digital: {0}", Title);
+			this.Text = Title;
 
 			UpdateClock();
 		}

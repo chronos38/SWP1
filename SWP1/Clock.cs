@@ -98,8 +98,12 @@ namespace SWP1
 		{
 			ComputeTime();
 
-			foreach (IObserver observer in mObserver) {
-				observer.Update(this);
+			try {
+				foreach (IObserver observer in mObserver) {
+					observer.Update(this);
+				}
+			} catch {
+				// why? because I can!
 			}
 		}
 
