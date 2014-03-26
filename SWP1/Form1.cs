@@ -123,6 +123,30 @@ namespace SWP1
 			mCommands[sender].Execute(args);
 		}
 
+		private void btnShowAll_Click(object sender, EventArgs e)
+		{
+			// variables
+			ICommand show = mCommands[this.btnShow];
+			int current = 0;
+
+			// show all
+			foreach (TimeZoneInfo item in this.cmbTimezone.Items) {
+				if (current == item.BaseUtcOffset.Hours) {
+					continue;
+				}
+
+				ShowEventArgs args = new ShowEventArgs();
+
+				args.Type = (string)this.cmbType.SelectedItem;
+				args.Timezone = item;
+				args.X = -1;
+				args.Y = -1;
+				current = item.BaseUtcOffset.Hours;
+				
+				show.Execute(args);
+			}
+		}
+
 		private Dictionary<object, ICommand> mCommands = new Dictionary<object, ICommand>();
 	}
 }

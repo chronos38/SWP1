@@ -22,13 +22,21 @@ namespace SWP1
 
 			if (timeZoneInfo != null) {
 				Offset = timeZoneInfo.BaseUtcOffset.Hours;
+				Title = timeZoneInfo.DisplayName;
+			} else {
+				Offset = 0;
+				Title = "UTC";
 			}
 		}
 
 		public virtual void Update(ISubject subject)
 		{
-			// invoke label
-			Invoke(new Action(UpdateClock));
+			try {
+				// invoke label
+				Invoke(new Action(UpdateClock));
+			} catch { 
+				// haha, there is no error handling here
+			}
 		}
 
 		private void DigitalForm_Load(object sender, EventArgs e)
@@ -51,7 +59,8 @@ namespace SWP1
 				point.Y = Location.Y;
 			}
 
-			Location = point;
+			this.Location = point;
+			this.Text = String.Format("Digital: {0}", Title);
 
 			UpdateClock();
 		}
@@ -97,6 +106,7 @@ namespace SWP1
 		private int Minute { get; set; }
 		private int Second { get; set; }
 		private int X { set; get; }
-		private int Y { set;get; }
+		private int Y { set; get; }
+		private string Title { get; set; }
 	}
 }

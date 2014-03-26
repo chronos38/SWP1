@@ -12,9 +12,9 @@ namespace SWP1
 		public int Hour { get; private set; }
 		public int Minute { get; private set; }
 		public int Second { get; private set; }
-		public int HourOffset { get; set; }
-		public int MinuteOffset { get; set; }
-		public int SecondOffset { get; set; }
+		public int HourOffset { get; private set; }
+		public int MinuteOffset { get; private set; }
+		public int SecondOffset { get; private set; }
 
 		private Clock()
 		{
@@ -54,48 +54,43 @@ namespace SWP1
 
 		public void Set(int h, int m, int s)
 		{
+			mUndoBuffer.Add(new Tuple<int, int, int>(Hour, Minute, Second));
+			mRedoBuffer.Clear();
 			if (h != -1) { Hour = h; }
 			if (m != -1) { Minute = m; }
 			if (s != -1) { Second = s; }
-			mUndoBuffer.Add(new Tuple<int, int, int>(Hour, Minute, Second));
-			mRedoBuffer.Clear();
 			Notify();
 		}
 
 		public void Increment(bool h, bool m, bool s)
 		{
+			mUndoBuffer.Add(new Tuple<int, int, int>(Hour, Minute, Second));
+			mRedoBuffer.Clear();
 			if (h) { Hour += 1; }
 			if (m) { Minute += 1; }
 			if (s) { Second += 1; }
-			mUndoBuffer.Add(new Tuple<int, int, int>(Hour, Minute, Second));
-			mRedoBuffer.Clear();
 			Notify();
 		}
 
 		public void Decrement(bool h, bool m, bool s)
 		{
+			mUndoBuffer.Add(new Tuple<int, int, int>(Hour, Minute, Second));
+			mRedoBuffer.Clear();
 			if (h) { Hour -= 1; }
 			if (m) { Minute -= 1; }
 			if (s) { Second -= 1; }
-			mUndoBuffer.Add(new Tuple<int, int, int>(Hour, Minute, Second));
-			mRedoBuffer.Clear();
 			Notify();
 		}
 
 		public virtual void Attach(IObserver observer)
 		{
-			lock (mObserver) {
-				mObserver.Add(observer);
-				mObserver = mObserver.Distinct().ToList();
-			}
+			mObserver.Add(observer);
 		}
 
 		public virtual void Detach(IObserver observer)
 		{
-			lock (mObserver) {
-				if (!mObserver.Remove(observer)) {
-					throw new ApplicationException("Couldn't detach observer from list.");
-				}
+			if (!mObserver.Remove(observer)) {
+				throw new ApplicationException("Couldn't detach observer from list.");
 			}
 		}
 
@@ -103,10 +98,8 @@ namespace SWP1
 		{
 			ComputeTime();
 
-			lock (mObserver) {
-				foreach (IObserver observer in mObserver) {
-					observer.Update(this);
-				}
+			foreach (IObserver observer in mObserver) {
+				observer.Update(this);
 			}
 		}
 

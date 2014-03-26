@@ -55,6 +55,7 @@
 			this.label4 = new System.Windows.Forms.Label();
 			this.cmbType = new System.Windows.Forms.ComboBox();
 			this.btnShow = new System.Windows.Forms.Button();
+			this.btnShowAll = new System.Windows.Forms.Button();
 			this.grpSet.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numSetSeconds)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numSetMinutes)).BeginInit();
@@ -206,6 +207,7 @@
 			// 
 			// grpUndoRedo
 			// 
+			this.grpUndoRedo.Controls.Add(this.btnShowAll);
 			this.grpUndoRedo.Controls.Add(this.btnRedo);
 			this.grpUndoRedo.Controls.Add(this.btnUndo);
 			this.grpUndoRedo.Location = new System.Drawing.Point(244, 169);
@@ -213,7 +215,7 @@
 			this.grpUndoRedo.Size = new System.Drawing.Size(307, 62);
 			this.grpUndoRedo.TabIndex = 2;
 			this.grpUndoRedo.TabStop = false;
-			this.grpUndoRedo.Text = "Undo / Redo";
+			this.grpUndoRedo.Text = "Undo / Redo / Makro";
 			// 
 			// btnRedo
 			// 
@@ -354,6 +356,16 @@
 			this.btnShow.UseVisualStyleBackColor = true;
 			this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
 			// 
+			// btnShowAll
+			// 
+			this.btnShowAll.Location = new System.Drawing.Point(171, 19);
+			this.btnShowAll.Name = "btnShowAll";
+			this.btnShowAll.Size = new System.Drawing.Size(75, 23);
+			this.btnShowAll.TabIndex = 2;
+			this.btnShowAll.Text = "Show All";
+			this.btnShowAll.UseVisualStyleBackColor = true;
+			this.btnShowAll.Click += new System.EventHandler(this.btnShowAll_Click);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -413,6 +425,7 @@
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.NumericUpDown numPosY;
+		private System.Windows.Forms.Button btnShowAll;
 
 	}
 }
