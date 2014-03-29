@@ -90,8 +90,8 @@ namespace SWP1
 		{
 			// variables
 			int hour = (Hour % 12);
-			double adjustment = ((hour - 2) % 12) * HOUR + (Minute / 2) * ARC;
-			double adjustmentMirror = ((hour + 4) % 12) * HOUR + (Minute / 2) * ARC;
+			double adjustment = ((hour - 3) % 12) * HOUR + (Minute / 2) * ARC;
+			double adjustmentMirror = ((hour + 3) % 12) * HOUR + (Minute / 2) * ARC;
 			double radius = _radius - 64;
 			Rectangle clip = e.ClipRectangle;
 			PointF start = new PointF(
@@ -101,11 +101,11 @@ namespace SWP1
 				(float)(radius * Math.Cos(adjustment)) + clip.Width / 2,
 				(float)(radius * Math.Sin(adjustment)) + clip.Height / 2
 			), left = new PointF(
-				(float)((radius / 16) * Math.Cos(ARC * hour)) + clip.Width / 2,
-				(float)((radius / 16) * Math.Sin(ARC * hour)) + clip.Height / 2
+				(float)((radius / 16) * Math.Cos(hour * HOUR + (Minute / 2) * ARC)) + clip.Width / 2,
+				(float)((radius / 16) * Math.Sin(hour * HOUR + (Minute / 2) * ARC)) + clip.Height / 2
 			), right = new PointF(
-				-1 * (float)((radius / 16) * Math.Cos(ARC * hour)) + clip.Width / 2,
-				-1 * (float)((radius / 16) * Math.Sin(ARC * hour)) + clip.Height / 2
+				-1 * (float)((radius / 16) * Math.Cos(hour* HOUR + (Minute / 2) * ARC)) + clip.Width / 2,
+				-1 * (float)((radius / 16) * Math.Sin(hour * HOUR + (Minute / 2) * ARC)) + clip.Height / 2
 			);
 			PointF[] points = new PointF[4] { start, left, end, right };
 
