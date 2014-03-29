@@ -24,10 +24,9 @@ namespace SWP1
 			ReadOnlyCollection<TimeZoneInfo> timeZoneInfo = TimeZoneInfo.GetSystemTimeZones();
 
 			// commands
-			mCommands.Add(this.btnInc, new CommandIncrement());
-			mCommands.Add(this.btnDec, new CommandDecrement());
-			mCommands.Add(this.btnSet, new CommandSet());
-			mCommands.Add(this.btnShow, new CommandShow());
+			mCommands.Add("incdec", new CommandIncDec());
+			mCommands.Add("set", new CommandSet());
+			mCommands.Add("show", new CommandShow());
 
 			// num upper bound
 			this.numSetHours.Maximum = 23;
@@ -56,7 +55,8 @@ namespace SWP1
 		private void btnSet_Click(object sender, EventArgs e)
 		{
 			// variables
-			SetEventArgs args = new SetEventArgs();
+			Clock clock = Clock.Instance;
+			ClockEventArgs args = new ClockEventArgs();
 
 			// set argument
 			args.Hour = (int)this.numSetHours.Value;
@@ -67,45 +67,75 @@ namespace SWP1
 			this.numSetHours.Value = this.numSetMinutes.Value = this.numSetSeconds.Value = -1;
 
 			// call command
-			mCommands[sender].Execute(args);
+			mCommands["set"].Execute(args);
+
+			// set undo/redo
+			mUndoBuffer.Add(new Tuple<ICommand, EventArgs>(mCommands["set"], args));
+			mRedo = null;
 		}
 
 		private void btnInc_Click(object sender, EventArgs e)
 		{
 			// variables
-			IncDecEventArgs args = new IncDecEventArgs();
+			ClockEventArgs args = new ClockEventArgs();
 
 			// set arguments
-			args.Hour = this.chkHours.Checked;
-			args.Minute = this.chkMinutes.Checked;
-			args.Second = this.chkSeconds.Checked;
+			args.Hour = this.chkHours.Checked ? 1 : 0;
+			args.Minute = this.chkMinutes.Checked ? 1 : 0;
+			args.Second = this.chkSeconds.Checked ? 1 : 0;
 
 			// call command
-			mCommands[sender].Execute(args);
+			mCommands["incdec"].Execute(args);
+
+			// set undo/redo
+			mUndoBuffer.Add(new Tuple<ICommand, EventArgs>(mCommands["incdec"], args));
+			mRedo = null;
 		}
 
 		private void btnDec_Click(object sender, EventArgs e)
 		{
 			// variables
-			IncDecEventArgs args = new IncDecEventArgs();
+			ClockEventArgs args = new ClockEventArgs();
 
 			// set arguments
-			args.Hour = this.chkHours.Checked;
-			args.Minute = this.chkMinutes.Checked;
-			args.Second = this.chkSeconds.Checked;
+			args.Hour = this.chkHours.Checked ? -1 : 0;
+			args.Minute = this.chkMinutes.Checked ? -1 : 0;
+			args.Second = this.chkSeconds.Checked ? -1 : 0;
 
 			// call command
-			mCommands[sender].Execute(args);
+			mCommands["incdec"].Execute(args);
+
+			// set undo/redo
+			mUndoBuffer.Add(new Tuple<ICommand, EventArgs>(mCommands["incdec"], args));
+			mRedo = null;
 		}
 
 		private void btnUndo_Click(object sender, EventArgs e)
 		{
-			Clock.Instance.Undo();
+			if (mUndoBuffer.Count <= 0) {
+				return;
+			}
+
+			// variables
+			Tuple<ICommand, EventArgs> undo = mUndoBuffer.Last();
+			mUndoBuffer.Remove(undo);
+
+			// exucute
+			undo.Item1.Execute(undo.Item2);
+
+			// set redo
+			mRedo = undo;
 		}
 
 		private void btnRedo_Click(object sender, EventArgs e)
 		{
-			Clock.Instance.Redo();
+			if (mRedo == null) {
+				return;
+			}
+
+			mRedo.Item1.Execute(mRedo.Item2);
+			mUndoBuffer.Add(mRedo);
+			mRedo = null;
 		}
 
 		private void btnShow_Click(object sender, EventArgs e)
@@ -120,13 +150,13 @@ namespace SWP1
 			args.Y = (int)this.numPosY.Value;
 
 			// call command
-			mCommands[sender].Execute(args);
+			mCommands["show"].Execute(args);
 		}
 
 		private void btnShowAll_Click(object sender, EventArgs e)
 		{
 			// variables
-			ICommand show = mCommands[this.btnShow];
+			ICommand show = mCommands["show"];
 			int current = 0;
 
 			// show all
@@ -147,6 +177,13 @@ namespace SWP1
 			}
 		}
 
-		private Dictionary<object, ICommand> mCommands = new Dictionary<object, ICommand>();
+		private void btnHelp_Click(object sender, EventArgs e)
+		{
+			MessageBox.Show("This program is pretty much straight forward.", "Help");
+		}
+
+		private Dictionary<string, ICommand> mCommands = new Dictionary<string, ICommand>();
+		private List<Tuple<ICommand, EventArgs>> mUndoBuffer = new List<Tuple<ICommand, EventArgs>>();
+		private Tuple<ICommand, EventArgs> mRedo = new Tuple<ICommand, EventArgs>(null, null);
 	}
 }

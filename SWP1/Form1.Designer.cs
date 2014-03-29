@@ -56,6 +56,7 @@
 			this.label4 = new System.Windows.Forms.Label();
 			this.cmbType = new System.Windows.Forms.ComboBox();
 			this.btnShow = new System.Windows.Forms.Button();
+			this.btnHelp = new System.Windows.Forms.Button();
 			this.grpSet.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numSetSeconds)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numSetMinutes)).BeginInit();
@@ -207,15 +208,26 @@
 			// 
 			// grpUndoRedo
 			// 
+			this.grpUndoRedo.Controls.Add(this.btnHelp);
 			this.grpUndoRedo.Controls.Add(this.btnShowAll);
 			this.grpUndoRedo.Controls.Add(this.btnRedo);
 			this.grpUndoRedo.Controls.Add(this.btnUndo);
 			this.grpUndoRedo.Location = new System.Drawing.Point(244, 169);
 			this.grpUndoRedo.Name = "grpUndoRedo";
-			this.grpUndoRedo.Size = new System.Drawing.Size(307, 62);
+			this.grpUndoRedo.Size = new System.Drawing.Size(346, 62);
 			this.grpUndoRedo.TabIndex = 2;
 			this.grpUndoRedo.TabStop = false;
-			this.grpUndoRedo.Text = "Undo / Redo / Makro";
+			this.grpUndoRedo.Text = "Various";
+			// 
+			// btnShowAll
+			// 
+			this.btnShowAll.Location = new System.Drawing.Point(171, 19);
+			this.btnShowAll.Name = "btnShowAll";
+			this.btnShowAll.Size = new System.Drawing.Size(75, 23);
+			this.btnShowAll.TabIndex = 2;
+			this.btnShowAll.Text = "Show All";
+			this.btnShowAll.UseVisualStyleBackColor = true;
+			this.btnShowAll.Click += new System.EventHandler(this.btnShowAll_Click);
 			// 
 			// btnShowAll
 			// 
@@ -260,7 +272,7 @@
 			this.grpShow.Controls.Add(this.btnShow);
 			this.grpShow.Location = new System.Drawing.Point(244, 13);
 			this.grpShow.Name = "grpShow";
-			this.grpShow.Size = new System.Drawing.Size(307, 150);
+			this.grpShow.Size = new System.Drawing.Size(346, 150);
 			this.grpShow.TabIndex = 3;
 			this.grpShow.TabStop = false;
 			this.grpShow.Text = "Show";
@@ -268,7 +280,7 @@
 			// label7
 			// 
 			this.label7.AutoSize = true;
-			this.label7.Location = new System.Drawing.Point(218, 105);
+			this.label7.Location = new System.Drawing.Point(276, 104);
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(54, 13);
 			this.label7.TabIndex = 8;
@@ -277,7 +289,7 @@
 			// label6
 			// 
 			this.label6.AutoSize = true;
-			this.label6.Location = new System.Drawing.Point(218, 78);
+			this.label6.Location = new System.Drawing.Point(276, 78);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(54, 13);
 			this.label6.TabIndex = 7;
@@ -285,7 +297,7 @@
 			// 
 			// numPosY
 			// 
-			this.numPosY.Location = new System.Drawing.Point(88, 102);
+			this.numPosY.Location = new System.Drawing.Point(149, 102);
 			this.numPosY.Minimum = new decimal(new int[] {
             1,
             0,
@@ -302,7 +314,7 @@
 			// 
 			// numPosX
 			// 
-			this.numPosX.Location = new System.Drawing.Point(88, 76);
+			this.numPosX.Location = new System.Drawing.Point(149, 76);
 			this.numPosX.Minimum = new decimal(new int[] {
             1,
             0,
@@ -320,7 +332,7 @@
 			// label5
 			// 
 			this.label5.AutoSize = true;
-			this.label5.Location = new System.Drawing.Point(218, 51);
+			this.label5.Location = new System.Drawing.Point(276, 51);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(53, 13);
 			this.label5.TabIndex = 4;
@@ -331,13 +343,13 @@
 			this.cmbTimezone.FormattingEnabled = true;
 			this.cmbTimezone.Location = new System.Drawing.Point(7, 49);
 			this.cmbTimezone.Name = "cmbTimezone";
-			this.cmbTimezone.Size = new System.Drawing.Size(201, 21);
+			this.cmbTimezone.Size = new System.Drawing.Size(263, 21);
 			this.cmbTimezone.TabIndex = 3;
 			// 
 			// label4
 			// 
 			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(215, 25);
+			this.label4.Location = new System.Drawing.Point(276, 25);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(31, 13);
 			this.label4.TabIndex = 2;
@@ -353,7 +365,7 @@
             "Analog"});
 			this.cmbType.Location = new System.Drawing.Point(88, 22);
 			this.cmbType.Name = "cmbType";
-			this.cmbType.Size = new System.Drawing.Size(121, 21);
+			this.cmbType.Size = new System.Drawing.Size(182, 21);
 			this.cmbType.TabIndex = 1;
 			// 
 			// btnShow
@@ -366,16 +378,27 @@
 			this.btnShow.UseVisualStyleBackColor = true;
 			this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
 			// 
+			// btnHelp
+			// 
+			this.btnHelp.Location = new System.Drawing.Point(252, 19);
+			this.btnHelp.Name = "btnHelp";
+			this.btnHelp.Size = new System.Drawing.Size(75, 23);
+			this.btnHelp.TabIndex = 3;
+			this.btnHelp.Text = "Help";
+			this.btnHelp.UseVisualStyleBackColor = true;
+			this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(574, 260);
+			this.ClientSize = new System.Drawing.Size(602, 260);
 			this.Controls.Add(this.grpShow);
 			this.Controls.Add(this.grpUndoRedo);
 			this.Controls.Add(this.grpIncDec);
 			this.Controls.Add(this.grpSet);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.HelpButton = true;
 			this.MaximizeBox = false;
 			this.Name = "Form1";
 			this.Text = "SWP1";
@@ -426,6 +449,7 @@
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.NumericUpDown numPosY;
 		private System.Windows.Forms.Button btnShowAll;
+		private System.Windows.Forms.Button btnHelp;
 
 	}
 }

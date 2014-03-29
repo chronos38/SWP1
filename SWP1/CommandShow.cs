@@ -38,9 +38,5 @@ namespace SWP1
 			// run window
 			form.Show();
 		}
-
-		public virtual void Undo()
-		{
-		}
 	}
 }

@@ -6,9 +6,16 @@ using System.Threading.Tasks;
 
 namespace SWP1
 {
-	class SetEventArgs : EventArgs
+	class ClockEventArgs : EventArgs
 	{
-		public SetEventArgs() { }
+		public ClockEventArgs() { }
+
+		public ClockEventArgs(int h, int m, int s)
+		{
+			Hour = h;
+			Minute = m;
+			Second = s;
+		}
 
 		public int Hour { get; set; }
 		public int Minute { get; set; }

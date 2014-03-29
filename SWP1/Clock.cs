@@ -54,31 +54,17 @@ namespace SWP1
 
 		public void Set(int h, int m, int s)
 		{
-			mUndoBuffer.Add(new Tuple<int, int, int>(Hour, Minute, Second));
-			mRedoBuffer.Clear();
 			if (h != -1) { Hour = h; }
 			if (m != -1) { Minute = m; }
 			if (s != -1) { Second = s; }
 			Notify();
 		}
 
-		public void Increment(bool h, bool m, bool s)
+		public void IncDec(int h, int m, int s)
 		{
-			mUndoBuffer.Add(new Tuple<int, int, int>(Hour, Minute, Second));
-			mRedoBuffer.Clear();
-			if (h) { Hour += 1; }
-			if (m) { Minute += 1; }
-			if (s) { Second += 1; }
-			Notify();
-		}
-
-		public void Decrement(bool h, bool m, bool s)
-		{
-			mUndoBuffer.Add(new Tuple<int, int, int>(Hour, Minute, Second));
-			mRedoBuffer.Clear();
-			if (h) { Hour -= 1; }
-			if (m) { Minute -= 1; }
-			if (s) { Second -= 1; }
+			if (h > 0) { Hour += 1; } else if (h < 0) { Hour -= 1; }
+			if (m > 0) { Minute += 1; } else if (m < 0) { Minute -= 1; }
+			if (s > 0) { Second += 1; } else if (s < 0) { Second += 1; }
 			Notify();
 		}
 
@@ -105,50 +91,6 @@ namespace SWP1
 			} catch {
 				// why? because I can!
 			}
-		}
-
-		public void Undo()
-		{
-			if (mUndoBuffer.Count <= 0) {
-				return;
-			}
-			// variables
-			Tuple<int, int, int> undo = mUndoBuffer.Last();
-
-			// set time
-			Hour = undo.Item1;
-			Minute = undo.Item2;
-			Second = undo.Item3;
-
-			// push into redo
-			mRedoBuffer.Add(undo);
-
-			// remove last
-			mUndoBuffer.RemoveAt(mUndoBuffer.Count - 1);
-
-			Notify();
-		}
-
-		public void Redo()
-		{
-			if (mRedoBuffer.Count <= 0) {
-				return;
-			}
-			// variables
-			Tuple<int, int, int> redo = mRedoBuffer.Last();
-
-			// set time
-			Hour = redo.Item1;
-			Minute = redo.Item2;
-			Second = redo.Item3;
-
-			// push into redo
-			mUndoBuffer.Add(redo);
-
-			// remove last
-			mRedoBuffer.RemoveAt(mUndoBuffer.Count - 1);
-
-			Notify();
 		}
 
 		private void ComputeTime()
@@ -209,7 +151,5 @@ namespace SWP1
 		private static readonly Clock sInstance = new Clock();
 		private List<IObserver> mObserver = new List<IObserver>();
 		private Timer mTimer = new Timer();
-		private List<Tuple<int, int, int>> mUndoBuffer = new List<Tuple<int,int,int>>();
-		private List<Tuple<int, int, int>> mRedoBuffer = new List<Tuple<int,int,int>>();
 	}
 }

@@ -9,6 +9,5 @@ namespace SWP1
 	public interface ICommand
 	{
 		void Execute(EventArgs args);
-		void Undo();
 	}
 }

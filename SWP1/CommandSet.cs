@@ -15,12 +15,18 @@ namespace SWP1
 		{
 			// variables
 			Clock clock = Clock.Instance;
-			SetEventArgs args = (SetEventArgs)a;
-			clock.Set(args.Hour, args.Minute, args.Second);
-		}
+			int h = clock.Hour;
+			int m = clock.Minute;
+			int s = clock.Second;
 
-		public virtual void Undo()
-		{
+			// set clock
+			ClockEventArgs args = (ClockEventArgs)a;
+			clock.Set(args.Hour, args.Minute, args.Second);
+
+			// set args for undo/redo
+			args.Hour = h;
+			args.Minute = m;
+			args.Second = s;
 		}
 	}
 }
