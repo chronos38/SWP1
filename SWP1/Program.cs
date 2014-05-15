@@ -14,6 +14,7 @@ namespace SWP1
 		[MTAThread]
 		static void Main()
 		{
+			Clock.Instance.Start();
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new Form1());

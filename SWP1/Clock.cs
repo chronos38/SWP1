@@ -27,16 +27,7 @@ namespace SWP1
 			Hour = utc.Hour;
 			HourOffset = MinuteOffset = SecondOffset = 0;
 
-			// start timer
-			mTimer.Interval = 1000;
-			mTimer.Elapsed += new ElapsedEventHandler((object sender, ElapsedEventArgs args) => {
-				// increment seconds
-				Second += 1;
-				// notify all observer
-				Notify();
-			});
 
-			mTimer.Start();
 		}
 
 		~Clock()
@@ -52,19 +43,40 @@ namespace SWP1
 			}
 		}
 
+		public void Start()
+		{
+			// start timer
+			mTimer.Interval = 1000;
+			mTimer.Elapsed += new ElapsedEventHandler((object sender, ElapsedEventArgs args) => {
+				// increment seconds
+				Second += 1;
+				// notify all observer
+				Notify();
+			});
+			mTimer.Start();
+		}
+
+		public void Stop()
+		{
+			mTimer.Stop();
+		}
+
 		public void Set(int h, int m, int s)
 		{
-			if (h != -1) { Hour = h; }
-			if (m != -1) { Minute = m; }
-			if (s != -1) { Second = s; }
+			if (!(h < 0)) { Hour = h; }
+			if (!(m < 0)) { Minute = m; }
+			if (!(s < 0)) { Second = s; }
 			Notify();
 		}
 
 		public void IncDec(int h, int m, int s)
 		{
-			if (h > 0) { Hour += 1; } else if (h < 0) { Hour -= 1; }
-			if (m > 0) { Minute += 1; } else if (m < 0) { Minute -= 1; }
-			if (s > 0) { Second += 1; } else if (s < 0) { Second += 1; }
+			if (h > 0) { Hour += 1; } 
+			else if (h < 0) { Hour -= 1; }
+			if (m > 0) { Minute += 1; } 
+			else if (m < 0) { Minute -= 1; }
+			if (s > 0) { Second += 1; } 
+			else if (s < 0) { Second -= 1; }
 			Notify();
 		}
 
@@ -106,10 +118,9 @@ namespace SWP1
 			int h = (Hour);
 
 			if (h < 0) {
-				Hour = 23 + h;
-				Minute = Second = 59;
+				Hour = 24 + h;
 			} else if (h > 23) {
-				Hour = h - 23;
+				Hour = h - 24;
 				Minute = Second = 0;
 			} else {
 				Hour = h;
@@ -123,10 +134,9 @@ namespace SWP1
 			if (m < 0) {
 				Hour -= 1;
 				Minute = 60 + m;
-				Second = 59;
 			} else if (m > 59) {
 				Hour += 1;
-				Minute = 60 - m;
+				Minute = m - 60;
 				Second = 0;
 			} else {
 				Minute = m;
