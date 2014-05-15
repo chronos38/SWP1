@@ -58,6 +58,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="ClockTest.cs" />
+    <Compile Include="Mock\MockOberserver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
