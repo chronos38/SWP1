@@ -39,6 +39,9 @@
     <Reference Include="mscorlib.4.0.0.0.Fakes">
       <HintPath>FakesAssemblies\mscorlib.4.0.0.0.Fakes.dll</HintPath>
     </Reference>
+    <Reference Include="SWP1.Fakes">
+      <HintPath>FakesAssemblies\SWP1.Fakes.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.4.0.0.0.Fakes">
       <HintPath>FakesAssemblies\System.4.0.0.0.Fakes.dll</HintPath>
@@ -57,9 +60,11 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="ClockEventArgsTest.cs" />
     <Compile Include="ClockTest.cs" />
     <Compile Include="Mock\MockOberserver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShowEventArgsTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SWP1\SWP1.csproj">
@@ -72,6 +77,9 @@
   </ItemGroup>
   <ItemGroup>
     <Fakes Include="Fakes\mscorlib.fakes" />
+  </ItemGroup>
+  <ItemGroup>
+    <Fakes Include="Fakes\SWP1.fakes" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

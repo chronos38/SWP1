@@ -1,0 +1,21 @@
+D:\Zeugs\Dokumente\Visual Studio 2013\Projects\SWP1\Tests\Fakes\SWP1.fakes : warning : Cannot generate stub for SWP1.Clock: type is not visible to exported or assembly(SWP1.Fakes).
+D:\Zeugs\Dokumente\Visual Studio 2013\Projects\SWP1\Tests\Fakes\SWP1.fakes : warning : Cannot generate stub for SWP1.CommandIncDec: type is not visible to exported or assembly(SWP1.Fakes).
+D:\Zeugs\Dokumente\Visual Studio 2013\Projects\SWP1\Tests\Fakes\SWP1.fakes : warning : Cannot generate stub for SWP1.CommandSet: type is not visible to exported or assembly(SWP1.Fakes).
+D:\Zeugs\Dokumente\Visual Studio 2013\Projects\SWP1\Tests\Fakes\SWP1.fakes : warning : Cannot generate stub for SWP1.CommandShow: type is not visible to exported or assembly(SWP1.Fakes).
+D:\Zeugs\Dokumente\Visual Studio 2013\Projects\SWP1\Tests\Fakes\SWP1.fakes : warning : Cannot generate stub for SWP1.Program: type is sealed.
+D:\Zeugs\Dokumente\Visual Studio 2013\Projects\SWP1\Tests\Fakes\SWP1.fakes : warning : Cannot generate stub for SWP1.ClockEventArgs: type is not visible to exported or assembly(SWP1.Fakes).
+D:\Zeugs\Dokumente\Visual Studio 2013\Projects\SWP1\Tests\Fakes\SWP1.fakes : warning : Cannot generate stub for SWP1.ShowEventArgs: type is not visible to exported or assembly(SWP1.Fakes).
+D:\Zeugs\Dokumente\Visual Studio 2013\Projects\SWP1\Tests\Fakes\SWP1.fakes : warning : Cannot generate stub for SWP1.Properties.Resources: type is not visible to exported or assembly(SWP1.Fakes).
+D:\Zeugs\Dokumente\Visual Studio 2013\Projects\SWP1\Tests\Fakes\SWP1.fakes : warning : Cannot generate stub for SWP1.Properties.Settings: type is sealed.
+D:\Zeugs\Dokumente\Visual Studio 2013\Projects\SWP1\Tests\Fakes\SWP1.fakes : warning : Cannot generate shim for SWP1.IObserver: type is an interface.
+D:\Zeugs\Dokumente\Visual Studio 2013\Projects\SWP1\Tests\Fakes\SWP1.fakes : warning : Cannot generate shim for SWP1.ISubject: type is an interface.
+D:\Zeugs\Dokumente\Visual Studio 2013\Projects\SWP1\Tests\Fakes\SWP1.fakes : warning : Cannot generate shim for SWP1.Clock: type is not visible to exported or assembly(SWP1.Fakes).
+D:\Zeugs\Dokumente\Visual Studio 2013\Projects\SWP1\Tests\Fakes\SWP1.fakes : warning : Cannot generate shim for SWP1.ICommand: type is an interface.
+D:\Zeugs\Dokumente\Visual Studio 2013\Projects\SWP1\Tests\Fakes\SWP1.fakes : warning : Cannot generate shim for SWP1.CommandIncDec: type is not visible to exported or assembly(SWP1.Fakes).
+D:\Zeugs\Dokumente\Visual Studio 2013\Projects\SWP1\Tests\Fakes\SWP1.fakes : warning : Cannot generate shim for SWP1.CommandSet: type is not visible to exported or assembly(SWP1.Fakes).
+D:\Zeugs\Dokumente\Visual Studio 2013\Projects\SWP1\Tests\Fakes\SWP1.fakes : warning : Cannot generate shim for SWP1.CommandShow: type is not visible to exported or assembly(SWP1.Fakes).
+D:\Zeugs\Dokumente\Visual Studio 2013\Projects\SWP1\Tests\Fakes\SWP1.fakes : warning : Cannot generate shim for SWP1.Program: type is not visible to exported or assembly(SWP1.Fakes).
+D:\Zeugs\Dokumente\Visual Studio 2013\Projects\SWP1\Tests\Fakes\SWP1.fakes : warning : Cannot generate shim for SWP1.ClockEventArgs: type is not visible to exported or assembly(SWP1.Fakes).
+D:\Zeugs\Dokumente\Visual Studio 2013\Projects\SWP1\Tests\Fakes\SWP1.fakes : warning : Cannot generate shim for SWP1.ShowEventArgs: type is not visible to exported or assembly(SWP1.Fakes).
+D:\Zeugs\Dokumente\Visual Studio 2013\Projects\SWP1\Tests\Fakes\SWP1.fakes : warning : Cannot generate shim for SWP1.Properties.Resources: type is not visible to exported or assembly(SWP1.Fakes).
+D:\Zeugs\Dokumente\Visual Studio 2013\Projects\SWP1\Tests\Fakes\SWP1.fakes : warning : Cannot generate shim for SWP1.Properties.Settings: type is not visible to exported or assembly(SWP1.Fakes).
