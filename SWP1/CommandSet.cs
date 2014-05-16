@@ -9,19 +9,22 @@ namespace SWP1
 	{
 		public CommandSet()
 		{
+			Clock = SWP1.Clock.Instance;
 		}
+
+		public Clock Clock { get; set; }
 
 		public virtual void Execute(EventArgs a) 
 		{
 			// variables
-			Clock clock = Clock.Instance;
-			int h = clock.Hour;
-			int m = clock.Minute;
-			int s = clock.Second;
+			//Clock clock = Clock.Instance;
+			int h = Clock.Hour;
+			int m = Clock.Minute;
+			int s = Clock.Second;
 
 			// set clock
 			ClockEventArgs args = (ClockEventArgs)a;
-			clock.Set(args.Hour, args.Minute, args.Second);
+			Clock.Set(args.Hour, args.Minute, args.Second);
 
 			// set args for undo/redo
 			args.Hour = h;

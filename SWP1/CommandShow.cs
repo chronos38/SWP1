@@ -10,7 +10,10 @@ namespace SWP1
 	{
 		public CommandShow()
 		{
+			Clock = SWP1.Clock.Instance;
 		}
+
+		public Clock Clock { get; set; }
 
 		public virtual void Execute(EventArgs a)
 		{
@@ -29,11 +32,11 @@ namespace SWP1
 
 			// set closing event
 			form.FormClosing += new FormClosingEventHandler((object sender, FormClosingEventArgs arg) => {
-				Clock.Instance.Detach((IObserver)sender);
+				Clock.Detach((IObserver)sender);
 			});
 
 			// attach window
-			Clock.Instance.Attach((IObserver)form);
+			Clock.Attach((IObserver)form);
 
 			// run window
 			form.Show();

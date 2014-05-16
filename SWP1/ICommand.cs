@@ -8,6 +8,7 @@ namespace SWP1
 {
 	public interface ICommand
 	{
+		Clock Clock { get; set; }
 		void Execute(EventArgs args);
 	}
 }
