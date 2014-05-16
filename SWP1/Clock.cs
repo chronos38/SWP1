@@ -24,7 +24,7 @@ namespace SWP1
 			// set initial values
 			Second = utc.Second;
 			Minute = utc.Minute;
-			Hour = utc.Hour;
+			Hour = utc.Hour + 1;
 			HourOffset = MinuteOffset = SecondOffset = 0;
 
 

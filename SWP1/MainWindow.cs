@@ -169,8 +169,8 @@ namespace SWP1
 
 				args.Type = (string)this.cmbType.SelectedItem;
 				args.Timezone = item;
-				args.X = -1;
-				args.Y = -1;
+				args.X = -1; // position is system defined
+				args.Y = -1; // position is system defined
 				current = item.BaseUtcOffset.Hours;
 				
 				show.Execute(args);
