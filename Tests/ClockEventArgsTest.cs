@@ -22,7 +22,7 @@ namespace Tests
 		}
 
 		[TestMethod]
-		public void ClockEventArgsAttributesAreSetable()
+		public void ClockEventArgsAttributesAreMaxSetable()
 		{
 			ClockEventArgs args = new ClockEventArgs();
 			args.Hour = int.MaxValue;
@@ -31,6 +31,18 @@ namespace Tests
 			Assert.AreEqual(int.MaxValue, args.Minute);
 			args.Second = int.MaxValue;
 			Assert.AreEqual(int.MaxValue, args.Second);
+		}
+
+		[TestMethod]
+		public void ClockEventArgsAttributesAreMinSetable()
+		{
+			ClockEventArgs args = new ClockEventArgs();
+			args.Hour = int.MinValue;
+			Assert.AreEqual(int.MinValue, args.Hour);
+			args.Minute = int.MinValue;
+			Assert.AreEqual(int.MinValue, args.Minute);
+			args.Second = int.MinValue;
+			Assert.AreEqual(int.MinValue, args.Second);
 		}
 	}
 }
