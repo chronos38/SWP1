@@ -62,9 +62,11 @@
   <ItemGroup>
     <Compile Include="ClockEventArgsTest.cs" />
     <Compile Include="ClockTest.cs" />
+    <Compile Include="Mock\MockClock.cs" />
     <Compile Include="Mock\MockOberserver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShowEventArgsTest.cs" />
+    <Compile Include="MockClockTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SWP1\SWP1.csproj">

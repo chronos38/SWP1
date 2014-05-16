@@ -11,7 +11,7 @@ namespace SWP1
 		{
 		}
 
-		public virtual void Execute(EventArgs a)
+		public virtual void Execute(EventArgs a) 
 		{
 			// variables
 			Clock clock = Clock.Instance;

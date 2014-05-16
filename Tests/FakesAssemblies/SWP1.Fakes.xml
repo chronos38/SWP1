@@ -214,6 +214,183 @@
         <member name="P:SWP1.Fakes.ShimAnalogForm.AllInstances.YSetInt32">
             <summary>Sets the shim of AnalogForm.set_Y(Int32 value)</summary>
         </member>
+        <member name="T:SWP1.Fakes.ShimClock">
+            <summary>Shim type of SWP1.Clock</summary>
+        </member>
+        <member name="M:SWP1.Fakes.ShimClock.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:SWP1.Fakes.ShimClock.#ctor(SWP1.Clock)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:SWP1.Fakes.ShimClock.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:SWP1.Fakes.ShimClock.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:SWP1.Fakes.ShimClock.Bind(SWP1.ISubject)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.AttachIObserver">
+            <summary>Sets the shim of Clock.Attach(IObserver observer)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.ComputeHours">
+            <summary>Sets the shim of Clock.ComputeHours()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.ComputeMinutes">
+            <summary>Sets the shim of Clock.ComputeMinutes()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.ComputeSeconds">
+            <summary>Sets the shim of Clock.ComputeSeconds()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.ComputeTime">
+            <summary>Sets the shim of Clock.ComputeTime()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.Constructor">
+            <summary>Sets the shim of Clock.Clock()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.DetachIObserver">
+            <summary>Sets the shim of Clock.Detach(IObserver observer)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.HourGet">
+            <summary>Sets the shim of Clock.get_Hour()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.HourOffsetGet">
+            <summary>Sets the shim of Clock.get_HourOffset()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.HourOffsetSetInt32">
+            <summary>Sets the shim of Clock.set_HourOffset(Int32 value)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.HourSetInt32">
+            <summary>Sets the shim of Clock.set_Hour(Int32 value)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.IncDecInt32Int32Int32">
+            <summary>Sets the shim of Clock.IncDec(Int32 h, Int32 m, Int32 s)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.InstanceGet">
+            <summary>Sets the shim of Clock.get_Instance()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.MinuteGet">
+            <summary>Sets the shim of Clock.get_Minute()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.MinuteOffsetGet">
+            <summary>Sets the shim of Clock.get_MinuteOffset()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.MinuteOffsetSetInt32">
+            <summary>Sets the shim of Clock.set_MinuteOffset(Int32 value)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.MinuteSetInt32">
+            <summary>Sets the shim of Clock.set_Minute(Int32 value)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.Notify">
+            <summary>Sets the shim of Clock.Notify()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.SecondGet">
+            <summary>Sets the shim of Clock.get_Second()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.SecondOffsetGet">
+            <summary>Sets the shim of Clock.get_SecondOffset()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.SecondOffsetSetInt32">
+            <summary>Sets the shim of Clock.set_SecondOffset(Int32 value)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.SecondSetInt32">
+            <summary>Sets the shim of Clock.set_Second(Int32 value)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.SetInt32Int32Int32">
+            <summary>Sets the shim of Clock.Set(Int32 h, Int32 m, Int32 s)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.Start">
+            <summary>Sets the shim of Clock.Start()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.StaticConstructor">
+            <summary>Sets the shim of Clock.Clock()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.Stop">
+            <summary>Sets the shim of Clock.Stop()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock._Startb__0ObjectElapsedEventArgs">
+            <summary>Sets the shim of Clock.&lt;Start&gt;b__0(Object sender, ElapsedEventArgs args)</summary>
+        </member>
+        <member name="T:SWP1.Fakes.ShimClock.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.AllInstances.AttachIObserver">
+            <summary>Sets the shim of Clock.Attach(IObserver observer)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.AllInstances.ComputeHours">
+            <summary>Sets the shim of Clock.ComputeHours()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.AllInstances.ComputeMinutes">
+            <summary>Sets the shim of Clock.ComputeMinutes()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.AllInstances.ComputeSeconds">
+            <summary>Sets the shim of Clock.ComputeSeconds()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.AllInstances.ComputeTime">
+            <summary>Sets the shim of Clock.ComputeTime()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.AllInstances.DetachIObserver">
+            <summary>Sets the shim of Clock.Detach(IObserver observer)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.AllInstances.HourGet">
+            <summary>Sets the shim of Clock.get_Hour()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.AllInstances.HourOffsetGet">
+            <summary>Sets the shim of Clock.get_HourOffset()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.AllInstances.HourOffsetSetInt32">
+            <summary>Sets the shim of Clock.set_HourOffset(Int32 value)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.AllInstances.HourSetInt32">
+            <summary>Sets the shim of Clock.set_Hour(Int32 value)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.AllInstances.IncDecInt32Int32Int32">
+            <summary>Sets the shim of Clock.IncDec(Int32 h, Int32 m, Int32 s)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.AllInstances.MinuteGet">
+            <summary>Sets the shim of Clock.get_Minute()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.AllInstances.MinuteOffsetGet">
+            <summary>Sets the shim of Clock.get_MinuteOffset()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.AllInstances.MinuteOffsetSetInt32">
+            <summary>Sets the shim of Clock.set_MinuteOffset(Int32 value)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.AllInstances.MinuteSetInt32">
+            <summary>Sets the shim of Clock.set_Minute(Int32 value)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.AllInstances.Notify">
+            <summary>Sets the shim of Clock.Notify()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.AllInstances.SecondGet">
+            <summary>Sets the shim of Clock.get_Second()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.AllInstances.SecondOffsetGet">
+            <summary>Sets the shim of Clock.get_SecondOffset()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.AllInstances.SecondOffsetSetInt32">
+            <summary>Sets the shim of Clock.set_SecondOffset(Int32 value)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.AllInstances.SecondSetInt32">
+            <summary>Sets the shim of Clock.set_Second(Int32 value)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.AllInstances.SetInt32Int32Int32">
+            <summary>Sets the shim of Clock.Set(Int32 h, Int32 m, Int32 s)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.AllInstances.Start">
+            <summary>Sets the shim of Clock.Start()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.AllInstances.Stop">
+            <summary>Sets the shim of Clock.Stop()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimClock.AllInstances._Startb__0ObjectElapsedEventArgs">
+            <summary>Sets the shim of Clock.&lt;Start&gt;b__0(Object sender, ElapsedEventArgs args)</summary>
+        </member>
         <member name="T:SWP1.Fakes.ShimDigitalForm">
             <summary>Shim type of SWP1.DigitalForm</summary>
         </member>
@@ -382,116 +559,116 @@
         <member name="P:SWP1.Fakes.ShimDigitalForm.AllInstances.YSetInt32">
             <summary>Sets the shim of DigitalForm.set_Y(Int32 value)</summary>
         </member>
-        <member name="T:SWP1.Fakes.ShimForm1">
-            <summary>Shim type of SWP1.Form1</summary>
+        <member name="T:SWP1.Fakes.ShimMainWindow">
+            <summary>Shim type of SWP1.MainWindow</summary>
         </member>
-        <member name="M:SWP1.Fakes.ShimForm1.#ctor">
+        <member name="M:SWP1.Fakes.ShimMainWindow.#ctor">
             <summary>Initializes a new shim instance</summary>
         </member>
-        <member name="M:SWP1.Fakes.ShimForm1.#ctor(SWP1.Form1)">
+        <member name="M:SWP1.Fakes.ShimMainWindow.#ctor(SWP1.MainWindow)">
             <summary>Initializes a new shim for the given instance</summary>
         </member>
-        <member name="M:SWP1.Fakes.ShimForm1.BehaveAsCurrent">
+        <member name="M:SWP1.Fakes.ShimMainWindow.BehaveAsCurrent">
             <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
         </member>
-        <member name="M:SWP1.Fakes.ShimForm1.BehaveAsNotImplemented">
+        <member name="M:SWP1.Fakes.ShimMainWindow.BehaveAsNotImplemented">
             <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
         </member>
-        <member name="M:SWP1.Fakes.ShimForm1.Bind(System.ComponentModel.IComponent)">
+        <member name="M:SWP1.Fakes.ShimMainWindow.Bind(System.ComponentModel.IComponent)">
             <summary>Binds the members of the interface to the shim.</summary>
         </member>
-        <member name="M:SWP1.Fakes.ShimForm1.Bind(System.ComponentModel.ISynchronizeInvoke)">
+        <member name="M:SWP1.Fakes.ShimMainWindow.Bind(System.ComponentModel.ISynchronizeInvoke)">
             <summary>Binds the members of the interface to the shim.</summary>
         </member>
-        <member name="M:SWP1.Fakes.ShimForm1.Bind(System.Windows.Forms.IBindableComponent)">
+        <member name="M:SWP1.Fakes.ShimMainWindow.Bind(System.Windows.Forms.IBindableComponent)">
             <summary>Binds the members of the interface to the shim.</summary>
         </member>
-        <member name="M:SWP1.Fakes.ShimForm1.Bind(System.Windows.Forms.IContainerControl)">
+        <member name="M:SWP1.Fakes.ShimMainWindow.Bind(System.Windows.Forms.IContainerControl)">
             <summary>Binds the members of the interface to the shim.</summary>
         </member>
-        <member name="M:SWP1.Fakes.ShimForm1.Bind(System.Windows.Forms.IDropTarget)">
+        <member name="M:SWP1.Fakes.ShimMainWindow.Bind(System.Windows.Forms.IDropTarget)">
             <summary>Binds the members of the interface to the shim.</summary>
         </member>
-        <member name="M:SWP1.Fakes.ShimForm1.Bind(System.Windows.Forms.IWin32Window)">
+        <member name="M:SWP1.Fakes.ShimMainWindow.Bind(System.Windows.Forms.IWin32Window)">
             <summary>Binds the members of the interface to the shim.</summary>
         </member>
-        <member name="M:SWP1.Fakes.ShimForm1.Bind(System.IDisposable)">
+        <member name="M:SWP1.Fakes.ShimMainWindow.Bind(System.IDisposable)">
             <summary>Binds the members of the interface to the shim.</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimForm1.Behavior">
+        <member name="P:SWP1.Fakes.ShimMainWindow.Behavior">
             <summary>Assigns the behavior for all methods of the shimmed type</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimForm1.Constructor">
-            <summary>Sets the shim of Form1.Form1()</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.Constructor">
+            <summary>Sets the shim of MainWindow.MainWindow()</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimForm1.DisposeBoolean">
-            <summary>Sets the shim of Form1.Dispose(Boolean disposing)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.DisposeBoolean">
+            <summary>Sets the shim of MainWindow.Dispose(Boolean disposing)</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimForm1.Form1_LoadObjectEventArgs">
-            <summary>Sets the shim of Form1.Form1_Load(Object sender, EventArgs e)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.Form1_LoadObjectEventArgs">
+            <summary>Sets the shim of MainWindow.Form1_Load(Object sender, EventArgs e)</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimForm1.InitializeComponent">
-            <summary>Sets the shim of Form1.InitializeComponent()</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.InitializeComponent">
+            <summary>Sets the shim of MainWindow.InitializeComponent()</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimForm1.btnDec_ClickObjectEventArgs">
-            <summary>Sets the shim of Form1.btnDec_Click(Object sender, EventArgs e)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.btnDec_ClickObjectEventArgs">
+            <summary>Sets the shim of MainWindow.btnDec_Click(Object sender, EventArgs e)</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimForm1.btnHelp_ClickObjectEventArgs">
-            <summary>Sets the shim of Form1.btnHelp_Click(Object sender, EventArgs e)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.btnHelp_ClickObjectEventArgs">
+            <summary>Sets the shim of MainWindow.btnHelp_Click(Object sender, EventArgs e)</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimForm1.btnInc_ClickObjectEventArgs">
-            <summary>Sets the shim of Form1.btnInc_Click(Object sender, EventArgs e)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.btnInc_ClickObjectEventArgs">
+            <summary>Sets the shim of MainWindow.btnInc_Click(Object sender, EventArgs e)</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimForm1.btnRedo_ClickObjectEventArgs">
-            <summary>Sets the shim of Form1.btnRedo_Click(Object sender, EventArgs e)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.btnRedo_ClickObjectEventArgs">
+            <summary>Sets the shim of MainWindow.btnRedo_Click(Object sender, EventArgs e)</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimForm1.btnSet_ClickObjectEventArgs">
-            <summary>Sets the shim of Form1.btnSet_Click(Object sender, EventArgs e)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.btnSet_ClickObjectEventArgs">
+            <summary>Sets the shim of MainWindow.btnSet_Click(Object sender, EventArgs e)</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimForm1.btnShowAll_ClickObjectEventArgs">
-            <summary>Sets the shim of Form1.btnShowAll_Click(Object sender, EventArgs e)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.btnShowAll_ClickObjectEventArgs">
+            <summary>Sets the shim of MainWindow.btnShowAll_Click(Object sender, EventArgs e)</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimForm1.btnShow_ClickObjectEventArgs">
-            <summary>Sets the shim of Form1.btnShow_Click(Object sender, EventArgs e)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.btnShow_ClickObjectEventArgs">
+            <summary>Sets the shim of MainWindow.btnShow_Click(Object sender, EventArgs e)</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimForm1.btnUndo_ClickObjectEventArgs">
-            <summary>Sets the shim of Form1.btnUndo_Click(Object sender, EventArgs e)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.btnUndo_ClickObjectEventArgs">
+            <summary>Sets the shim of MainWindow.btnUndo_Click(Object sender, EventArgs e)</summary>
         </member>
-        <member name="T:SWP1.Fakes.ShimForm1.AllInstances">
+        <member name="T:SWP1.Fakes.ShimMainWindow.AllInstances">
             <summary>Define shims for all instances members</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimForm1.AllInstances.DisposeBoolean">
-            <summary>Sets the shim of Form1.Dispose(Boolean disposing)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.DisposeBoolean">
+            <summary>Sets the shim of MainWindow.Dispose(Boolean disposing)</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimForm1.AllInstances.Form1_LoadObjectEventArgs">
-            <summary>Sets the shim of Form1.Form1_Load(Object sender, EventArgs e)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.Form1_LoadObjectEventArgs">
+            <summary>Sets the shim of MainWindow.Form1_Load(Object sender, EventArgs e)</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimForm1.AllInstances.InitializeComponent">
-            <summary>Sets the shim of Form1.InitializeComponent()</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.InitializeComponent">
+            <summary>Sets the shim of MainWindow.InitializeComponent()</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimForm1.AllInstances.btnDec_ClickObjectEventArgs">
-            <summary>Sets the shim of Form1.btnDec_Click(Object sender, EventArgs e)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.btnDec_ClickObjectEventArgs">
+            <summary>Sets the shim of MainWindow.btnDec_Click(Object sender, EventArgs e)</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimForm1.AllInstances.btnHelp_ClickObjectEventArgs">
-            <summary>Sets the shim of Form1.btnHelp_Click(Object sender, EventArgs e)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.btnHelp_ClickObjectEventArgs">
+            <summary>Sets the shim of MainWindow.btnHelp_Click(Object sender, EventArgs e)</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimForm1.AllInstances.btnInc_ClickObjectEventArgs">
-            <summary>Sets the shim of Form1.btnInc_Click(Object sender, EventArgs e)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.btnInc_ClickObjectEventArgs">
+            <summary>Sets the shim of MainWindow.btnInc_Click(Object sender, EventArgs e)</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimForm1.AllInstances.btnRedo_ClickObjectEventArgs">
-            <summary>Sets the shim of Form1.btnRedo_Click(Object sender, EventArgs e)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.btnRedo_ClickObjectEventArgs">
+            <summary>Sets the shim of MainWindow.btnRedo_Click(Object sender, EventArgs e)</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimForm1.AllInstances.btnSet_ClickObjectEventArgs">
-            <summary>Sets the shim of Form1.btnSet_Click(Object sender, EventArgs e)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.btnSet_ClickObjectEventArgs">
+            <summary>Sets the shim of MainWindow.btnSet_Click(Object sender, EventArgs e)</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimForm1.AllInstances.btnShowAll_ClickObjectEventArgs">
-            <summary>Sets the shim of Form1.btnShowAll_Click(Object sender, EventArgs e)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.btnShowAll_ClickObjectEventArgs">
+            <summary>Sets the shim of MainWindow.btnShowAll_Click(Object sender, EventArgs e)</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimForm1.AllInstances.btnShow_ClickObjectEventArgs">
-            <summary>Sets the shim of Form1.btnShow_Click(Object sender, EventArgs e)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.btnShow_ClickObjectEventArgs">
+            <summary>Sets the shim of MainWindow.btnShow_Click(Object sender, EventArgs e)</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimForm1.AllInstances.btnUndo_ClickObjectEventArgs">
-            <summary>Sets the shim of Form1.btnUndo_Click(Object sender, EventArgs e)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.btnUndo_ClickObjectEventArgs">
+            <summary>Sets the shim of MainWindow.btnUndo_Click(Object sender, EventArgs e)</summary>
         </member>
         <member name="T:SWP1.Fakes.StubAnalogForm">
             <summary>Stub type of SWP1.AnalogForm</summary>
@@ -1795,6 +1972,42 @@
         <member name="P:SWP1.Fakes.StubAnalogForm.Text">
             <summary>Sets the stub of Form.get_Text()</summary>
         </member>
+        <member name="T:SWP1.Fakes.StubClock">
+            <summary>Stub type of SWP1.Clock</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubClock.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubClock.Attach(SWP1.IObserver)">
+            <summary>Sets the stub of Clock.Attach(IObserver observer)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubClock.AttachIObserver">
+            <summary>Sets the stub of Clock.Attach(IObserver observer)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubClock.Detach(SWP1.IObserver)">
+            <summary>Sets the stub of Clock.Detach(IObserver observer)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubClock.DetachIObserver">
+            <summary>Sets the stub of Clock.Detach(IObserver observer)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubClock.InitializeStub">
+            <summary>Initializes a new instance of type StubClock</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubClock.Notify">
+            <summary>Sets the stub of Clock.Notify()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubClock.Notify01">
+            <summary>Sets the stub of Clock.Notify()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubClock.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubClock.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubClock.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
         <member name="T:SWP1.Fakes.StubDigitalForm">
             <summary>Stub type of SWP1.DigitalForm</summary>
         </member>
@@ -3097,1302 +3310,6 @@
         <member name="P:SWP1.Fakes.StubDigitalForm.Text">
             <summary>Sets the stub of Form.get_Text()</summary>
         </member>
-        <member name="T:SWP1.Fakes.StubForm1">
-            <summary>Stub type of SWP1.Form1</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.#ctor">
-            <summary>Initializes a new instance</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.AdjustFormScrollbars(System.Boolean)">
-            <summary>Sets the stub of Form.AdjustFormScrollbars(Boolean displayScrollbars)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.AdjustFormScrollbarsBoolean">
-            <summary>Sets the stub of Form.AdjustFormScrollbars(Boolean displayScrollbars)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.AllowDropGet">
-            <summary>Sets the stub of Control.get_AllowDrop()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.AllowDropSetBoolean">
-            <summary>Sets the stub of Control.set_AllowDrop(Boolean value)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.AnchorGet">
-            <summary>Sets the stub of Control.get_Anchor()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.AnchorSetAnchorStyles">
-            <summary>Sets the stub of Control.set_Anchor(AnchorStyles value)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.AttachBackingFieldToAllowDrop">
-            <summary>Attaches delegates to emulate StubForm1.AllowDrop as a property with a backing field.</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.AttachBackingFieldToAnchor">
-            <summary>Attaches delegates to emulate StubForm1.Anchor as a property with a backing field.</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.AttachBackingFieldToAutoScaleBaseSize">
-            <summary>Attaches delegates to emulate StubForm1.AutoScaleBaseSize as a property with a backing field.</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.AttachBackingFieldToAutoScroll">
-            <summary>Attaches delegates to emulate StubForm1.AutoScroll as a property with a backing field.</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.AttachBackingFieldToAutoScrollOffset">
-            <summary>Attaches delegates to emulate StubForm1.AutoScrollOffset as a property with a backing field.</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.AttachBackingFieldToAutoSize">
-            <summary>Attaches delegates to emulate StubForm1.AutoSize as a property with a backing field.</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.AttachBackingFieldToAutoValidate">
-            <summary>Attaches delegates to emulate StubForm1.AutoValidate as a property with a backing field.</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.AttachBackingFieldToBackColor">
-            <summary>Attaches delegates to emulate StubForm1.BackColor as a property with a backing field.</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.AttachBackingFieldToBackgroundImage">
-            <summary>Attaches delegates to emulate StubForm1.BackgroundImage as a property with a backing field.</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.AttachBackingFieldToBackgroundImageLayout">
-            <summary>Attaches delegates to emulate StubForm1.BackgroundImageLayout as a property with a backing field.</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.AttachBackingFieldToBindingContext">
-            <summary>Attaches delegates to emulate StubForm1.BindingContext as a property with a backing field.</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.AttachBackingFieldToContextMenu">
-            <summary>Attaches delegates to emulate StubForm1.ContextMenu as a property with a backing field.</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.AttachBackingFieldToContextMenuStrip">
-            <summary>Attaches delegates to emulate StubForm1.ContextMenuStrip as a property with a backing field.</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.AttachBackingFieldToCursor">
-            <summary>Attaches delegates to emulate StubForm1.Cursor as a property with a backing field.</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.AttachBackingFieldToDock">
-            <summary>Attaches delegates to emulate StubForm1.Dock as a property with a backing field.</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.AttachBackingFieldToDoubleBuffered">
-            <summary>Attaches delegates to emulate StubForm1.DoubleBuffered as a property with a backing field.</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.AttachBackingFieldToFont">
-            <summary>Attaches delegates to emulate StubForm1.Font as a property with a backing field.</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.AttachBackingFieldToForeColor">
-            <summary>Attaches delegates to emulate StubForm1.ForeColor as a property with a backing field.</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.AttachBackingFieldToImeModeBase">
-            <summary>Attaches delegates to emulate StubForm1.ImeModeBase as a property with a backing field.</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.AttachBackingFieldToMaximumSize">
-            <summary>Attaches delegates to emulate StubForm1.MaximumSize as a property with a backing field.</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.AttachBackingFieldToMinimumSize">
-            <summary>Attaches delegates to emulate StubForm1.MinimumSize as a property with a backing field.</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.AttachBackingFieldToRightToLeft">
-            <summary>Attaches delegates to emulate StubForm1.RightToLeft as a property with a backing field.</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.AttachBackingFieldToRightToLeftLayout">
-            <summary>Attaches delegates to emulate StubForm1.RightToLeftLayout as a property with a backing field.</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.AttachBackingFieldToSite">
-            <summary>Attaches delegates to emulate StubForm1.Site as a property with a backing field.</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.AttachBackingFieldToText">
-            <summary>Attaches delegates to emulate StubForm1.Text as a property with a backing field.</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.AutoScaleBaseSizeGet">
-            <summary>Sets the stub of Form.get_AutoScaleBaseSize()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.AutoScaleBaseSizeSetSize">
-            <summary>Sets the stub of Form.set_AutoScaleBaseSize(Size value)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.AutoScrollGet">
-            <summary>Sets the stub of Form.get_AutoScroll()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.AutoScrollOffsetGet">
-            <summary>Sets the stub of Control.get_AutoScrollOffset()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.AutoScrollOffsetSetPoint">
-            <summary>Sets the stub of Control.set_AutoScrollOffset(Point value)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.AutoScrollSetBoolean">
-            <summary>Sets the stub of Form.set_AutoScroll(Boolean value)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.AutoSizeGet">
-            <summary>Sets the stub of Form.get_AutoSize()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.AutoSizeSetBoolean">
-            <summary>Sets the stub of Form.set_AutoSize(Boolean value)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.AutoValidateGet">
-            <summary>Sets the stub of Form.get_AutoValidate()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.AutoValidateSetAutoValidate">
-            <summary>Sets the stub of Form.set_AutoValidate(AutoValidate value)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.BackColorGet">
-            <summary>Sets the stub of Form.get_BackColor()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.BackColorSetColor">
-            <summary>Sets the stub of Form.set_BackColor(Color value)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.BackgroundImageGet">
-            <summary>Sets the stub of Control.get_BackgroundImage()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.BackgroundImageLayoutGet">
-            <summary>Sets the stub of Control.get_BackgroundImageLayout()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.BackgroundImageLayoutSetImageLayout">
-            <summary>Sets the stub of Control.set_BackgroundImageLayout(ImageLayout value)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.BackgroundImageSetImage">
-            <summary>Sets the stub of Control.set_BackgroundImage(Image value)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.BindingContextGet">
-            <summary>Sets the stub of ContainerControl.get_BindingContext()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.BindingContextSetBindingContext">
-            <summary>Sets the stub of ContainerControl.set_BindingContext(BindingContext value)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.CanEnableImeGet">
-            <summary>Sets the stub of ContainerControl.get_CanEnableIme()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.CanRaiseEventsGet">
-            <summary>Sets the stub of Control.get_CanRaiseEvents()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.ContextMenuGet">
-            <summary>Sets the stub of Control.get_ContextMenu()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.ContextMenuSetContextMenu">
-            <summary>Sets the stub of Control.set_ContextMenu(ContextMenu value)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.ContextMenuStripGet">
-            <summary>Sets the stub of Control.get_ContextMenuStrip()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.ContextMenuStripSetContextMenuStrip">
-            <summary>Sets the stub of Control.set_ContextMenuStrip(ContextMenuStrip value)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.CreateAccessibilityInstance">
-            <summary>Sets the stub of Control.CreateAccessibilityInstance()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.CreateAccessibilityInstance01">
-            <summary>Sets the stub of Control.CreateAccessibilityInstance()</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.CreateControlsInstance">
-            <summary>Sets the stub of Form.CreateControlsInstance()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.CreateControlsInstance01">
-            <summary>Sets the stub of Form.CreateControlsInstance()</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.CreateHandle">
-            <summary>Sets the stub of Form.CreateHandle()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.CreateHandle01">
-            <summary>Sets the stub of Form.CreateHandle()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.CreateParamsGet">
-            <summary>Sets the stub of Form.get_CreateParams()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.CursorGet">
-            <summary>Sets the stub of Control.get_Cursor()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.CursorSetCursor">
-            <summary>Sets the stub of Control.set_Cursor(Cursor value)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.DefWndProc(System.Windows.Forms.Message@)">
-            <summary>Sets the stub of Form.DefWndProc(Message&amp; m)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.DefWndProcMessageRef">
-            <summary>Sets the stub of Form.DefWndProc(Message&amp; m)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.DefaultCursorGet">
-            <summary>Sets the stub of Control.get_DefaultCursor()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.DefaultImeModeGet">
-            <summary>Sets the stub of Form.get_DefaultImeMode()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.DefaultMarginGet">
-            <summary>Sets the stub of Control.get_DefaultMargin()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.DefaultMaximumSizeGet">
-            <summary>Sets the stub of Control.get_DefaultMaximumSize()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.DefaultMinimumSizeGet">
-            <summary>Sets the stub of Control.get_DefaultMinimumSize()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.DefaultPaddingGet">
-            <summary>Sets the stub of Control.get_DefaultPadding()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.DefaultSizeGet">
-            <summary>Sets the stub of Form.get_DefaultSize()</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.DestroyHandle">
-            <summary>Sets the stub of Control.DestroyHandle()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.DestroyHandle01">
-            <summary>Sets the stub of Control.DestroyHandle()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.DisplayRectangleGet">
-            <summary>Sets the stub of ScrollableControl.get_DisplayRectangle()</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.Dispose(System.Boolean)">
-            <summary>Sets the stub of Form1.Dispose(Boolean disposing)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.DisposeBoolean">
-            <summary>Sets the stub of Form1.Dispose(Boolean disposing)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.DockGet">
-            <summary>Sets the stub of Control.get_Dock()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.DockSetDockStyle">
-            <summary>Sets the stub of Control.set_Dock(DockStyle value)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.DoubleBufferedGet">
-            <summary>Sets the stub of Control.get_DoubleBuffered()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.DoubleBufferedSetBoolean">
-            <summary>Sets the stub of Control.set_DoubleBuffered(Boolean value)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.FocusedGet">
-            <summary>Sets the stub of Control.get_Focused()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.FontGet">
-            <summary>Sets the stub of Control.get_Font()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.FontSetFont">
-            <summary>Sets the stub of Control.set_Font(Font value)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.ForeColorGet">
-            <summary>Sets the stub of Control.get_ForeColor()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.ForeColorSetColor">
-            <summary>Sets the stub of Control.set_ForeColor(Color value)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.GetAccessibilityObjectById(System.Int32)">
-            <summary>Sets the stub of Control.GetAccessibilityObjectById(Int32 objectId)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.GetAccessibilityObjectByIdInt32">
-            <summary>Sets the stub of Control.GetAccessibilityObjectById(Int32 objectId)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.GetPreferredSize(System.Drawing.Size)">
-            <summary>Sets the stub of Control.GetPreferredSize(Size proposedSize)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.GetPreferredSizeSize">
-            <summary>Sets the stub of Control.GetPreferredSize(Size proposedSize)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.GetScaledBounds(System.Drawing.Rectangle,System.Drawing.SizeF,System.Windows.Forms.BoundsSpecified)">
-            <summary>Sets the stub of Form.GetScaledBounds(Rectangle bounds, SizeF factor, BoundsSpecified specified)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.GetScaledBoundsRectangleSizeFBoundsSpecified">
-            <summary>Sets the stub of Form.GetScaledBounds(Rectangle bounds, SizeF factor, BoundsSpecified specified)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.GetService(System.Type)">
-            <summary>Sets the stub of Component.GetService(Type service)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.GetServiceType">
-            <summary>Sets the stub of Component.GetService(Type service)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.ImeModeBaseGet">
-            <summary>Sets the stub of Control.get_ImeModeBase()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.ImeModeBaseSetImeMode">
-            <summary>Sets the stub of Control.set_ImeModeBase(ImeMode value)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.InitLayout">
-            <summary>Sets the stub of Control.InitLayout()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.InitLayout01">
-            <summary>Sets the stub of Control.InitLayout()</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.InitializeStub">
-            <summary>Initializes a new instance of type StubForm1</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.IsInputChar(System.Char)">
-            <summary>Sets the stub of Control.IsInputChar(Char charCode)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.IsInputCharChar">
-            <summary>Sets the stub of Control.IsInputChar(Char charCode)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.IsInputKey(System.Windows.Forms.Keys)">
-            <summary>Sets the stub of Control.IsInputKey(Keys keyData)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.IsInputKeyKeys">
-            <summary>Sets the stub of Control.IsInputKey(Keys keyData)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.LayoutEngineGet">
-            <summary>Sets the stub of Control.get_LayoutEngine()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.MaximumSizeGet">
-            <summary>Sets the stub of Form.get_MaximumSize()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.MaximumSizeSetSize">
-            <summary>Sets the stub of Form.set_MaximumSize(Size value)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.MinimumSizeGet">
-            <summary>Sets the stub of Form.get_MinimumSize()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.MinimumSizeSetSize">
-            <summary>Sets the stub of Form.set_MinimumSize(Size value)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.NotifyInvalidate(System.Drawing.Rectangle)">
-            <summary>Sets the stub of Control.NotifyInvalidate(Rectangle invalidatedArea)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.NotifyInvalidateRectangle">
-            <summary>Sets the stub of Control.NotifyInvalidate(Rectangle invalidatedArea)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnActivated(System.EventArgs)">
-            <summary>Sets the stub of Form.OnActivated(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnActivatedEventArgs">
-            <summary>Sets the stub of Form.OnActivated(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnAutoSizeChanged(System.EventArgs)">
-            <summary>Sets the stub of Control.OnAutoSizeChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnAutoSizeChangedEventArgs">
-            <summary>Sets the stub of Control.OnAutoSizeChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnAutoValidateChanged(System.EventArgs)">
-            <summary>Sets the stub of ContainerControl.OnAutoValidateChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnAutoValidateChangedEventArgs">
-            <summary>Sets the stub of ContainerControl.OnAutoValidateChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnBackColorChanged(System.EventArgs)">
-            <summary>Sets the stub of Control.OnBackColorChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnBackColorChangedEventArgs">
-            <summary>Sets the stub of Control.OnBackColorChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnBackgroundImageChanged(System.EventArgs)">
-            <summary>Sets the stub of Form.OnBackgroundImageChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnBackgroundImageChangedEventArgs">
-            <summary>Sets the stub of Form.OnBackgroundImageChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnBackgroundImageLayoutChanged(System.EventArgs)">
-            <summary>Sets the stub of Form.OnBackgroundImageLayoutChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnBackgroundImageLayoutChangedEventArgs">
-            <summary>Sets the stub of Form.OnBackgroundImageLayoutChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnBindingContextChanged(System.EventArgs)">
-            <summary>Sets the stub of Control.OnBindingContextChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnBindingContextChangedEventArgs">
-            <summary>Sets the stub of Control.OnBindingContextChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnCausesValidationChanged(System.EventArgs)">
-            <summary>Sets the stub of Control.OnCausesValidationChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnCausesValidationChangedEventArgs">
-            <summary>Sets the stub of Control.OnCausesValidationChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnChangeUICues(System.Windows.Forms.UICuesEventArgs)">
-            <summary>Sets the stub of Control.OnChangeUICues(UICuesEventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnChangeUICuesUICuesEventArgs">
-            <summary>Sets the stub of Control.OnChangeUICues(UICuesEventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnClick(System.EventArgs)">
-            <summary>Sets the stub of Control.OnClick(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnClickEventArgs">
-            <summary>Sets the stub of Control.OnClick(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnClientSizeChanged(System.EventArgs)">
-            <summary>Sets the stub of Control.OnClientSizeChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnClientSizeChangedEventArgs">
-            <summary>Sets the stub of Control.OnClientSizeChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnClosed(System.EventArgs)">
-            <summary>Sets the stub of Form.OnClosed(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnClosedEventArgs">
-            <summary>Sets the stub of Form.OnClosed(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnClosing(System.ComponentModel.CancelEventArgs)">
-            <summary>Sets the stub of Form.OnClosing(CancelEventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnClosingCancelEventArgs">
-            <summary>Sets the stub of Form.OnClosing(CancelEventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnContextMenuChanged(System.EventArgs)">
-            <summary>Sets the stub of Control.OnContextMenuChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnContextMenuChangedEventArgs">
-            <summary>Sets the stub of Control.OnContextMenuChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnContextMenuStripChanged(System.EventArgs)">
-            <summary>Sets the stub of Control.OnContextMenuStripChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnContextMenuStripChangedEventArgs">
-            <summary>Sets the stub of Control.OnContextMenuStripChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnControlAdded(System.Windows.Forms.ControlEventArgs)">
-            <summary>Sets the stub of Control.OnControlAdded(ControlEventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnControlAddedControlEventArgs">
-            <summary>Sets the stub of Control.OnControlAdded(ControlEventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnControlRemoved(System.Windows.Forms.ControlEventArgs)">
-            <summary>Sets the stub of Control.OnControlRemoved(ControlEventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnControlRemovedControlEventArgs">
-            <summary>Sets the stub of Control.OnControlRemoved(ControlEventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnCreateControl">
-            <summary>Sets the stub of Form.OnCreateControl()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnCreateControl01">
-            <summary>Sets the stub of Form.OnCreateControl()</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnCursorChanged(System.EventArgs)">
-            <summary>Sets the stub of Control.OnCursorChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnCursorChangedEventArgs">
-            <summary>Sets the stub of Control.OnCursorChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnDeactivate(System.EventArgs)">
-            <summary>Sets the stub of Form.OnDeactivate(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnDeactivateEventArgs">
-            <summary>Sets the stub of Form.OnDeactivate(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnDockChanged(System.EventArgs)">
-            <summary>Sets the stub of Control.OnDockChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnDockChangedEventArgs">
-            <summary>Sets the stub of Control.OnDockChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnDoubleClick(System.EventArgs)">
-            <summary>Sets the stub of Control.OnDoubleClick(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnDoubleClickEventArgs">
-            <summary>Sets the stub of Control.OnDoubleClick(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnDragDrop(System.Windows.Forms.DragEventArgs)">
-            <summary>Sets the stub of Control.OnDragDrop(DragEventArgs drgevent)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnDragDropDragEventArgs">
-            <summary>Sets the stub of Control.OnDragDrop(DragEventArgs drgevent)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnDragEnter(System.Windows.Forms.DragEventArgs)">
-            <summary>Sets the stub of Control.OnDragEnter(DragEventArgs drgevent)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnDragEnterDragEventArgs">
-            <summary>Sets the stub of Control.OnDragEnter(DragEventArgs drgevent)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnDragLeave(System.EventArgs)">
-            <summary>Sets the stub of Control.OnDragLeave(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnDragLeaveEventArgs">
-            <summary>Sets the stub of Control.OnDragLeave(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnDragOver(System.Windows.Forms.DragEventArgs)">
-            <summary>Sets the stub of Control.OnDragOver(DragEventArgs drgevent)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnDragOverDragEventArgs">
-            <summary>Sets the stub of Control.OnDragOver(DragEventArgs drgevent)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnEnabledChanged(System.EventArgs)">
-            <summary>Sets the stub of Form.OnEnabledChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnEnabledChangedEventArgs">
-            <summary>Sets the stub of Form.OnEnabledChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnEnter(System.EventArgs)">
-            <summary>Sets the stub of Form.OnEnter(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnEnterEventArgs">
-            <summary>Sets the stub of Form.OnEnter(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnFontChanged(System.EventArgs)">
-            <summary>Sets the stub of Form.OnFontChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnFontChangedEventArgs">
-            <summary>Sets the stub of Form.OnFontChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnForeColorChanged(System.EventArgs)">
-            <summary>Sets the stub of Control.OnForeColorChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnForeColorChangedEventArgs">
-            <summary>Sets the stub of Control.OnForeColorChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnFormClosed(System.Windows.Forms.FormClosedEventArgs)">
-            <summary>Sets the stub of Form.OnFormClosed(FormClosedEventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnFormClosedFormClosedEventArgs">
-            <summary>Sets the stub of Form.OnFormClosed(FormClosedEventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnFormClosing(System.Windows.Forms.FormClosingEventArgs)">
-            <summary>Sets the stub of Form.OnFormClosing(FormClosingEventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnFormClosingFormClosingEventArgs">
-            <summary>Sets the stub of Form.OnFormClosing(FormClosingEventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnGiveFeedback(System.Windows.Forms.GiveFeedbackEventArgs)">
-            <summary>Sets the stub of Control.OnGiveFeedback(GiveFeedbackEventArgs gfbevent)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnGiveFeedbackGiveFeedbackEventArgs">
-            <summary>Sets the stub of Control.OnGiveFeedback(GiveFeedbackEventArgs gfbevent)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnGotFocus(System.EventArgs)">
-            <summary>Sets the stub of Control.OnGotFocus(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnGotFocusEventArgs">
-            <summary>Sets the stub of Control.OnGotFocus(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnHandleCreated(System.EventArgs)">
-            <summary>Sets the stub of Form.OnHandleCreated(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnHandleCreatedEventArgs">
-            <summary>Sets the stub of Form.OnHandleCreated(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnHandleDestroyed(System.EventArgs)">
-            <summary>Sets the stub of Form.OnHandleDestroyed(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnHandleDestroyedEventArgs">
-            <summary>Sets the stub of Form.OnHandleDestroyed(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnHelpButtonClicked(System.ComponentModel.CancelEventArgs)">
-            <summary>Sets the stub of Form.OnHelpButtonClicked(CancelEventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnHelpButtonClickedCancelEventArgs">
-            <summary>Sets the stub of Form.OnHelpButtonClicked(CancelEventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnHelpRequested(System.Windows.Forms.HelpEventArgs)">
-            <summary>Sets the stub of Control.OnHelpRequested(HelpEventArgs hevent)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnHelpRequestedHelpEventArgs">
-            <summary>Sets the stub of Control.OnHelpRequested(HelpEventArgs hevent)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnImeModeChanged(System.EventArgs)">
-            <summary>Sets the stub of Control.OnImeModeChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnImeModeChangedEventArgs">
-            <summary>Sets the stub of Control.OnImeModeChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnInputLanguageChanged(System.Windows.Forms.InputLanguageChangedEventArgs)">
-            <summary>Sets the stub of Form.OnInputLanguageChanged(InputLanguageChangedEventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnInputLanguageChangedInputLanguageChangedEventArgs">
-            <summary>Sets the stub of Form.OnInputLanguageChanged(InputLanguageChangedEventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnInputLanguageChanging(System.Windows.Forms.InputLanguageChangingEventArgs)">
-            <summary>Sets the stub of Form.OnInputLanguageChanging(InputLanguageChangingEventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnInputLanguageChangingInputLanguageChangingEventArgs">
-            <summary>Sets the stub of Form.OnInputLanguageChanging(InputLanguageChangingEventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnInvalidated(System.Windows.Forms.InvalidateEventArgs)">
-            <summary>Sets the stub of Control.OnInvalidated(InvalidateEventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnInvalidatedInvalidateEventArgs">
-            <summary>Sets the stub of Control.OnInvalidated(InvalidateEventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnKeyDown(System.Windows.Forms.KeyEventArgs)">
-            <summary>Sets the stub of Control.OnKeyDown(KeyEventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnKeyDownKeyEventArgs">
-            <summary>Sets the stub of Control.OnKeyDown(KeyEventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnKeyPress(System.Windows.Forms.KeyPressEventArgs)">
-            <summary>Sets the stub of Control.OnKeyPress(KeyPressEventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnKeyPressKeyPressEventArgs">
-            <summary>Sets the stub of Control.OnKeyPress(KeyPressEventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnKeyUp(System.Windows.Forms.KeyEventArgs)">
-            <summary>Sets the stub of Control.OnKeyUp(KeyEventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnKeyUpKeyEventArgs">
-            <summary>Sets the stub of Control.OnKeyUp(KeyEventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnLayout(System.Windows.Forms.LayoutEventArgs)">
-            <summary>Sets the stub of Form.OnLayout(LayoutEventArgs levent)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnLayoutLayoutEventArgs">
-            <summary>Sets the stub of Form.OnLayout(LayoutEventArgs levent)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnLeave(System.EventArgs)">
-            <summary>Sets the stub of Control.OnLeave(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnLeaveEventArgs">
-            <summary>Sets the stub of Control.OnLeave(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnLoad(System.EventArgs)">
-            <summary>Sets the stub of Form.OnLoad(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnLoadEventArgs">
-            <summary>Sets the stub of Form.OnLoad(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnLocationChanged(System.EventArgs)">
-            <summary>Sets the stub of Control.OnLocationChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnLocationChangedEventArgs">
-            <summary>Sets the stub of Control.OnLocationChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnLostFocus(System.EventArgs)">
-            <summary>Sets the stub of Control.OnLostFocus(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnLostFocusEventArgs">
-            <summary>Sets the stub of Control.OnLostFocus(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnMarginChanged(System.EventArgs)">
-            <summary>Sets the stub of Control.OnMarginChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnMarginChangedEventArgs">
-            <summary>Sets the stub of Control.OnMarginChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnMaximizedBoundsChanged(System.EventArgs)">
-            <summary>Sets the stub of Form.OnMaximizedBoundsChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnMaximizedBoundsChangedEventArgs">
-            <summary>Sets the stub of Form.OnMaximizedBoundsChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnMaximumSizeChanged(System.EventArgs)">
-            <summary>Sets the stub of Form.OnMaximumSizeChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnMaximumSizeChangedEventArgs">
-            <summary>Sets the stub of Form.OnMaximumSizeChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnMdiChildActivate(System.EventArgs)">
-            <summary>Sets the stub of Form.OnMdiChildActivate(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnMdiChildActivateEventArgs">
-            <summary>Sets the stub of Form.OnMdiChildActivate(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnMenuComplete(System.EventArgs)">
-            <summary>Sets the stub of Form.OnMenuComplete(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnMenuCompleteEventArgs">
-            <summary>Sets the stub of Form.OnMenuComplete(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnMenuStart(System.EventArgs)">
-            <summary>Sets the stub of Form.OnMenuStart(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnMenuStartEventArgs">
-            <summary>Sets the stub of Form.OnMenuStart(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnMinimumSizeChanged(System.EventArgs)">
-            <summary>Sets the stub of Form.OnMinimumSizeChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnMinimumSizeChangedEventArgs">
-            <summary>Sets the stub of Form.OnMinimumSizeChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnMouseCaptureChanged(System.EventArgs)">
-            <summary>Sets the stub of Control.OnMouseCaptureChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnMouseCaptureChangedEventArgs">
-            <summary>Sets the stub of Control.OnMouseCaptureChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnMouseClick(System.Windows.Forms.MouseEventArgs)">
-            <summary>Sets the stub of Control.OnMouseClick(MouseEventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnMouseClickMouseEventArgs">
-            <summary>Sets the stub of Control.OnMouseClick(MouseEventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnMouseDoubleClick(System.Windows.Forms.MouseEventArgs)">
-            <summary>Sets the stub of Control.OnMouseDoubleClick(MouseEventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnMouseDoubleClickMouseEventArgs">
-            <summary>Sets the stub of Control.OnMouseDoubleClick(MouseEventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
-            <summary>Sets the stub of Control.OnMouseDown(MouseEventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnMouseDownMouseEventArgs">
-            <summary>Sets the stub of Control.OnMouseDown(MouseEventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnMouseEnter(System.EventArgs)">
-            <summary>Sets the stub of Control.OnMouseEnter(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnMouseEnterEventArgs">
-            <summary>Sets the stub of Control.OnMouseEnter(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnMouseHover(System.EventArgs)">
-            <summary>Sets the stub of Control.OnMouseHover(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnMouseHoverEventArgs">
-            <summary>Sets the stub of Control.OnMouseHover(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnMouseLeave(System.EventArgs)">
-            <summary>Sets the stub of Control.OnMouseLeave(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnMouseLeaveEventArgs">
-            <summary>Sets the stub of Control.OnMouseLeave(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
-            <summary>Sets the stub of Control.OnMouseMove(MouseEventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnMouseMoveMouseEventArgs">
-            <summary>Sets the stub of Control.OnMouseMove(MouseEventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
-            <summary>Sets the stub of Control.OnMouseUp(MouseEventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnMouseUpMouseEventArgs">
-            <summary>Sets the stub of Control.OnMouseUp(MouseEventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnMouseWheel(System.Windows.Forms.MouseEventArgs)">
-            <summary>Sets the stub of ScrollableControl.OnMouseWheel(MouseEventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnMouseWheelMouseEventArgs">
-            <summary>Sets the stub of ScrollableControl.OnMouseWheel(MouseEventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnMove(System.EventArgs)">
-            <summary>Sets the stub of Control.OnMove(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnMoveEventArgs">
-            <summary>Sets the stub of Control.OnMove(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnNotifyMessage(System.Windows.Forms.Message)">
-            <summary>Sets the stub of Control.OnNotifyMessage(Message m)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnNotifyMessageMessage">
-            <summary>Sets the stub of Control.OnNotifyMessage(Message m)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnPaddingChanged(System.EventArgs)">
-            <summary>Sets the stub of ScrollableControl.OnPaddingChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnPaddingChangedEventArgs">
-            <summary>Sets the stub of ScrollableControl.OnPaddingChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnPaint(System.Windows.Forms.PaintEventArgs)">
-            <summary>Sets the stub of Form.OnPaint(PaintEventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnPaintBackground(System.Windows.Forms.PaintEventArgs)">
-            <summary>Sets the stub of ScrollableControl.OnPaintBackground(PaintEventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnPaintBackgroundPaintEventArgs">
-            <summary>Sets the stub of ScrollableControl.OnPaintBackground(PaintEventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnPaintPaintEventArgs">
-            <summary>Sets the stub of Form.OnPaint(PaintEventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnParentBackColorChanged(System.EventArgs)">
-            <summary>Sets the stub of Control.OnParentBackColorChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnParentBackColorChangedEventArgs">
-            <summary>Sets the stub of Control.OnParentBackColorChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnParentBackgroundImageChanged(System.EventArgs)">
-            <summary>Sets the stub of Control.OnParentBackgroundImageChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnParentBackgroundImageChangedEventArgs">
-            <summary>Sets the stub of Control.OnParentBackgroundImageChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnParentBindingContextChanged(System.EventArgs)">
-            <summary>Sets the stub of Control.OnParentBindingContextChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnParentBindingContextChangedEventArgs">
-            <summary>Sets the stub of Control.OnParentBindingContextChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnParentChanged(System.EventArgs)">
-            <summary>Sets the stub of ContainerControl.OnParentChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnParentChangedEventArgs">
-            <summary>Sets the stub of ContainerControl.OnParentChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnParentCursorChanged(System.EventArgs)">
-            <summary>Sets the stub of Control.OnParentCursorChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnParentCursorChangedEventArgs">
-            <summary>Sets the stub of Control.OnParentCursorChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnParentEnabledChanged(System.EventArgs)">
-            <summary>Sets the stub of Control.OnParentEnabledChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnParentEnabledChangedEventArgs">
-            <summary>Sets the stub of Control.OnParentEnabledChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnParentFontChanged(System.EventArgs)">
-            <summary>Sets the stub of Control.OnParentFontChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnParentFontChangedEventArgs">
-            <summary>Sets the stub of Control.OnParentFontChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnParentForeColorChanged(System.EventArgs)">
-            <summary>Sets the stub of Control.OnParentForeColorChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnParentForeColorChangedEventArgs">
-            <summary>Sets the stub of Control.OnParentForeColorChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnParentRightToLeftChanged(System.EventArgs)">
-            <summary>Sets the stub of Control.OnParentRightToLeftChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnParentRightToLeftChangedEventArgs">
-            <summary>Sets the stub of Control.OnParentRightToLeftChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnParentVisibleChanged(System.EventArgs)">
-            <summary>Sets the stub of Control.OnParentVisibleChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnParentVisibleChangedEventArgs">
-            <summary>Sets the stub of Control.OnParentVisibleChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnPreviewKeyDown(System.Windows.Forms.PreviewKeyDownEventArgs)">
-            <summary>Sets the stub of Control.OnPreviewKeyDown(PreviewKeyDownEventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnPreviewKeyDownPreviewKeyDownEventArgs">
-            <summary>Sets the stub of Control.OnPreviewKeyDown(PreviewKeyDownEventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnPrint(System.Windows.Forms.PaintEventArgs)">
-            <summary>Sets the stub of Control.OnPrint(PaintEventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnPrintPaintEventArgs">
-            <summary>Sets the stub of Control.OnPrint(PaintEventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnQueryContinueDrag(System.Windows.Forms.QueryContinueDragEventArgs)">
-            <summary>Sets the stub of Control.OnQueryContinueDrag(QueryContinueDragEventArgs qcdevent)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnQueryContinueDragQueryContinueDragEventArgs">
-            <summary>Sets the stub of Control.OnQueryContinueDrag(QueryContinueDragEventArgs qcdevent)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnRegionChanged(System.EventArgs)">
-            <summary>Sets the stub of Control.OnRegionChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnRegionChangedEventArgs">
-            <summary>Sets the stub of Control.OnRegionChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnResize(System.EventArgs)">
-            <summary>Sets the stub of Form.OnResize(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnResizeBegin(System.EventArgs)">
-            <summary>Sets the stub of Form.OnResizeBegin(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnResizeBeginEventArgs">
-            <summary>Sets the stub of Form.OnResizeBegin(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnResizeEnd(System.EventArgs)">
-            <summary>Sets the stub of Form.OnResizeEnd(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnResizeEndEventArgs">
-            <summary>Sets the stub of Form.OnResizeEnd(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnResizeEventArgs">
-            <summary>Sets the stub of Form.OnResize(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnRightToLeftChanged(System.EventArgs)">
-            <summary>Sets the stub of ScrollableControl.OnRightToLeftChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnRightToLeftChangedEventArgs">
-            <summary>Sets the stub of ScrollableControl.OnRightToLeftChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnRightToLeftLayoutChanged(System.EventArgs)">
-            <summary>Sets the stub of Form.OnRightToLeftLayoutChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnRightToLeftLayoutChangedEventArgs">
-            <summary>Sets the stub of Form.OnRightToLeftLayoutChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnScroll(System.Windows.Forms.ScrollEventArgs)">
-            <summary>Sets the stub of ScrollableControl.OnScroll(ScrollEventArgs se)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnScrollScrollEventArgs">
-            <summary>Sets the stub of ScrollableControl.OnScroll(ScrollEventArgs se)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnShown(System.EventArgs)">
-            <summary>Sets the stub of Form.OnShown(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnShownEventArgs">
-            <summary>Sets the stub of Form.OnShown(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnSizeChanged(System.EventArgs)">
-            <summary>Sets the stub of Control.OnSizeChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnSizeChangedEventArgs">
-            <summary>Sets the stub of Control.OnSizeChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnStyleChanged(System.EventArgs)">
-            <summary>Sets the stub of Form.OnStyleChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnStyleChangedEventArgs">
-            <summary>Sets the stub of Form.OnStyleChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnSystemColorsChanged(System.EventArgs)">
-            <summary>Sets the stub of Control.OnSystemColorsChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnSystemColorsChangedEventArgs">
-            <summary>Sets the stub of Control.OnSystemColorsChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnTabIndexChanged(System.EventArgs)">
-            <summary>Sets the stub of Control.OnTabIndexChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnTabIndexChangedEventArgs">
-            <summary>Sets the stub of Control.OnTabIndexChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnTabStopChanged(System.EventArgs)">
-            <summary>Sets the stub of Control.OnTabStopChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnTabStopChangedEventArgs">
-            <summary>Sets the stub of Control.OnTabStopChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnTextChanged(System.EventArgs)">
-            <summary>Sets the stub of Form.OnTextChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnTextChangedEventArgs">
-            <summary>Sets the stub of Form.OnTextChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnValidated(System.EventArgs)">
-            <summary>Sets the stub of Control.OnValidated(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnValidatedEventArgs">
-            <summary>Sets the stub of Control.OnValidated(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnValidating(System.ComponentModel.CancelEventArgs)">
-            <summary>Sets the stub of Control.OnValidating(CancelEventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnValidatingCancelEventArgs">
-            <summary>Sets the stub of Control.OnValidating(CancelEventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.OnVisibleChanged(System.EventArgs)">
-            <summary>Sets the stub of Form.OnVisibleChanged(EventArgs e)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.OnVisibleChangedEventArgs">
-            <summary>Sets the stub of Form.OnVisibleChanged(EventArgs e)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.PreProcessMessage(System.Windows.Forms.Message@)">
-            <summary>Sets the stub of Control.PreProcessMessage(Message&amp; msg)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.PreProcessMessageMessageRef">
-            <summary>Sets the stub of Control.PreProcessMessage(Message&amp; msg)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.ProcessCmdKey(System.Windows.Forms.Message@,System.Windows.Forms.Keys)">
-            <summary>Sets the stub of Form.ProcessCmdKey(Message&amp; msg, Keys keyData)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.ProcessCmdKeyMessageRefKeys">
-            <summary>Sets the stub of Form.ProcessCmdKey(Message&amp; msg, Keys keyData)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.ProcessDialogChar(System.Char)">
-            <summary>Sets the stub of Form.ProcessDialogChar(Char charCode)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.ProcessDialogCharChar">
-            <summary>Sets the stub of Form.ProcessDialogChar(Char charCode)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.ProcessDialogKey(System.Windows.Forms.Keys)">
-            <summary>Sets the stub of Form.ProcessDialogKey(Keys keyData)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.ProcessDialogKeyKeys">
-            <summary>Sets the stub of Form.ProcessDialogKey(Keys keyData)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.ProcessKeyEventArgs(System.Windows.Forms.Message@)">
-            <summary>Sets the stub of Control.ProcessKeyEventArgs(Message&amp; m)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.ProcessKeyEventArgsMessageRef">
-            <summary>Sets the stub of Control.ProcessKeyEventArgs(Message&amp; m)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.ProcessKeyMessage(System.Windows.Forms.Message@)">
-            <summary>Sets the stub of Control.ProcessKeyMessage(Message&amp; m)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.ProcessKeyMessageMessageRef">
-            <summary>Sets the stub of Control.ProcessKeyMessage(Message&amp; m)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.ProcessKeyPreview(System.Windows.Forms.Message@)">
-            <summary>Sets the stub of Form.ProcessKeyPreview(Message&amp; m)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.ProcessKeyPreviewMessageRef">
-            <summary>Sets the stub of Form.ProcessKeyPreview(Message&amp; m)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.ProcessMnemonic(System.Char)">
-            <summary>Sets the stub of Form.ProcessMnemonic(Char charCode)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.ProcessMnemonicChar">
-            <summary>Sets the stub of Form.ProcessMnemonic(Char charCode)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.ProcessTabKey(System.Boolean)">
-            <summary>Sets the stub of Form.ProcessTabKey(Boolean forward)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.ProcessTabKeyBoolean">
-            <summary>Sets the stub of Form.ProcessTabKey(Boolean forward)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.Refresh">
-            <summary>Sets the stub of Control.Refresh()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.Refresh01">
-            <summary>Sets the stub of Control.Refresh()</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.ResetBackColor">
-            <summary>Sets the stub of Control.ResetBackColor()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.ResetBackColor01">
-            <summary>Sets the stub of Control.ResetBackColor()</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.ResetCursor">
-            <summary>Sets the stub of Control.ResetCursor()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.ResetCursor01">
-            <summary>Sets the stub of Control.ResetCursor()</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.ResetFont">
-            <summary>Sets the stub of Control.ResetFont()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.ResetFont01">
-            <summary>Sets the stub of Control.ResetFont()</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.ResetForeColor">
-            <summary>Sets the stub of Control.ResetForeColor()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.ResetForeColor01">
-            <summary>Sets the stub of Control.ResetForeColor()</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.ResetRightToLeft">
-            <summary>Sets the stub of Control.ResetRightToLeft()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.ResetRightToLeft01">
-            <summary>Sets the stub of Control.ResetRightToLeft()</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.ResetText">
-            <summary>Sets the stub of Control.ResetText()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.ResetText01">
-            <summary>Sets the stub of Control.ResetText()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.RightToLeftGet">
-            <summary>Sets the stub of Control.get_RightToLeft()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.RightToLeftLayoutGet">
-            <summary>Sets the stub of Form.get_RightToLeftLayout()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.RightToLeftLayoutSetBoolean">
-            <summary>Sets the stub of Form.set_RightToLeftLayout(Boolean value)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.RightToLeftSetRightToLeft">
-            <summary>Sets the stub of Control.set_RightToLeft(RightToLeft value)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.ScaleChildrenGet">
-            <summary>Sets the stub of Control.get_ScaleChildren()</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.ScaleControl(System.Drawing.SizeF,System.Windows.Forms.BoundsSpecified)">
-            <summary>Sets the stub of Form.ScaleControl(SizeF factor, BoundsSpecified specified)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.ScaleControlSizeFBoundsSpecified">
-            <summary>Sets the stub of Form.ScaleControl(SizeF factor, BoundsSpecified specified)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.ScaleCore(System.Single,System.Single)">
-            <summary>Sets the stub of Form.ScaleCore(Single x, Single y)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.ScaleCoreSingleSingle">
-            <summary>Sets the stub of Form.ScaleCore(Single x, Single y)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.ScrollToControl(System.Windows.Forms.Control)">
-            <summary>Sets the stub of ScrollableControl.ScrollToControl(Control activeControl)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.ScrollToControlControl">
-            <summary>Sets the stub of ScrollableControl.ScrollToControl(Control activeControl)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.Select(System.Boolean,System.Boolean)">
-            <summary>Sets the stub of Form.Select(Boolean directed, Boolean forward)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.SelectBooleanBoolean">
-            <summary>Sets the stub of Form.Select(Boolean directed, Boolean forward)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.SetBoundsCore(System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.BoundsSpecified)">
-            <summary>Sets the stub of Form.SetBoundsCore(Int32 x, Int32 y, Int32 width, Int32 height, BoundsSpecified specified)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.SetBoundsCoreInt32Int32Int32Int32BoundsSpecified">
-            <summary>Sets the stub of Form.SetBoundsCore(Int32 x, Int32 y, Int32 width, Int32 height, BoundsSpecified specified)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.SetClientSizeCore(System.Int32,System.Int32)">
-            <summary>Sets the stub of Form.SetClientSizeCore(Int32 x, Int32 y)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.SetClientSizeCoreInt32Int32">
-            <summary>Sets the stub of Form.SetClientSizeCore(Int32 x, Int32 y)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.SetVisibleCore(System.Boolean)">
-            <summary>Sets the stub of Form.SetVisibleCore(Boolean value)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.SetVisibleCoreBoolean">
-            <summary>Sets the stub of Form.SetVisibleCore(Boolean value)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.ShowFocusCuesGet">
-            <summary>Sets the stub of Control.get_ShowFocusCues()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.ShowKeyboardCuesGet">
-            <summary>Sets the stub of Control.get_ShowKeyboardCues()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.ShowWithoutActivationGet">
-            <summary>Sets the stub of Form.get_ShowWithoutActivation()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.SiteGet">
-            <summary>Sets the stub of Control.get_Site()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.SiteSetISite">
-            <summary>Sets the stub of Control.set_Site(ISite value)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.SizeFromClientSize(System.Drawing.Size)">
-            <summary>Sets the stub of Control.SizeFromClientSize(Size clientSize)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.SizeFromClientSizeSize">
-            <summary>Sets the stub of Control.SizeFromClientSize(Size clientSize)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.TextGet">
-            <summary>Sets the stub of Form.get_Text()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.TextSetString">
-            <summary>Sets the stub of Form.set_Text(String value)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.ToString">
-            <summary>Sets the stub of Form.ToString()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.ToString01">
-            <summary>Sets the stub of Form.ToString()</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.UpdateDefaultButton">
-            <summary>Sets the stub of Form.UpdateDefaultButton()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.UpdateDefaultButton01">
-            <summary>Sets the stub of Form.UpdateDefaultButton()</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.ValidateChildren">
-            <summary>Sets the stub of Form.ValidateChildren()</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.ValidateChildren(System.Windows.Forms.ValidationConstraints)">
-            <summary>Sets the stub of Form.ValidateChildren(ValidationConstraints validationConstraints)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.ValidateChildren01">
-            <summary>Sets the stub of Form.ValidateChildren()</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.ValidateChildrenValidationConstraints">
-            <summary>Sets the stub of Form.ValidateChildren(ValidationConstraints validationConstraints)</summary>
-        </member>
-        <member name="M:SWP1.Fakes.StubForm1.WndProc(System.Windows.Forms.Message@)">
-            <summary>Sets the stub of Form.WndProc(Message&amp; m)</summary>
-        </member>
-        <member name="F:SWP1.Fakes.StubForm1.WndProcMessageRef">
-            <summary>Sets the stub of Form.WndProc(Message&amp; m)</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.AllowDrop">
-            <summary>Sets the stub of Control.get_AllowDrop()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.Anchor">
-            <summary>Sets the stub of Control.get_Anchor()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.AutoScaleBaseSize">
-            <summary>Sets the stub of Form.get_AutoScaleBaseSize()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.AutoScroll">
-            <summary>Sets the stub of Form.get_AutoScroll()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.AutoScrollOffset">
-            <summary>Sets the stub of Control.get_AutoScrollOffset()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.AutoSize">
-            <summary>Sets the stub of Form.get_AutoSize()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.AutoValidate">
-            <summary>Sets the stub of Form.get_AutoValidate()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.BackColor">
-            <summary>Sets the stub of Form.get_BackColor()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.BackgroundImage">
-            <summary>Sets the stub of Control.get_BackgroundImage()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.BackgroundImageLayout">
-            <summary>Sets the stub of Control.get_BackgroundImageLayout()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.BindingContext">
-            <summary>Sets the stub of ContainerControl.get_BindingContext()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.CallBase">
-            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.CanEnableIme">
-            <summary>Sets the stub of ContainerControl.get_CanEnableIme()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.CanRaiseEvents">
-            <summary>Sets the stub of Control.get_CanRaiseEvents()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.ContextMenu">
-            <summary>Sets the stub of Control.get_ContextMenu()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.ContextMenuStrip">
-            <summary>Sets the stub of Control.get_ContextMenuStrip()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.CreateParams">
-            <summary>Sets the stub of Form.get_CreateParams()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.Cursor">
-            <summary>Sets the stub of Control.get_Cursor()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.DefaultCursor">
-            <summary>Sets the stub of Control.get_DefaultCursor()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.DefaultImeMode">
-            <summary>Sets the stub of Form.get_DefaultImeMode()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.DefaultMargin">
-            <summary>Sets the stub of Control.get_DefaultMargin()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.DefaultMaximumSize">
-            <summary>Sets the stub of Control.get_DefaultMaximumSize()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.DefaultMinimumSize">
-            <summary>Sets the stub of Control.get_DefaultMinimumSize()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.DefaultPadding">
-            <summary>Sets the stub of Control.get_DefaultPadding()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.DefaultSize">
-            <summary>Sets the stub of Form.get_DefaultSize()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.DisplayRectangle">
-            <summary>Sets the stub of ScrollableControl.get_DisplayRectangle()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.Dock">
-            <summary>Sets the stub of Control.get_Dock()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.DoubleBuffered">
-            <summary>Sets the stub of Control.get_DoubleBuffered()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.Focused">
-            <summary>Sets the stub of Control.get_Focused()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.Font">
-            <summary>Sets the stub of Control.get_Font()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.ForeColor">
-            <summary>Sets the stub of Control.get_ForeColor()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.ImeModeBase">
-            <summary>Sets the stub of Control.get_ImeModeBase()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.InstanceBehavior">
-            <summary>Gets or sets the instance behavior.</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.InstanceObserver">
-            <summary>Gets or sets the instance observer.</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.LayoutEngine">
-            <summary>Sets the stub of Control.get_LayoutEngine()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.MaximumSize">
-            <summary>Sets the stub of Form.get_MaximumSize()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.MinimumSize">
-            <summary>Sets the stub of Form.get_MinimumSize()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.RightToLeft">
-            <summary>Sets the stub of Control.get_RightToLeft()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.RightToLeftLayout">
-            <summary>Sets the stub of Form.get_RightToLeftLayout()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.ScaleChildren">
-            <summary>Sets the stub of Control.get_ScaleChildren()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.ShowFocusCues">
-            <summary>Sets the stub of Control.get_ShowFocusCues()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.ShowKeyboardCues">
-            <summary>Sets the stub of Control.get_ShowKeyboardCues()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.ShowWithoutActivation">
-            <summary>Sets the stub of Form.get_ShowWithoutActivation()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.Site">
-            <summary>Sets the stub of Control.get_Site()</summary>
-        </member>
-        <member name="P:SWP1.Fakes.StubForm1.Text">
-            <summary>Sets the stub of Form.get_Text()</summary>
-        </member>
         <member name="T:SWP1.Fakes.StubICommand">
             <summary>Stub type of SWP1.ICommand</summary>
         </member>
@@ -4440,6 +3357,1302 @@
         </member>
         <member name="M:SWP1.Fakes.StubISubject.swp1::SWP1#ISubject#Notify">
             <summary>Sets the stub of ISubject.Notify()</summary>
+        </member>
+        <member name="T:SWP1.Fakes.StubMainWindow">
+            <summary>Stub type of SWP1.MainWindow</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.AdjustFormScrollbars(System.Boolean)">
+            <summary>Sets the stub of Form.AdjustFormScrollbars(Boolean displayScrollbars)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.AdjustFormScrollbarsBoolean">
+            <summary>Sets the stub of Form.AdjustFormScrollbars(Boolean displayScrollbars)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.AllowDropGet">
+            <summary>Sets the stub of Control.get_AllowDrop()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.AllowDropSetBoolean">
+            <summary>Sets the stub of Control.set_AllowDrop(Boolean value)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.AnchorGet">
+            <summary>Sets the stub of Control.get_Anchor()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.AnchorSetAnchorStyles">
+            <summary>Sets the stub of Control.set_Anchor(AnchorStyles value)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.AttachBackingFieldToAllowDrop">
+            <summary>Attaches delegates to emulate StubMainWindow.AllowDrop as a property with a backing field.</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.AttachBackingFieldToAnchor">
+            <summary>Attaches delegates to emulate StubMainWindow.Anchor as a property with a backing field.</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.AttachBackingFieldToAutoScaleBaseSize">
+            <summary>Attaches delegates to emulate StubMainWindow.AutoScaleBaseSize as a property with a backing field.</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.AttachBackingFieldToAutoScroll">
+            <summary>Attaches delegates to emulate StubMainWindow.AutoScroll as a property with a backing field.</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.AttachBackingFieldToAutoScrollOffset">
+            <summary>Attaches delegates to emulate StubMainWindow.AutoScrollOffset as a property with a backing field.</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.AttachBackingFieldToAutoSize">
+            <summary>Attaches delegates to emulate StubMainWindow.AutoSize as a property with a backing field.</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.AttachBackingFieldToAutoValidate">
+            <summary>Attaches delegates to emulate StubMainWindow.AutoValidate as a property with a backing field.</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.AttachBackingFieldToBackColor">
+            <summary>Attaches delegates to emulate StubMainWindow.BackColor as a property with a backing field.</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.AttachBackingFieldToBackgroundImage">
+            <summary>Attaches delegates to emulate StubMainWindow.BackgroundImage as a property with a backing field.</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.AttachBackingFieldToBackgroundImageLayout">
+            <summary>Attaches delegates to emulate StubMainWindow.BackgroundImageLayout as a property with a backing field.</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.AttachBackingFieldToBindingContext">
+            <summary>Attaches delegates to emulate StubMainWindow.BindingContext as a property with a backing field.</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.AttachBackingFieldToContextMenu">
+            <summary>Attaches delegates to emulate StubMainWindow.ContextMenu as a property with a backing field.</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.AttachBackingFieldToContextMenuStrip">
+            <summary>Attaches delegates to emulate StubMainWindow.ContextMenuStrip as a property with a backing field.</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.AttachBackingFieldToCursor">
+            <summary>Attaches delegates to emulate StubMainWindow.Cursor as a property with a backing field.</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.AttachBackingFieldToDock">
+            <summary>Attaches delegates to emulate StubMainWindow.Dock as a property with a backing field.</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.AttachBackingFieldToDoubleBuffered">
+            <summary>Attaches delegates to emulate StubMainWindow.DoubleBuffered as a property with a backing field.</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.AttachBackingFieldToFont">
+            <summary>Attaches delegates to emulate StubMainWindow.Font as a property with a backing field.</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.AttachBackingFieldToForeColor">
+            <summary>Attaches delegates to emulate StubMainWindow.ForeColor as a property with a backing field.</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.AttachBackingFieldToImeModeBase">
+            <summary>Attaches delegates to emulate StubMainWindow.ImeModeBase as a property with a backing field.</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.AttachBackingFieldToMaximumSize">
+            <summary>Attaches delegates to emulate StubMainWindow.MaximumSize as a property with a backing field.</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.AttachBackingFieldToMinimumSize">
+            <summary>Attaches delegates to emulate StubMainWindow.MinimumSize as a property with a backing field.</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.AttachBackingFieldToRightToLeft">
+            <summary>Attaches delegates to emulate StubMainWindow.RightToLeft as a property with a backing field.</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.AttachBackingFieldToRightToLeftLayout">
+            <summary>Attaches delegates to emulate StubMainWindow.RightToLeftLayout as a property with a backing field.</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.AttachBackingFieldToSite">
+            <summary>Attaches delegates to emulate StubMainWindow.Site as a property with a backing field.</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.AttachBackingFieldToText">
+            <summary>Attaches delegates to emulate StubMainWindow.Text as a property with a backing field.</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.AutoScaleBaseSizeGet">
+            <summary>Sets the stub of Form.get_AutoScaleBaseSize()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.AutoScaleBaseSizeSetSize">
+            <summary>Sets the stub of Form.set_AutoScaleBaseSize(Size value)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.AutoScrollGet">
+            <summary>Sets the stub of Form.get_AutoScroll()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.AutoScrollOffsetGet">
+            <summary>Sets the stub of Control.get_AutoScrollOffset()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.AutoScrollOffsetSetPoint">
+            <summary>Sets the stub of Control.set_AutoScrollOffset(Point value)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.AutoScrollSetBoolean">
+            <summary>Sets the stub of Form.set_AutoScroll(Boolean value)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.AutoSizeGet">
+            <summary>Sets the stub of Form.get_AutoSize()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.AutoSizeSetBoolean">
+            <summary>Sets the stub of Form.set_AutoSize(Boolean value)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.AutoValidateGet">
+            <summary>Sets the stub of Form.get_AutoValidate()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.AutoValidateSetAutoValidate">
+            <summary>Sets the stub of Form.set_AutoValidate(AutoValidate value)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.BackColorGet">
+            <summary>Sets the stub of Form.get_BackColor()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.BackColorSetColor">
+            <summary>Sets the stub of Form.set_BackColor(Color value)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.BackgroundImageGet">
+            <summary>Sets the stub of Control.get_BackgroundImage()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.BackgroundImageLayoutGet">
+            <summary>Sets the stub of Control.get_BackgroundImageLayout()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.BackgroundImageLayoutSetImageLayout">
+            <summary>Sets the stub of Control.set_BackgroundImageLayout(ImageLayout value)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.BackgroundImageSetImage">
+            <summary>Sets the stub of Control.set_BackgroundImage(Image value)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.BindingContextGet">
+            <summary>Sets the stub of ContainerControl.get_BindingContext()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.BindingContextSetBindingContext">
+            <summary>Sets the stub of ContainerControl.set_BindingContext(BindingContext value)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.CanEnableImeGet">
+            <summary>Sets the stub of ContainerControl.get_CanEnableIme()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.CanRaiseEventsGet">
+            <summary>Sets the stub of Control.get_CanRaiseEvents()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.ContextMenuGet">
+            <summary>Sets the stub of Control.get_ContextMenu()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.ContextMenuSetContextMenu">
+            <summary>Sets the stub of Control.set_ContextMenu(ContextMenu value)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.ContextMenuStripGet">
+            <summary>Sets the stub of Control.get_ContextMenuStrip()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.ContextMenuStripSetContextMenuStrip">
+            <summary>Sets the stub of Control.set_ContextMenuStrip(ContextMenuStrip value)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.CreateAccessibilityInstance">
+            <summary>Sets the stub of Control.CreateAccessibilityInstance()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.CreateAccessibilityInstance01">
+            <summary>Sets the stub of Control.CreateAccessibilityInstance()</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.CreateControlsInstance">
+            <summary>Sets the stub of Form.CreateControlsInstance()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.CreateControlsInstance01">
+            <summary>Sets the stub of Form.CreateControlsInstance()</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.CreateHandle">
+            <summary>Sets the stub of Form.CreateHandle()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.CreateHandle01">
+            <summary>Sets the stub of Form.CreateHandle()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.CreateParamsGet">
+            <summary>Sets the stub of Form.get_CreateParams()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.CursorGet">
+            <summary>Sets the stub of Control.get_Cursor()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.CursorSetCursor">
+            <summary>Sets the stub of Control.set_Cursor(Cursor value)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.DefWndProc(System.Windows.Forms.Message@)">
+            <summary>Sets the stub of Form.DefWndProc(Message&amp; m)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.DefWndProcMessageRef">
+            <summary>Sets the stub of Form.DefWndProc(Message&amp; m)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.DefaultCursorGet">
+            <summary>Sets the stub of Control.get_DefaultCursor()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.DefaultImeModeGet">
+            <summary>Sets the stub of Form.get_DefaultImeMode()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.DefaultMarginGet">
+            <summary>Sets the stub of Control.get_DefaultMargin()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.DefaultMaximumSizeGet">
+            <summary>Sets the stub of Control.get_DefaultMaximumSize()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.DefaultMinimumSizeGet">
+            <summary>Sets the stub of Control.get_DefaultMinimumSize()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.DefaultPaddingGet">
+            <summary>Sets the stub of Control.get_DefaultPadding()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.DefaultSizeGet">
+            <summary>Sets the stub of Form.get_DefaultSize()</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.DestroyHandle">
+            <summary>Sets the stub of Control.DestroyHandle()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.DestroyHandle01">
+            <summary>Sets the stub of Control.DestroyHandle()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.DisplayRectangleGet">
+            <summary>Sets the stub of ScrollableControl.get_DisplayRectangle()</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.Dispose(System.Boolean)">
+            <summary>Sets the stub of MainWindow.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.DisposeBoolean">
+            <summary>Sets the stub of MainWindow.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.DockGet">
+            <summary>Sets the stub of Control.get_Dock()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.DockSetDockStyle">
+            <summary>Sets the stub of Control.set_Dock(DockStyle value)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.DoubleBufferedGet">
+            <summary>Sets the stub of Control.get_DoubleBuffered()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.DoubleBufferedSetBoolean">
+            <summary>Sets the stub of Control.set_DoubleBuffered(Boolean value)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.FocusedGet">
+            <summary>Sets the stub of Control.get_Focused()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.FontGet">
+            <summary>Sets the stub of Control.get_Font()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.FontSetFont">
+            <summary>Sets the stub of Control.set_Font(Font value)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.ForeColorGet">
+            <summary>Sets the stub of Control.get_ForeColor()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.ForeColorSetColor">
+            <summary>Sets the stub of Control.set_ForeColor(Color value)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.GetAccessibilityObjectById(System.Int32)">
+            <summary>Sets the stub of Control.GetAccessibilityObjectById(Int32 objectId)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.GetAccessibilityObjectByIdInt32">
+            <summary>Sets the stub of Control.GetAccessibilityObjectById(Int32 objectId)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.GetPreferredSize(System.Drawing.Size)">
+            <summary>Sets the stub of Control.GetPreferredSize(Size proposedSize)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.GetPreferredSizeSize">
+            <summary>Sets the stub of Control.GetPreferredSize(Size proposedSize)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.GetScaledBounds(System.Drawing.Rectangle,System.Drawing.SizeF,System.Windows.Forms.BoundsSpecified)">
+            <summary>Sets the stub of Form.GetScaledBounds(Rectangle bounds, SizeF factor, BoundsSpecified specified)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.GetScaledBoundsRectangleSizeFBoundsSpecified">
+            <summary>Sets the stub of Form.GetScaledBounds(Rectangle bounds, SizeF factor, BoundsSpecified specified)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.GetService(System.Type)">
+            <summary>Sets the stub of Component.GetService(Type service)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.GetServiceType">
+            <summary>Sets the stub of Component.GetService(Type service)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.ImeModeBaseGet">
+            <summary>Sets the stub of Control.get_ImeModeBase()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.ImeModeBaseSetImeMode">
+            <summary>Sets the stub of Control.set_ImeModeBase(ImeMode value)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.InitLayout">
+            <summary>Sets the stub of Control.InitLayout()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.InitLayout01">
+            <summary>Sets the stub of Control.InitLayout()</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.InitializeStub">
+            <summary>Initializes a new instance of type StubMainWindow</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.IsInputChar(System.Char)">
+            <summary>Sets the stub of Control.IsInputChar(Char charCode)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.IsInputCharChar">
+            <summary>Sets the stub of Control.IsInputChar(Char charCode)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.IsInputKey(System.Windows.Forms.Keys)">
+            <summary>Sets the stub of Control.IsInputKey(Keys keyData)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.IsInputKeyKeys">
+            <summary>Sets the stub of Control.IsInputKey(Keys keyData)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.LayoutEngineGet">
+            <summary>Sets the stub of Control.get_LayoutEngine()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.MaximumSizeGet">
+            <summary>Sets the stub of Form.get_MaximumSize()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.MaximumSizeSetSize">
+            <summary>Sets the stub of Form.set_MaximumSize(Size value)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.MinimumSizeGet">
+            <summary>Sets the stub of Form.get_MinimumSize()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.MinimumSizeSetSize">
+            <summary>Sets the stub of Form.set_MinimumSize(Size value)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.NotifyInvalidate(System.Drawing.Rectangle)">
+            <summary>Sets the stub of Control.NotifyInvalidate(Rectangle invalidatedArea)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.NotifyInvalidateRectangle">
+            <summary>Sets the stub of Control.NotifyInvalidate(Rectangle invalidatedArea)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnActivated(System.EventArgs)">
+            <summary>Sets the stub of Form.OnActivated(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnActivatedEventArgs">
+            <summary>Sets the stub of Form.OnActivated(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnAutoSizeChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnAutoSizeChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnAutoSizeChangedEventArgs">
+            <summary>Sets the stub of Control.OnAutoSizeChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnAutoValidateChanged(System.EventArgs)">
+            <summary>Sets the stub of ContainerControl.OnAutoValidateChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnAutoValidateChangedEventArgs">
+            <summary>Sets the stub of ContainerControl.OnAutoValidateChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnBackColorChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnBackColorChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnBackColorChangedEventArgs">
+            <summary>Sets the stub of Control.OnBackColorChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnBackgroundImageChanged(System.EventArgs)">
+            <summary>Sets the stub of Form.OnBackgroundImageChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnBackgroundImageChangedEventArgs">
+            <summary>Sets the stub of Form.OnBackgroundImageChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnBackgroundImageLayoutChanged(System.EventArgs)">
+            <summary>Sets the stub of Form.OnBackgroundImageLayoutChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnBackgroundImageLayoutChangedEventArgs">
+            <summary>Sets the stub of Form.OnBackgroundImageLayoutChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnBindingContextChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnBindingContextChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnBindingContextChangedEventArgs">
+            <summary>Sets the stub of Control.OnBindingContextChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnCausesValidationChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnCausesValidationChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnCausesValidationChangedEventArgs">
+            <summary>Sets the stub of Control.OnCausesValidationChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnChangeUICues(System.Windows.Forms.UICuesEventArgs)">
+            <summary>Sets the stub of Control.OnChangeUICues(UICuesEventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnChangeUICuesUICuesEventArgs">
+            <summary>Sets the stub of Control.OnChangeUICues(UICuesEventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnClick(System.EventArgs)">
+            <summary>Sets the stub of Control.OnClick(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnClickEventArgs">
+            <summary>Sets the stub of Control.OnClick(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnClientSizeChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnClientSizeChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnClientSizeChangedEventArgs">
+            <summary>Sets the stub of Control.OnClientSizeChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnClosed(System.EventArgs)">
+            <summary>Sets the stub of Form.OnClosed(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnClosedEventArgs">
+            <summary>Sets the stub of Form.OnClosed(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnClosing(System.ComponentModel.CancelEventArgs)">
+            <summary>Sets the stub of Form.OnClosing(CancelEventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnClosingCancelEventArgs">
+            <summary>Sets the stub of Form.OnClosing(CancelEventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnContextMenuChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnContextMenuChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnContextMenuChangedEventArgs">
+            <summary>Sets the stub of Control.OnContextMenuChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnContextMenuStripChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnContextMenuStripChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnContextMenuStripChangedEventArgs">
+            <summary>Sets the stub of Control.OnContextMenuStripChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnControlAdded(System.Windows.Forms.ControlEventArgs)">
+            <summary>Sets the stub of Control.OnControlAdded(ControlEventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnControlAddedControlEventArgs">
+            <summary>Sets the stub of Control.OnControlAdded(ControlEventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnControlRemoved(System.Windows.Forms.ControlEventArgs)">
+            <summary>Sets the stub of Control.OnControlRemoved(ControlEventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnControlRemovedControlEventArgs">
+            <summary>Sets the stub of Control.OnControlRemoved(ControlEventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnCreateControl">
+            <summary>Sets the stub of Form.OnCreateControl()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnCreateControl01">
+            <summary>Sets the stub of Form.OnCreateControl()</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnCursorChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnCursorChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnCursorChangedEventArgs">
+            <summary>Sets the stub of Control.OnCursorChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnDeactivate(System.EventArgs)">
+            <summary>Sets the stub of Form.OnDeactivate(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnDeactivateEventArgs">
+            <summary>Sets the stub of Form.OnDeactivate(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnDockChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnDockChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnDockChangedEventArgs">
+            <summary>Sets the stub of Control.OnDockChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnDoubleClick(System.EventArgs)">
+            <summary>Sets the stub of Control.OnDoubleClick(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnDoubleClickEventArgs">
+            <summary>Sets the stub of Control.OnDoubleClick(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnDragDrop(System.Windows.Forms.DragEventArgs)">
+            <summary>Sets the stub of Control.OnDragDrop(DragEventArgs drgevent)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnDragDropDragEventArgs">
+            <summary>Sets the stub of Control.OnDragDrop(DragEventArgs drgevent)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnDragEnter(System.Windows.Forms.DragEventArgs)">
+            <summary>Sets the stub of Control.OnDragEnter(DragEventArgs drgevent)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnDragEnterDragEventArgs">
+            <summary>Sets the stub of Control.OnDragEnter(DragEventArgs drgevent)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnDragLeave(System.EventArgs)">
+            <summary>Sets the stub of Control.OnDragLeave(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnDragLeaveEventArgs">
+            <summary>Sets the stub of Control.OnDragLeave(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnDragOver(System.Windows.Forms.DragEventArgs)">
+            <summary>Sets the stub of Control.OnDragOver(DragEventArgs drgevent)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnDragOverDragEventArgs">
+            <summary>Sets the stub of Control.OnDragOver(DragEventArgs drgevent)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnEnabledChanged(System.EventArgs)">
+            <summary>Sets the stub of Form.OnEnabledChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnEnabledChangedEventArgs">
+            <summary>Sets the stub of Form.OnEnabledChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnEnter(System.EventArgs)">
+            <summary>Sets the stub of Form.OnEnter(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnEnterEventArgs">
+            <summary>Sets the stub of Form.OnEnter(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnFontChanged(System.EventArgs)">
+            <summary>Sets the stub of Form.OnFontChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnFontChangedEventArgs">
+            <summary>Sets the stub of Form.OnFontChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnForeColorChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnForeColorChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnForeColorChangedEventArgs">
+            <summary>Sets the stub of Control.OnForeColorChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnFormClosed(System.Windows.Forms.FormClosedEventArgs)">
+            <summary>Sets the stub of Form.OnFormClosed(FormClosedEventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnFormClosedFormClosedEventArgs">
+            <summary>Sets the stub of Form.OnFormClosed(FormClosedEventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnFormClosing(System.Windows.Forms.FormClosingEventArgs)">
+            <summary>Sets the stub of Form.OnFormClosing(FormClosingEventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnFormClosingFormClosingEventArgs">
+            <summary>Sets the stub of Form.OnFormClosing(FormClosingEventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnGiveFeedback(System.Windows.Forms.GiveFeedbackEventArgs)">
+            <summary>Sets the stub of Control.OnGiveFeedback(GiveFeedbackEventArgs gfbevent)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnGiveFeedbackGiveFeedbackEventArgs">
+            <summary>Sets the stub of Control.OnGiveFeedback(GiveFeedbackEventArgs gfbevent)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnGotFocus(System.EventArgs)">
+            <summary>Sets the stub of Control.OnGotFocus(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnGotFocusEventArgs">
+            <summary>Sets the stub of Control.OnGotFocus(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnHandleCreated(System.EventArgs)">
+            <summary>Sets the stub of Form.OnHandleCreated(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnHandleCreatedEventArgs">
+            <summary>Sets the stub of Form.OnHandleCreated(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnHandleDestroyed(System.EventArgs)">
+            <summary>Sets the stub of Form.OnHandleDestroyed(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnHandleDestroyedEventArgs">
+            <summary>Sets the stub of Form.OnHandleDestroyed(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnHelpButtonClicked(System.ComponentModel.CancelEventArgs)">
+            <summary>Sets the stub of Form.OnHelpButtonClicked(CancelEventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnHelpButtonClickedCancelEventArgs">
+            <summary>Sets the stub of Form.OnHelpButtonClicked(CancelEventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnHelpRequested(System.Windows.Forms.HelpEventArgs)">
+            <summary>Sets the stub of Control.OnHelpRequested(HelpEventArgs hevent)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnHelpRequestedHelpEventArgs">
+            <summary>Sets the stub of Control.OnHelpRequested(HelpEventArgs hevent)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnImeModeChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnImeModeChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnImeModeChangedEventArgs">
+            <summary>Sets the stub of Control.OnImeModeChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnInputLanguageChanged(System.Windows.Forms.InputLanguageChangedEventArgs)">
+            <summary>Sets the stub of Form.OnInputLanguageChanged(InputLanguageChangedEventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnInputLanguageChangedInputLanguageChangedEventArgs">
+            <summary>Sets the stub of Form.OnInputLanguageChanged(InputLanguageChangedEventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnInputLanguageChanging(System.Windows.Forms.InputLanguageChangingEventArgs)">
+            <summary>Sets the stub of Form.OnInputLanguageChanging(InputLanguageChangingEventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnInputLanguageChangingInputLanguageChangingEventArgs">
+            <summary>Sets the stub of Form.OnInputLanguageChanging(InputLanguageChangingEventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnInvalidated(System.Windows.Forms.InvalidateEventArgs)">
+            <summary>Sets the stub of Control.OnInvalidated(InvalidateEventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnInvalidatedInvalidateEventArgs">
+            <summary>Sets the stub of Control.OnInvalidated(InvalidateEventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnKeyDown(System.Windows.Forms.KeyEventArgs)">
+            <summary>Sets the stub of Control.OnKeyDown(KeyEventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnKeyDownKeyEventArgs">
+            <summary>Sets the stub of Control.OnKeyDown(KeyEventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnKeyPress(System.Windows.Forms.KeyPressEventArgs)">
+            <summary>Sets the stub of Control.OnKeyPress(KeyPressEventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnKeyPressKeyPressEventArgs">
+            <summary>Sets the stub of Control.OnKeyPress(KeyPressEventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnKeyUp(System.Windows.Forms.KeyEventArgs)">
+            <summary>Sets the stub of Control.OnKeyUp(KeyEventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnKeyUpKeyEventArgs">
+            <summary>Sets the stub of Control.OnKeyUp(KeyEventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnLayout(System.Windows.Forms.LayoutEventArgs)">
+            <summary>Sets the stub of Form.OnLayout(LayoutEventArgs levent)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnLayoutLayoutEventArgs">
+            <summary>Sets the stub of Form.OnLayout(LayoutEventArgs levent)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnLeave(System.EventArgs)">
+            <summary>Sets the stub of Control.OnLeave(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnLeaveEventArgs">
+            <summary>Sets the stub of Control.OnLeave(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnLoad(System.EventArgs)">
+            <summary>Sets the stub of Form.OnLoad(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnLoadEventArgs">
+            <summary>Sets the stub of Form.OnLoad(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnLocationChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnLocationChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnLocationChangedEventArgs">
+            <summary>Sets the stub of Control.OnLocationChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnLostFocus(System.EventArgs)">
+            <summary>Sets the stub of Control.OnLostFocus(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnLostFocusEventArgs">
+            <summary>Sets the stub of Control.OnLostFocus(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnMarginChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnMarginChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnMarginChangedEventArgs">
+            <summary>Sets the stub of Control.OnMarginChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnMaximizedBoundsChanged(System.EventArgs)">
+            <summary>Sets the stub of Form.OnMaximizedBoundsChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnMaximizedBoundsChangedEventArgs">
+            <summary>Sets the stub of Form.OnMaximizedBoundsChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnMaximumSizeChanged(System.EventArgs)">
+            <summary>Sets the stub of Form.OnMaximumSizeChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnMaximumSizeChangedEventArgs">
+            <summary>Sets the stub of Form.OnMaximumSizeChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnMdiChildActivate(System.EventArgs)">
+            <summary>Sets the stub of Form.OnMdiChildActivate(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnMdiChildActivateEventArgs">
+            <summary>Sets the stub of Form.OnMdiChildActivate(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnMenuComplete(System.EventArgs)">
+            <summary>Sets the stub of Form.OnMenuComplete(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnMenuCompleteEventArgs">
+            <summary>Sets the stub of Form.OnMenuComplete(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnMenuStart(System.EventArgs)">
+            <summary>Sets the stub of Form.OnMenuStart(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnMenuStartEventArgs">
+            <summary>Sets the stub of Form.OnMenuStart(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnMinimumSizeChanged(System.EventArgs)">
+            <summary>Sets the stub of Form.OnMinimumSizeChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnMinimumSizeChangedEventArgs">
+            <summary>Sets the stub of Form.OnMinimumSizeChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnMouseCaptureChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnMouseCaptureChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnMouseCaptureChangedEventArgs">
+            <summary>Sets the stub of Control.OnMouseCaptureChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnMouseClick(System.Windows.Forms.MouseEventArgs)">
+            <summary>Sets the stub of Control.OnMouseClick(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnMouseClickMouseEventArgs">
+            <summary>Sets the stub of Control.OnMouseClick(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnMouseDoubleClick(System.Windows.Forms.MouseEventArgs)">
+            <summary>Sets the stub of Control.OnMouseDoubleClick(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnMouseDoubleClickMouseEventArgs">
+            <summary>Sets the stub of Control.OnMouseDoubleClick(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <summary>Sets the stub of Control.OnMouseDown(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnMouseDownMouseEventArgs">
+            <summary>Sets the stub of Control.OnMouseDown(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnMouseEnter(System.EventArgs)">
+            <summary>Sets the stub of Control.OnMouseEnter(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnMouseEnterEventArgs">
+            <summary>Sets the stub of Control.OnMouseEnter(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnMouseHover(System.EventArgs)">
+            <summary>Sets the stub of Control.OnMouseHover(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnMouseHoverEventArgs">
+            <summary>Sets the stub of Control.OnMouseHover(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnMouseLeave(System.EventArgs)">
+            <summary>Sets the stub of Control.OnMouseLeave(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnMouseLeaveEventArgs">
+            <summary>Sets the stub of Control.OnMouseLeave(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <summary>Sets the stub of Control.OnMouseMove(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnMouseMoveMouseEventArgs">
+            <summary>Sets the stub of Control.OnMouseMove(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <summary>Sets the stub of Control.OnMouseUp(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnMouseUpMouseEventArgs">
+            <summary>Sets the stub of Control.OnMouseUp(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnMouseWheel(System.Windows.Forms.MouseEventArgs)">
+            <summary>Sets the stub of ScrollableControl.OnMouseWheel(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnMouseWheelMouseEventArgs">
+            <summary>Sets the stub of ScrollableControl.OnMouseWheel(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnMove(System.EventArgs)">
+            <summary>Sets the stub of Control.OnMove(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnMoveEventArgs">
+            <summary>Sets the stub of Control.OnMove(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnNotifyMessage(System.Windows.Forms.Message)">
+            <summary>Sets the stub of Control.OnNotifyMessage(Message m)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnNotifyMessageMessage">
+            <summary>Sets the stub of Control.OnNotifyMessage(Message m)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnPaddingChanged(System.EventArgs)">
+            <summary>Sets the stub of ScrollableControl.OnPaddingChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnPaddingChangedEventArgs">
+            <summary>Sets the stub of ScrollableControl.OnPaddingChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>Sets the stub of Form.OnPaint(PaintEventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnPaintBackground(System.Windows.Forms.PaintEventArgs)">
+            <summary>Sets the stub of ScrollableControl.OnPaintBackground(PaintEventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnPaintBackgroundPaintEventArgs">
+            <summary>Sets the stub of ScrollableControl.OnPaintBackground(PaintEventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnPaintPaintEventArgs">
+            <summary>Sets the stub of Form.OnPaint(PaintEventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnParentBackColorChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnParentBackColorChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnParentBackColorChangedEventArgs">
+            <summary>Sets the stub of Control.OnParentBackColorChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnParentBackgroundImageChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnParentBackgroundImageChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnParentBackgroundImageChangedEventArgs">
+            <summary>Sets the stub of Control.OnParentBackgroundImageChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnParentBindingContextChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnParentBindingContextChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnParentBindingContextChangedEventArgs">
+            <summary>Sets the stub of Control.OnParentBindingContextChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnParentChanged(System.EventArgs)">
+            <summary>Sets the stub of ContainerControl.OnParentChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnParentChangedEventArgs">
+            <summary>Sets the stub of ContainerControl.OnParentChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnParentCursorChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnParentCursorChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnParentCursorChangedEventArgs">
+            <summary>Sets the stub of Control.OnParentCursorChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnParentEnabledChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnParentEnabledChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnParentEnabledChangedEventArgs">
+            <summary>Sets the stub of Control.OnParentEnabledChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnParentFontChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnParentFontChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnParentFontChangedEventArgs">
+            <summary>Sets the stub of Control.OnParentFontChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnParentForeColorChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnParentForeColorChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnParentForeColorChangedEventArgs">
+            <summary>Sets the stub of Control.OnParentForeColorChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnParentRightToLeftChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnParentRightToLeftChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnParentRightToLeftChangedEventArgs">
+            <summary>Sets the stub of Control.OnParentRightToLeftChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnParentVisibleChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnParentVisibleChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnParentVisibleChangedEventArgs">
+            <summary>Sets the stub of Control.OnParentVisibleChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnPreviewKeyDown(System.Windows.Forms.PreviewKeyDownEventArgs)">
+            <summary>Sets the stub of Control.OnPreviewKeyDown(PreviewKeyDownEventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnPreviewKeyDownPreviewKeyDownEventArgs">
+            <summary>Sets the stub of Control.OnPreviewKeyDown(PreviewKeyDownEventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnPrint(System.Windows.Forms.PaintEventArgs)">
+            <summary>Sets the stub of Control.OnPrint(PaintEventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnPrintPaintEventArgs">
+            <summary>Sets the stub of Control.OnPrint(PaintEventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnQueryContinueDrag(System.Windows.Forms.QueryContinueDragEventArgs)">
+            <summary>Sets the stub of Control.OnQueryContinueDrag(QueryContinueDragEventArgs qcdevent)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnQueryContinueDragQueryContinueDragEventArgs">
+            <summary>Sets the stub of Control.OnQueryContinueDrag(QueryContinueDragEventArgs qcdevent)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnRegionChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnRegionChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnRegionChangedEventArgs">
+            <summary>Sets the stub of Control.OnRegionChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnResize(System.EventArgs)">
+            <summary>Sets the stub of Form.OnResize(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnResizeBegin(System.EventArgs)">
+            <summary>Sets the stub of Form.OnResizeBegin(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnResizeBeginEventArgs">
+            <summary>Sets the stub of Form.OnResizeBegin(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnResizeEnd(System.EventArgs)">
+            <summary>Sets the stub of Form.OnResizeEnd(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnResizeEndEventArgs">
+            <summary>Sets the stub of Form.OnResizeEnd(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnResizeEventArgs">
+            <summary>Sets the stub of Form.OnResize(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnRightToLeftChanged(System.EventArgs)">
+            <summary>Sets the stub of ScrollableControl.OnRightToLeftChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnRightToLeftChangedEventArgs">
+            <summary>Sets the stub of ScrollableControl.OnRightToLeftChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnRightToLeftLayoutChanged(System.EventArgs)">
+            <summary>Sets the stub of Form.OnRightToLeftLayoutChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnRightToLeftLayoutChangedEventArgs">
+            <summary>Sets the stub of Form.OnRightToLeftLayoutChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnScroll(System.Windows.Forms.ScrollEventArgs)">
+            <summary>Sets the stub of ScrollableControl.OnScroll(ScrollEventArgs se)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnScrollScrollEventArgs">
+            <summary>Sets the stub of ScrollableControl.OnScroll(ScrollEventArgs se)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnShown(System.EventArgs)">
+            <summary>Sets the stub of Form.OnShown(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnShownEventArgs">
+            <summary>Sets the stub of Form.OnShown(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnSizeChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnSizeChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnSizeChangedEventArgs">
+            <summary>Sets the stub of Control.OnSizeChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnStyleChanged(System.EventArgs)">
+            <summary>Sets the stub of Form.OnStyleChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnStyleChangedEventArgs">
+            <summary>Sets the stub of Form.OnStyleChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnSystemColorsChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnSystemColorsChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnSystemColorsChangedEventArgs">
+            <summary>Sets the stub of Control.OnSystemColorsChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnTabIndexChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnTabIndexChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnTabIndexChangedEventArgs">
+            <summary>Sets the stub of Control.OnTabIndexChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnTabStopChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnTabStopChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnTabStopChangedEventArgs">
+            <summary>Sets the stub of Control.OnTabStopChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnTextChanged(System.EventArgs)">
+            <summary>Sets the stub of Form.OnTextChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnTextChangedEventArgs">
+            <summary>Sets the stub of Form.OnTextChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnValidated(System.EventArgs)">
+            <summary>Sets the stub of Control.OnValidated(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnValidatedEventArgs">
+            <summary>Sets the stub of Control.OnValidated(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnValidating(System.ComponentModel.CancelEventArgs)">
+            <summary>Sets the stub of Control.OnValidating(CancelEventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnValidatingCancelEventArgs">
+            <summary>Sets the stub of Control.OnValidating(CancelEventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.OnVisibleChanged(System.EventArgs)">
+            <summary>Sets the stub of Form.OnVisibleChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.OnVisibleChangedEventArgs">
+            <summary>Sets the stub of Form.OnVisibleChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.PreProcessMessage(System.Windows.Forms.Message@)">
+            <summary>Sets the stub of Control.PreProcessMessage(Message&amp; msg)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.PreProcessMessageMessageRef">
+            <summary>Sets the stub of Control.PreProcessMessage(Message&amp; msg)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.ProcessCmdKey(System.Windows.Forms.Message@,System.Windows.Forms.Keys)">
+            <summary>Sets the stub of Form.ProcessCmdKey(Message&amp; msg, Keys keyData)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.ProcessCmdKeyMessageRefKeys">
+            <summary>Sets the stub of Form.ProcessCmdKey(Message&amp; msg, Keys keyData)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.ProcessDialogChar(System.Char)">
+            <summary>Sets the stub of Form.ProcessDialogChar(Char charCode)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.ProcessDialogCharChar">
+            <summary>Sets the stub of Form.ProcessDialogChar(Char charCode)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.ProcessDialogKey(System.Windows.Forms.Keys)">
+            <summary>Sets the stub of Form.ProcessDialogKey(Keys keyData)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.ProcessDialogKeyKeys">
+            <summary>Sets the stub of Form.ProcessDialogKey(Keys keyData)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.ProcessKeyEventArgs(System.Windows.Forms.Message@)">
+            <summary>Sets the stub of Control.ProcessKeyEventArgs(Message&amp; m)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.ProcessKeyEventArgsMessageRef">
+            <summary>Sets the stub of Control.ProcessKeyEventArgs(Message&amp; m)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.ProcessKeyMessage(System.Windows.Forms.Message@)">
+            <summary>Sets the stub of Control.ProcessKeyMessage(Message&amp; m)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.ProcessKeyMessageMessageRef">
+            <summary>Sets the stub of Control.ProcessKeyMessage(Message&amp; m)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.ProcessKeyPreview(System.Windows.Forms.Message@)">
+            <summary>Sets the stub of Form.ProcessKeyPreview(Message&amp; m)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.ProcessKeyPreviewMessageRef">
+            <summary>Sets the stub of Form.ProcessKeyPreview(Message&amp; m)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.ProcessMnemonic(System.Char)">
+            <summary>Sets the stub of Form.ProcessMnemonic(Char charCode)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.ProcessMnemonicChar">
+            <summary>Sets the stub of Form.ProcessMnemonic(Char charCode)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.ProcessTabKey(System.Boolean)">
+            <summary>Sets the stub of Form.ProcessTabKey(Boolean forward)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.ProcessTabKeyBoolean">
+            <summary>Sets the stub of Form.ProcessTabKey(Boolean forward)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.Refresh">
+            <summary>Sets the stub of Control.Refresh()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.Refresh01">
+            <summary>Sets the stub of Control.Refresh()</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.ResetBackColor">
+            <summary>Sets the stub of Control.ResetBackColor()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.ResetBackColor01">
+            <summary>Sets the stub of Control.ResetBackColor()</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.ResetCursor">
+            <summary>Sets the stub of Control.ResetCursor()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.ResetCursor01">
+            <summary>Sets the stub of Control.ResetCursor()</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.ResetFont">
+            <summary>Sets the stub of Control.ResetFont()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.ResetFont01">
+            <summary>Sets the stub of Control.ResetFont()</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.ResetForeColor">
+            <summary>Sets the stub of Control.ResetForeColor()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.ResetForeColor01">
+            <summary>Sets the stub of Control.ResetForeColor()</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.ResetRightToLeft">
+            <summary>Sets the stub of Control.ResetRightToLeft()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.ResetRightToLeft01">
+            <summary>Sets the stub of Control.ResetRightToLeft()</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.ResetText">
+            <summary>Sets the stub of Control.ResetText()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.ResetText01">
+            <summary>Sets the stub of Control.ResetText()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.RightToLeftGet">
+            <summary>Sets the stub of Control.get_RightToLeft()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.RightToLeftLayoutGet">
+            <summary>Sets the stub of Form.get_RightToLeftLayout()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.RightToLeftLayoutSetBoolean">
+            <summary>Sets the stub of Form.set_RightToLeftLayout(Boolean value)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.RightToLeftSetRightToLeft">
+            <summary>Sets the stub of Control.set_RightToLeft(RightToLeft value)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.ScaleChildrenGet">
+            <summary>Sets the stub of Control.get_ScaleChildren()</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.ScaleControl(System.Drawing.SizeF,System.Windows.Forms.BoundsSpecified)">
+            <summary>Sets the stub of Form.ScaleControl(SizeF factor, BoundsSpecified specified)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.ScaleControlSizeFBoundsSpecified">
+            <summary>Sets the stub of Form.ScaleControl(SizeF factor, BoundsSpecified specified)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.ScaleCore(System.Single,System.Single)">
+            <summary>Sets the stub of Form.ScaleCore(Single x, Single y)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.ScaleCoreSingleSingle">
+            <summary>Sets the stub of Form.ScaleCore(Single x, Single y)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.ScrollToControl(System.Windows.Forms.Control)">
+            <summary>Sets the stub of ScrollableControl.ScrollToControl(Control activeControl)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.ScrollToControlControl">
+            <summary>Sets the stub of ScrollableControl.ScrollToControl(Control activeControl)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.Select(System.Boolean,System.Boolean)">
+            <summary>Sets the stub of Form.Select(Boolean directed, Boolean forward)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.SelectBooleanBoolean">
+            <summary>Sets the stub of Form.Select(Boolean directed, Boolean forward)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.SetBoundsCore(System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.BoundsSpecified)">
+            <summary>Sets the stub of Form.SetBoundsCore(Int32 x, Int32 y, Int32 width, Int32 height, BoundsSpecified specified)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.SetBoundsCoreInt32Int32Int32Int32BoundsSpecified">
+            <summary>Sets the stub of Form.SetBoundsCore(Int32 x, Int32 y, Int32 width, Int32 height, BoundsSpecified specified)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.SetClientSizeCore(System.Int32,System.Int32)">
+            <summary>Sets the stub of Form.SetClientSizeCore(Int32 x, Int32 y)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.SetClientSizeCoreInt32Int32">
+            <summary>Sets the stub of Form.SetClientSizeCore(Int32 x, Int32 y)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.SetVisibleCore(System.Boolean)">
+            <summary>Sets the stub of Form.SetVisibleCore(Boolean value)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.SetVisibleCoreBoolean">
+            <summary>Sets the stub of Form.SetVisibleCore(Boolean value)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.ShowFocusCuesGet">
+            <summary>Sets the stub of Control.get_ShowFocusCues()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.ShowKeyboardCuesGet">
+            <summary>Sets the stub of Control.get_ShowKeyboardCues()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.ShowWithoutActivationGet">
+            <summary>Sets the stub of Form.get_ShowWithoutActivation()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.SiteGet">
+            <summary>Sets the stub of Control.get_Site()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.SiteSetISite">
+            <summary>Sets the stub of Control.set_Site(ISite value)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.SizeFromClientSize(System.Drawing.Size)">
+            <summary>Sets the stub of Control.SizeFromClientSize(Size clientSize)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.SizeFromClientSizeSize">
+            <summary>Sets the stub of Control.SizeFromClientSize(Size clientSize)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.TextGet">
+            <summary>Sets the stub of Form.get_Text()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.TextSetString">
+            <summary>Sets the stub of Form.set_Text(String value)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.ToString">
+            <summary>Sets the stub of Form.ToString()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.ToString01">
+            <summary>Sets the stub of Form.ToString()</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.UpdateDefaultButton">
+            <summary>Sets the stub of Form.UpdateDefaultButton()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.UpdateDefaultButton01">
+            <summary>Sets the stub of Form.UpdateDefaultButton()</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.ValidateChildren">
+            <summary>Sets the stub of Form.ValidateChildren()</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.ValidateChildren(System.Windows.Forms.ValidationConstraints)">
+            <summary>Sets the stub of Form.ValidateChildren(ValidationConstraints validationConstraints)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.ValidateChildren01">
+            <summary>Sets the stub of Form.ValidateChildren()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.ValidateChildrenValidationConstraints">
+            <summary>Sets the stub of Form.ValidateChildren(ValidationConstraints validationConstraints)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainWindow.WndProc(System.Windows.Forms.Message@)">
+            <summary>Sets the stub of Form.WndProc(Message&amp; m)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubMainWindow.WndProcMessageRef">
+            <summary>Sets the stub of Form.WndProc(Message&amp; m)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.AllowDrop">
+            <summary>Sets the stub of Control.get_AllowDrop()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.Anchor">
+            <summary>Sets the stub of Control.get_Anchor()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.AutoScaleBaseSize">
+            <summary>Sets the stub of Form.get_AutoScaleBaseSize()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.AutoScroll">
+            <summary>Sets the stub of Form.get_AutoScroll()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.AutoScrollOffset">
+            <summary>Sets the stub of Control.get_AutoScrollOffset()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.AutoSize">
+            <summary>Sets the stub of Form.get_AutoSize()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.AutoValidate">
+            <summary>Sets the stub of Form.get_AutoValidate()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.BackColor">
+            <summary>Sets the stub of Form.get_BackColor()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.BackgroundImage">
+            <summary>Sets the stub of Control.get_BackgroundImage()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.BackgroundImageLayout">
+            <summary>Sets the stub of Control.get_BackgroundImageLayout()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.BindingContext">
+            <summary>Sets the stub of ContainerControl.get_BindingContext()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.CanEnableIme">
+            <summary>Sets the stub of ContainerControl.get_CanEnableIme()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.CanRaiseEvents">
+            <summary>Sets the stub of Control.get_CanRaiseEvents()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.ContextMenu">
+            <summary>Sets the stub of Control.get_ContextMenu()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.ContextMenuStrip">
+            <summary>Sets the stub of Control.get_ContextMenuStrip()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.CreateParams">
+            <summary>Sets the stub of Form.get_CreateParams()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.Cursor">
+            <summary>Sets the stub of Control.get_Cursor()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.DefaultCursor">
+            <summary>Sets the stub of Control.get_DefaultCursor()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.DefaultImeMode">
+            <summary>Sets the stub of Form.get_DefaultImeMode()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.DefaultMargin">
+            <summary>Sets the stub of Control.get_DefaultMargin()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.DefaultMaximumSize">
+            <summary>Sets the stub of Control.get_DefaultMaximumSize()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.DefaultMinimumSize">
+            <summary>Sets the stub of Control.get_DefaultMinimumSize()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.DefaultPadding">
+            <summary>Sets the stub of Control.get_DefaultPadding()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.DefaultSize">
+            <summary>Sets the stub of Form.get_DefaultSize()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.DisplayRectangle">
+            <summary>Sets the stub of ScrollableControl.get_DisplayRectangle()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.Dock">
+            <summary>Sets the stub of Control.get_Dock()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.DoubleBuffered">
+            <summary>Sets the stub of Control.get_DoubleBuffered()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.Focused">
+            <summary>Sets the stub of Control.get_Focused()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.Font">
+            <summary>Sets the stub of Control.get_Font()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.ForeColor">
+            <summary>Sets the stub of Control.get_ForeColor()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.ImeModeBase">
+            <summary>Sets the stub of Control.get_ImeModeBase()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.LayoutEngine">
+            <summary>Sets the stub of Control.get_LayoutEngine()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.MaximumSize">
+            <summary>Sets the stub of Form.get_MaximumSize()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.MinimumSize">
+            <summary>Sets the stub of Form.get_MinimumSize()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.RightToLeft">
+            <summary>Sets the stub of Control.get_RightToLeft()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.RightToLeftLayout">
+            <summary>Sets the stub of Form.get_RightToLeftLayout()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.ScaleChildren">
+            <summary>Sets the stub of Control.get_ScaleChildren()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.ShowFocusCues">
+            <summary>Sets the stub of Control.get_ShowFocusCues()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.ShowKeyboardCues">
+            <summary>Sets the stub of Control.get_ShowKeyboardCues()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.ShowWithoutActivation">
+            <summary>Sets the stub of Form.get_ShowWithoutActivation()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.Site">
+            <summary>Sets the stub of Control.get_Site()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainWindow.Text">
+            <summary>Sets the stub of Form.get_Text()</summary>
         </member>
     </members>
 </doc>

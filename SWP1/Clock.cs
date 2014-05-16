@@ -7,7 +7,7 @@ using System.Timers;
 
 namespace SWP1
 {
-	class Clock : ISubject
+	public class Clock : ISubject
 	{
 		public int Hour { get; private set; }
 		public int Minute { get; private set; }
@@ -16,7 +16,7 @@ namespace SWP1
 		public int MinuteOffset { get; private set; }
 		public int SecondOffset { get; private set; }
 
-		private Clock()
+		protected Clock()
 		{
 			// variables
 			DateTime utc = DateTime.UtcNow;
