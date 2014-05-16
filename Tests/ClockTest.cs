@@ -12,23 +12,23 @@ namespace Tests
 	public class ClockTest
 	{
 		Clock _clock;
-		IDisposable _shimCon;
+		//IDisposable _shimCon;
 
 		[TestInitialize]
 		public void ClockTestSetup()
 		{
 			_clock = Clock.Instance;
-			_shimCon = ShimsContext.Create();
+			/*_shimCon = ShimsContext.Create();
 			//Shim to set Time always to 0:0:0
 			ShimDateTime.UtcNowGet = () => {
 					return new DateTime(2000, 1, 1, 0, 0, 0);
-				};
+				};*/
 		}
 
 		[TestCleanup]
 		public void ClockTestCleanup()
 		{
-			_shimCon.Dispose();
+			//_shimCon.Dispose();
 		}
 
 		[TestMethod]

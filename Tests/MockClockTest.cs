@@ -10,23 +10,23 @@ namespace Tests
 	[TestClass]
 	public class MockClockTest
 	{
-		IDisposable _context;
+		//IDisposable _context;
 
 		[TestInitialize]
 		public void MockClockTestSetup()
 		{
-			_context = ShimsContext.Create();
+			/*_context = ShimsContext.Create();
 			var shim = new ShimClock(MockClock.Instance);
 			ShimClock.InstanceGet = () => {
 				return MockClock.Instance; 
-			};
+			};*/
 
 		}
 
 		[TestCleanup]
 		public void MockClockTestCleanup()
 		{
-			_context.Dispose();
+			//_context.Dispose();
 		}
 
 		[TestMethod]
