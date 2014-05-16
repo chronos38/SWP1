@@ -14,9 +14,16 @@ namespace Tests.Mock
 		public override int Minute { get { return 0; } }
 		public override int Second { get { return 0; } }
 
+		bool set = false;
+		bool incdec = false;
+
+		public bool SetExecuted { get { return set; }}
+		public bool IncDecExecuted { get { return incdec; } }
+
 		private MockClock()
 		{
-
+			set = false;
+			incdec = false;
 		}
 
 		public static MockClock Instance
@@ -39,12 +46,12 @@ namespace Tests.Mock
 
 		public override void Set(int h, int m, int s)
 		{
-
+			set = true;
 		}
 
 		public override void IncDec(int h, int m, int s)
 		{
-
+			incdec = true;
 		}
 		public override void Attach(IObserver observer)
 		{
@@ -59,6 +66,12 @@ namespace Tests.Mock
 		public override void Notify()
 		{
 
+		}
+
+		public void ResetMock()
+		{
+			set = false;
+			incdec = false;
 		}
 	}
 }

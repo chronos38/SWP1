@@ -34,15 +34,28 @@ namespace Tests
 		public void CommandSetExecutesCorrectly()
 		{
 			CommandSet set = new CommandSet();
-			ClockEventArgs args = new ClockEventArgs();
-			args.Hour = 9;
-			args.Minute = 9;
-			args.Second = 9;
+			ClockEventArgs args = new ClockEventArgs(9,9,9);
 
 			set.Execute(args);
+			Assert.AreEqual(true, MockClock.Instance.SetExecuted);
 			Assert.AreEqual(0, args.Hour);
 			Assert.AreEqual(0, args.Minute);
 			Assert.AreEqual(0, args.Second);
+			MockClock.Instance.ResetMock();
+		}
+
+		[TestMethod]
+		public void CommandIncDecExecutesCorrectly()
+		{
+			CommandIncDec incdec = new CommandIncDec();
+			ClockEventArgs args = new ClockEventArgs(9,9,9);
+
+			incdec.Execute(args);
+			Assert.AreEqual(true, MockClock.Instance.IncDecExecuted);
+			Assert.AreEqual(-9, args.Hour);
+			Assert.AreEqual(-9, args.Minute);
+			Assert.AreEqual(-9, args.Second);
+			MockClock.Instance.ResetMock();
 		}
 	}
 }
