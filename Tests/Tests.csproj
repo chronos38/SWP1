@@ -67,6 +67,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShowEventArgsTest.cs" />
     <Compile Include="MockClockTest.cs" />
+    <Compile Include="CommandTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SWP1\SWP1.csproj">

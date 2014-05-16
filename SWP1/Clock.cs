@@ -9,9 +9,9 @@ namespace SWP1
 {
 	public class Clock : ISubject
 	{
-		public int Hour { get; private set; }
-		public int Minute { get; private set; }
-		public int Second { get; private set; }
+		public virtual int Hour { get; private set; }
+		public virtual int Minute { get; private set; }
+		public virtual int Second { get; private set; }
 		public int HourOffset { get; private set; }
 		public int MinuteOffset { get; private set; }
 		public int SecondOffset { get; private set; }
@@ -43,7 +43,7 @@ namespace SWP1
 			}
 		}
 
-		public void Start()
+		public virtual void Start()
 		{
 			// start timer
 			mTimer.Interval = 1000;
@@ -56,12 +56,12 @@ namespace SWP1
 			mTimer.Start();
 		}
 
-		public void Stop()
+		public virtual void Stop()
 		{
 			mTimer.Stop();
 		}
 
-		public void Set(int h, int m, int s)
+		public virtual void Set(int h, int m, int s)
 		{
 			if (!(h < 0)) { Hour = h; }
 			if (!(m < 0)) { Minute = m; }
@@ -69,7 +69,7 @@ namespace SWP1
 			Notify();
 		}
 
-		public void IncDec(int h, int m, int s)
+		public virtual void IncDec(int h, int m, int s)
 		{
 			if (h > 0) { Hour += 1; } 
 			else if (h < 0) { Hour -= 1; }

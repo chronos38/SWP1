@@ -1990,6 +1990,12 @@
         <member name="F:SWP1.Fakes.StubClock.DetachIObserver">
             <summary>Sets the stub of Clock.Detach(IObserver observer)</summary>
         </member>
+        <member name="M:SWP1.Fakes.StubClock.IncDec(System.Int32,System.Int32,System.Int32)">
+            <summary>Sets the stub of Clock.IncDec(Int32 h, Int32 m, Int32 s)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubClock.IncDecInt32Int32Int32">
+            <summary>Sets the stub of Clock.IncDec(Int32 h, Int32 m, Int32 s)</summary>
+        </member>
         <member name="M:SWP1.Fakes.StubClock.InitializeStub">
             <summary>Initializes a new instance of type StubClock</summary>
         </member>
@@ -1998,6 +2004,24 @@
         </member>
         <member name="F:SWP1.Fakes.StubClock.Notify01">
             <summary>Sets the stub of Clock.Notify()</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubClock.Set(System.Int32,System.Int32,System.Int32)">
+            <summary>Sets the stub of Clock.Set(Int32 h, Int32 m, Int32 s)</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubClock.SetInt32Int32Int32">
+            <summary>Sets the stub of Clock.Set(Int32 h, Int32 m, Int32 s)</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubClock.Start">
+            <summary>Sets the stub of Clock.Start()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubClock.Start01">
+            <summary>Sets the stub of Clock.Start()</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubClock.Stop">
+            <summary>Sets the stub of Clock.Stop()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubClock.Stop01">
+            <summary>Sets the stub of Clock.Stop()</summary>
         </member>
         <member name="P:SWP1.Fakes.StubClock.CallBase">
             <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
