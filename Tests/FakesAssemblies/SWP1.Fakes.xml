@@ -559,6 +559,96 @@
         <member name="P:SWP1.Fakes.ShimDigitalForm.AllInstances.YSetInt32">
             <summary>Sets the shim of DigitalForm.set_Y(Int32 value)</summary>
         </member>
+        <member name="T:SWP1.Fakes.ShimMainControl">
+            <summary>Shim type of SWP1.MainControl</summary>
+        </member>
+        <member name="M:SWP1.Fakes.ShimMainControl.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:SWP1.Fakes.ShimMainControl.#ctor(SWP1.MainControl)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:SWP1.Fakes.ShimMainControl.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:SWP1.Fakes.ShimMainControl.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainControl.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainControl.ConstructorMainWindow">
+            <summary>Sets the shim of MainControl.MainControl(MainWindow window)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainControl.DecClickObjectEventArgs">
+            <summary>Sets the shim of MainControl.DecClick(Object sender, EventArgs e)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainControl.FormLoadObjectEventArgs">
+            <summary>Sets the shim of MainControl.FormLoad(Object sender, EventArgs e)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainControl.HelpClickObjectEventArgs">
+            <summary>Sets the shim of MainControl.HelpClick(Object sender, EventArgs e)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainControl.IncClickObjectEventArgs">
+            <summary>Sets the shim of MainControl.IncClick(Object sender, EventArgs e)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainControl.RedoClickObjectEventArgs">
+            <summary>Sets the shim of MainControl.RedoClick(Object sender, EventArgs e)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainControl.SetClickObjectEventArgs">
+            <summary>Sets the shim of MainControl.SetClick(Object sender, EventArgs e)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainControl.ShowAllClickObjectEventArgs">
+            <summary>Sets the shim of MainControl.ShowAllClick(Object sender, EventArgs e)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainControl.ShowClickObjectEventArgs">
+            <summary>Sets the shim of MainControl.ShowClick(Object sender, EventArgs e)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainControl.UndoClickObjectEventArgs">
+            <summary>Sets the shim of MainControl.UndoClick(Object sender, EventArgs e)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainControl.WindowGet">
+            <summary>Sets the shim of MainControl.get_Window()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainControl.WindowSetMainWindow">
+            <summary>Sets the shim of MainControl.set_Window(MainWindow value)</summary>
+        </member>
+        <member name="T:SWP1.Fakes.ShimMainControl.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainControl.AllInstances.DecClickObjectEventArgs">
+            <summary>Sets the shim of MainControl.DecClick(Object sender, EventArgs e)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainControl.AllInstances.FormLoadObjectEventArgs">
+            <summary>Sets the shim of MainControl.FormLoad(Object sender, EventArgs e)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainControl.AllInstances.HelpClickObjectEventArgs">
+            <summary>Sets the shim of MainControl.HelpClick(Object sender, EventArgs e)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainControl.AllInstances.IncClickObjectEventArgs">
+            <summary>Sets the shim of MainControl.IncClick(Object sender, EventArgs e)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainControl.AllInstances.RedoClickObjectEventArgs">
+            <summary>Sets the shim of MainControl.RedoClick(Object sender, EventArgs e)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainControl.AllInstances.SetClickObjectEventArgs">
+            <summary>Sets the shim of MainControl.SetClick(Object sender, EventArgs e)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainControl.AllInstances.ShowAllClickObjectEventArgs">
+            <summary>Sets the shim of MainControl.ShowAllClick(Object sender, EventArgs e)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainControl.AllInstances.ShowClickObjectEventArgs">
+            <summary>Sets the shim of MainControl.ShowClick(Object sender, EventArgs e)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainControl.AllInstances.UndoClickObjectEventArgs">
+            <summary>Sets the shim of MainControl.UndoClick(Object sender, EventArgs e)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainControl.AllInstances.WindowGet">
+            <summary>Sets the shim of MainControl.get_Window()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainControl.AllInstances.WindowSetMainWindow">
+            <summary>Sets the shim of MainControl.set_Window(MainWindow value)</summary>
+        </member>
         <member name="T:SWP1.Fakes.ShimMainWindow">
             <summary>Shim type of SWP1.MainWindow</summary>
         </member>
@@ -598,77 +688,251 @@
         <member name="P:SWP1.Fakes.ShimMainWindow.Behavior">
             <summary>Assigns the behavior for all methods of the shimmed type</summary>
         </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.ButtonDecGet">
+            <summary>Sets the shim of MainWindow.get_ButtonDec()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.ButtonDecSetButton">
+            <summary>Sets the shim of MainWindow.set_ButtonDec(Button value)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.ButtonHelpGet">
+            <summary>Sets the shim of MainWindow.get_ButtonHelp()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.ButtonHelpSetButton">
+            <summary>Sets the shim of MainWindow.set_ButtonHelp(Button value)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.ButtonIncGet">
+            <summary>Sets the shim of MainWindow.get_ButtonInc()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.ButtonIncSetButton">
+            <summary>Sets the shim of MainWindow.set_ButtonInc(Button value)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.ButtonRedoGet">
+            <summary>Sets the shim of MainWindow.get_ButtonRedo()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.ButtonRedoSetButton">
+            <summary>Sets the shim of MainWindow.set_ButtonRedo(Button value)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.ButtonSetGet">
+            <summary>Sets the shim of MainWindow.get_ButtonSet()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.ButtonSetSetButton">
+            <summary>Sets the shim of MainWindow.set_ButtonSet(Button value)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.ButtonShowAllGet">
+            <summary>Sets the shim of MainWindow.get_ButtonShowAll()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.ButtonShowAllSetButton">
+            <summary>Sets the shim of MainWindow.set_ButtonShowAll(Button value)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.ButtonShowGet">
+            <summary>Sets the shim of MainWindow.get_ButtonShow()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.ButtonShowSetButton">
+            <summary>Sets the shim of MainWindow.set_ButtonShow(Button value)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.ButtonUndoGet">
+            <summary>Sets the shim of MainWindow.get_ButtonUndo()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.ButtonUndoSetButton">
+            <summary>Sets the shim of MainWindow.set_ButtonUndo(Button value)</summary>
+        </member>
         <member name="P:SWP1.Fakes.ShimMainWindow.Constructor">
             <summary>Sets the shim of MainWindow.MainWindow()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.ControlGet">
+            <summary>Sets the shim of MainWindow.get_Control()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.ControlSetMainControl">
+            <summary>Sets the shim of MainWindow.set_Control(MainControl value)</summary>
         </member>
         <member name="P:SWP1.Fakes.ShimMainWindow.DisposeBoolean">
             <summary>Sets the shim of MainWindow.Dispose(Boolean disposing)</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimMainWindow.Form1_LoadObjectEventArgs">
-            <summary>Sets the shim of MainWindow.Form1_Load(Object sender, EventArgs e)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.HoursGet">
+            <summary>Sets the shim of MainWindow.get_Hours()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.HoursSetCheckBox">
+            <summary>Sets the shim of MainWindow.set_Hours(CheckBox value)</summary>
         </member>
         <member name="P:SWP1.Fakes.ShimMainWindow.InitializeComponent">
             <summary>Sets the shim of MainWindow.InitializeComponent()</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimMainWindow.btnDec_ClickObjectEventArgs">
-            <summary>Sets the shim of MainWindow.btnDec_Click(Object sender, EventArgs e)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.MinutesGet">
+            <summary>Sets the shim of MainWindow.get_Minutes()</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimMainWindow.btnHelp_ClickObjectEventArgs">
-            <summary>Sets the shim of MainWindow.btnHelp_Click(Object sender, EventArgs e)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.MinutesSetCheckBox">
+            <summary>Sets the shim of MainWindow.set_Minutes(CheckBox value)</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimMainWindow.btnInc_ClickObjectEventArgs">
-            <summary>Sets the shim of MainWindow.btnInc_Click(Object sender, EventArgs e)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.PositionXGet">
+            <summary>Sets the shim of MainWindow.get_PositionX()</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimMainWindow.btnRedo_ClickObjectEventArgs">
-            <summary>Sets the shim of MainWindow.btnRedo_Click(Object sender, EventArgs e)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.PositionXSetNumericUpDown">
+            <summary>Sets the shim of MainWindow.set_PositionX(NumericUpDown value)</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimMainWindow.btnSet_ClickObjectEventArgs">
-            <summary>Sets the shim of MainWindow.btnSet_Click(Object sender, EventArgs e)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.PositionYGet">
+            <summary>Sets the shim of MainWindow.get_PositionY()</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimMainWindow.btnShowAll_ClickObjectEventArgs">
-            <summary>Sets the shim of MainWindow.btnShowAll_Click(Object sender, EventArgs e)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.PositionYSetNumericUpDown">
+            <summary>Sets the shim of MainWindow.set_PositionY(NumericUpDown value)</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimMainWindow.btnShow_ClickObjectEventArgs">
-            <summary>Sets the shim of MainWindow.btnShow_Click(Object sender, EventArgs e)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.SecondsGet">
+            <summary>Sets the shim of MainWindow.get_Seconds()</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimMainWindow.btnUndo_ClickObjectEventArgs">
-            <summary>Sets the shim of MainWindow.btnUndo_Click(Object sender, EventArgs e)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.SecondsSetCheckBox">
+            <summary>Sets the shim of MainWindow.set_Seconds(CheckBox value)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.SetHoursGet">
+            <summary>Sets the shim of MainWindow.get_SetHours()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.SetHoursSetNumericUpDown">
+            <summary>Sets the shim of MainWindow.set_SetHours(NumericUpDown value)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.SetMinutesGet">
+            <summary>Sets the shim of MainWindow.get_SetMinutes()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.SetMinutesSetNumericUpDown">
+            <summary>Sets the shim of MainWindow.set_SetMinutes(NumericUpDown value)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.SetSecondsGet">
+            <summary>Sets the shim of MainWindow.get_SetSeconds()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.SetSecondsSetNumericUpDown">
+            <summary>Sets the shim of MainWindow.set_SetSeconds(NumericUpDown value)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.TimeZonesGet">
+            <summary>Sets the shim of MainWindow.get_TimeZones()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.TimeZonesSetComboBox">
+            <summary>Sets the shim of MainWindow.set_TimeZones(ComboBox value)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.TypeGet">
+            <summary>Sets the shim of MainWindow.get_Type()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.TypeSetComboBox">
+            <summary>Sets the shim of MainWindow.set_Type(ComboBox value)</summary>
         </member>
         <member name="T:SWP1.Fakes.ShimMainWindow.AllInstances">
             <summary>Define shims for all instances members</summary>
         </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.ButtonDecGet">
+            <summary>Sets the shim of MainWindow.get_ButtonDec()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.ButtonDecSetButton">
+            <summary>Sets the shim of MainWindow.set_ButtonDec(Button value)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.ButtonHelpGet">
+            <summary>Sets the shim of MainWindow.get_ButtonHelp()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.ButtonHelpSetButton">
+            <summary>Sets the shim of MainWindow.set_ButtonHelp(Button value)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.ButtonIncGet">
+            <summary>Sets the shim of MainWindow.get_ButtonInc()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.ButtonIncSetButton">
+            <summary>Sets the shim of MainWindow.set_ButtonInc(Button value)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.ButtonRedoGet">
+            <summary>Sets the shim of MainWindow.get_ButtonRedo()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.ButtonRedoSetButton">
+            <summary>Sets the shim of MainWindow.set_ButtonRedo(Button value)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.ButtonSetGet">
+            <summary>Sets the shim of MainWindow.get_ButtonSet()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.ButtonSetSetButton">
+            <summary>Sets the shim of MainWindow.set_ButtonSet(Button value)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.ButtonShowAllGet">
+            <summary>Sets the shim of MainWindow.get_ButtonShowAll()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.ButtonShowAllSetButton">
+            <summary>Sets the shim of MainWindow.set_ButtonShowAll(Button value)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.ButtonShowGet">
+            <summary>Sets the shim of MainWindow.get_ButtonShow()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.ButtonShowSetButton">
+            <summary>Sets the shim of MainWindow.set_ButtonShow(Button value)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.ButtonUndoGet">
+            <summary>Sets the shim of MainWindow.get_ButtonUndo()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.ButtonUndoSetButton">
+            <summary>Sets the shim of MainWindow.set_ButtonUndo(Button value)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.ControlGet">
+            <summary>Sets the shim of MainWindow.get_Control()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.ControlSetMainControl">
+            <summary>Sets the shim of MainWindow.set_Control(MainControl value)</summary>
+        </member>
         <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.DisposeBoolean">
             <summary>Sets the shim of MainWindow.Dispose(Boolean disposing)</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.Form1_LoadObjectEventArgs">
-            <summary>Sets the shim of MainWindow.Form1_Load(Object sender, EventArgs e)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.HoursGet">
+            <summary>Sets the shim of MainWindow.get_Hours()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.HoursSetCheckBox">
+            <summary>Sets the shim of MainWindow.set_Hours(CheckBox value)</summary>
         </member>
         <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.InitializeComponent">
             <summary>Sets the shim of MainWindow.InitializeComponent()</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.btnDec_ClickObjectEventArgs">
-            <summary>Sets the shim of MainWindow.btnDec_Click(Object sender, EventArgs e)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.MinutesGet">
+            <summary>Sets the shim of MainWindow.get_Minutes()</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.btnHelp_ClickObjectEventArgs">
-            <summary>Sets the shim of MainWindow.btnHelp_Click(Object sender, EventArgs e)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.MinutesSetCheckBox">
+            <summary>Sets the shim of MainWindow.set_Minutes(CheckBox value)</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.btnInc_ClickObjectEventArgs">
-            <summary>Sets the shim of MainWindow.btnInc_Click(Object sender, EventArgs e)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.PositionXGet">
+            <summary>Sets the shim of MainWindow.get_PositionX()</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.btnRedo_ClickObjectEventArgs">
-            <summary>Sets the shim of MainWindow.btnRedo_Click(Object sender, EventArgs e)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.PositionXSetNumericUpDown">
+            <summary>Sets the shim of MainWindow.set_PositionX(NumericUpDown value)</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.btnSet_ClickObjectEventArgs">
-            <summary>Sets the shim of MainWindow.btnSet_Click(Object sender, EventArgs e)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.PositionYGet">
+            <summary>Sets the shim of MainWindow.get_PositionY()</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.btnShowAll_ClickObjectEventArgs">
-            <summary>Sets the shim of MainWindow.btnShowAll_Click(Object sender, EventArgs e)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.PositionYSetNumericUpDown">
+            <summary>Sets the shim of MainWindow.set_PositionY(NumericUpDown value)</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.btnShow_ClickObjectEventArgs">
-            <summary>Sets the shim of MainWindow.btnShow_Click(Object sender, EventArgs e)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.SecondsGet">
+            <summary>Sets the shim of MainWindow.get_Seconds()</summary>
         </member>
-        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.btnUndo_ClickObjectEventArgs">
-            <summary>Sets the shim of MainWindow.btnUndo_Click(Object sender, EventArgs e)</summary>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.SecondsSetCheckBox">
+            <summary>Sets the shim of MainWindow.set_Seconds(CheckBox value)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.SetHoursGet">
+            <summary>Sets the shim of MainWindow.get_SetHours()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.SetHoursSetNumericUpDown">
+            <summary>Sets the shim of MainWindow.set_SetHours(NumericUpDown value)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.SetMinutesGet">
+            <summary>Sets the shim of MainWindow.get_SetMinutes()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.SetMinutesSetNumericUpDown">
+            <summary>Sets the shim of MainWindow.set_SetMinutes(NumericUpDown value)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.SetSecondsGet">
+            <summary>Sets the shim of MainWindow.get_SetSeconds()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.SetSecondsSetNumericUpDown">
+            <summary>Sets the shim of MainWindow.set_SetSeconds(NumericUpDown value)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.TimeZonesGet">
+            <summary>Sets the shim of MainWindow.get_TimeZones()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.TimeZonesSetComboBox">
+            <summary>Sets the shim of MainWindow.set_TimeZones(ComboBox value)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.TypeGet">
+            <summary>Sets the shim of MainWindow.get_Type()</summary>
+        </member>
+        <member name="P:SWP1.Fakes.ShimMainWindow.AllInstances.TypeSetComboBox">
+            <summary>Sets the shim of MainWindow.set_Type(ComboBox value)</summary>
         </member>
         <member name="T:SWP1.Fakes.StubAnalogForm">
             <summary>Stub type of SWP1.AnalogForm</summary>
@@ -3340,11 +3604,23 @@
         <member name="M:SWP1.Fakes.StubICommand.#ctor">
             <summary>Initializes a new instance of type StubICommand</summary>
         </member>
+        <member name="M:SWP1.Fakes.StubICommand.AttachBackingFieldToClock">
+            <summary>Attaches delegates to emulate StubICommand.Clock as a property with a backing field.</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubICommand.ClockGet">
+            <summary>Sets the stub of ICommand.get_Clock()</summary>
+        </member>
+        <member name="F:SWP1.Fakes.StubICommand.ClockSetClock">
+            <summary>Sets the stub of ICommand.set_Clock(Clock value)</summary>
+        </member>
         <member name="F:SWP1.Fakes.StubICommand.ExecuteEventArgs">
             <summary>Sets the stub of ICommand.Execute(EventArgs args)</summary>
         </member>
         <member name="M:SWP1.Fakes.StubICommand.swp1::SWP1#ICommand#Execute(System.EventArgs)">
             <summary>Sets the stub of ICommand.Execute(EventArgs args)</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubICommand.swp1::SWP1#ICommand#Clock">
+            <summary>Sets the stub of ICommand.get_Clock()</summary>
         </member>
         <member name="T:SWP1.Fakes.StubIObserver">
             <summary>Stub type of SWP1.IObserver</summary>
@@ -3381,6 +3657,24 @@
         </member>
         <member name="M:SWP1.Fakes.StubISubject.swp1::SWP1#ISubject#Notify">
             <summary>Sets the stub of ISubject.Notify()</summary>
+        </member>
+        <member name="T:SWP1.Fakes.StubMainControl">
+            <summary>Stub type of SWP1.MainControl</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainControl.#ctor(SWP1.MainWindow)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:SWP1.Fakes.StubMainControl.InitializeStub">
+            <summary>Initializes a new instance of type StubMainControl</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainControl.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainControl.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:SWP1.Fakes.StubMainControl.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
         </member>
         <member name="T:SWP1.Fakes.StubMainWindow">
             <summary>Stub type of SWP1.MainWindow</summary>

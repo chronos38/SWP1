@@ -46,6 +46,7 @@
     <Reference Include="System.4.0.0.0.Fakes">
       <HintPath>FakesAssemblies\System.4.0.0.0.Fakes.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -68,6 +69,7 @@
     <Compile Include="ShowEventArgsTest.cs" />
     <Compile Include="MockClockTest.cs" />
     <Compile Include="CommandTest.cs" />
+    <Compile Include="MainControlTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SWP1\SWP1.csproj">

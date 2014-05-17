@@ -64,7 +64,6 @@ namespace SWP1
 		public void SetClick(object sender, EventArgs e)
 		{
 			// variables
-			Clock clock = Clock.Instance;
 			ClockEventArgs args = new ClockEventArgs();
 
 			// set argument

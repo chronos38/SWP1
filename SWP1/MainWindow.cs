@@ -36,7 +36,7 @@ namespace SWP1
 		public CheckBox Minutes { get; private set; }
 		public CheckBox Seconds { get; private set; }
 
-		public MainControl Control { get; private set; }
+		public MainControl Control { get; set; }
 
 		public MainWindow()
 		{
