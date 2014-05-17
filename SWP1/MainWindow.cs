@@ -13,177 +13,59 @@ namespace SWP1
 {
 	public partial class MainWindow : Form
 	{
+		public Button ButtonSet { get; private set; }
+		public Button ButtonInc { get; private set; }
+		public Button ButtonDec { get; private set; }
+		public Button ButtonUndo { get; private set; }
+		public Button ButtonRedo { get; private set; }
+		public Button ButtonShow { get; private set; }
+		public Button ButtonShowAll { get; private set; }
+		public Button ButtonHelp { get; private set; }
+
+		public NumericUpDown SetHours { get; private set; }
+		public NumericUpDown SetMinutes { get; private set; }
+		public NumericUpDown SetSeconds { get; private set; }
+
+		public NumericUpDown PositionX { get; private set; }
+		public NumericUpDown PositionY { get; private set; }
+
+		public ComboBox TimeZones { get; private set; }
+		public ComboBox Type { get; private set; }
+
+		public CheckBox Hours { get; private set; }
+		public CheckBox Minutes { get; private set; }
+		public CheckBox Seconds { get; private set; }
+
+		public MainControl Control { get; private set; }
+
 		public MainWindow()
 		{
 			InitializeComponent();
+
+			ButtonSet = this.btnSet;
+			ButtonInc = this.btnInc;
+			ButtonDec = this.btnDec;
+			ButtonUndo = this.btnUndo;
+			ButtonRedo = this.btnRedo;
+			ButtonShow = this.btnShow;
+			ButtonShowAll = this.btnShowAll;
+			ButtonHelp = this.btnHelp;
+
+			SetHours = this.numSetHours;
+			SetMinutes = this.numSetMinutes;
+			SetSeconds = this.numSetSeconds;
+
+			PositionX = this.numPosX;
+			PositionY = this.numPosY;
+
+			TimeZones = this.cmbTimezone;
+			Type = this.cmbType;
+
+			Hours = this.chkHours;
+			Minutes = this.chkMinutes;
+			Seconds = this.chkSeconds;
+
+			Control = new MainControl(this);
 		}
-
-		private void Form1_Load(object sender, EventArgs e)
-		{
-			// variables
-			ReadOnlyCollection<TimeZoneInfo> timeZoneInfo = TimeZoneInfo.GetSystemTimeZones();
-
-			// commands
-			mCommands.Add("incdec", new CommandIncDec());
-			mCommands.Add("set", new CommandSet());
-			mCommands.Add("show", new CommandShow());
-
-			// num upper bound
-			this.numSetHours.Maximum = 23;
-			this.numSetMinutes.Maximum = this.numSetSeconds.Maximum = 59;
-			// num lower bound
-			this.numSetHours.Minimum = this.numSetMinutes.Minimum = this.numSetSeconds.Minimum = -1;
-			// num default value
-			this.numSetHours.Value = this.numSetMinutes.Value = this.numSetSeconds.Value = -1;
-
-			// set combo boxes
-			this.cmbType.SelectedIndex = 0;
-
-			foreach (var info in timeZoneInfo) {
-				this.cmbTimezone.Items.Add(info);
-
-				if (info.BaseUtcOffset.Hours == 0) {
-					this.cmbTimezone.SelectedItem = info;
-				}
-			}
-
-			// set position values
-			this.numPosX.Maximum = SystemInformation.VirtualScreen.Width - 256;
-			this.numPosY.Maximum = SystemInformation.VirtualScreen.Height - 256;
-		}
-
-		private void btnSet_Click(object sender, EventArgs e)
-		{
-			// variables
-			Clock clock = Clock.Instance;
-			ClockEventArgs args = new ClockEventArgs();
-
-			// set argument
-			args.Hour = (int)this.numSetHours.Value;
-			args.Minute = (int)this.numSetMinutes.Value;
-			args.Second = (int)this.numSetSeconds.Value;
-			
-			// reset values
-			this.numSetHours.Value = this.numSetMinutes.Value = this.numSetSeconds.Value = -1;
-
-			// call command
-			mCommands["set"].Execute(args);
-
-			// set undo/redo
-			mUndoBuffer.Add(new Tuple<ICommand, EventArgs>(mCommands["set"], args));
-			mRedo = null;
-		}
-
-		private void btnInc_Click(object sender, EventArgs e)
-		{
-			// variables
-			ClockEventArgs args = new ClockEventArgs();
-
-			// set arguments
-			args.Hour = this.chkHours.Checked ? 1 : 0;
-			args.Minute = this.chkMinutes.Checked ? 1 : 0;
-			args.Second = this.chkSeconds.Checked ? 1 : 0;
-
-			// call command
-			mCommands["incdec"].Execute(args);
-
-			// set undo/redo
-			mUndoBuffer.Add(new Tuple<ICommand, EventArgs>(mCommands["incdec"], args));
-			mRedo = null;
-		}
-
-		private void btnDec_Click(object sender, EventArgs e)
-		{
-			// variables
-			ClockEventArgs args = new ClockEventArgs();
-
-			// set arguments
-			args.Hour = this.chkHours.Checked ? -1 : 0;
-			args.Minute = this.chkMinutes.Checked ? -1 : 0;
-			args.Second = this.chkSeconds.Checked ? -1 : 0;
-
-			// call command
-			mCommands["incdec"].Execute(args);
-
-			// set undo/redo
-			mUndoBuffer.Add(new Tuple<ICommand, EventArgs>(mCommands["incdec"], args));
-			mRedo = null;
-		}
-
-		private void btnUndo_Click(object sender, EventArgs e)
-		{
-			if (mUndoBuffer.Count <= 0) {
-				return;
-			}
-
-			// variables
-			Tuple<ICommand, EventArgs> undo = mUndoBuffer.Last();
-			mUndoBuffer.Remove(undo);
-
-			// exucute
-			undo.Item1.Execute(undo.Item2);
-
-			// set redo
-			mRedo = undo;
-		}
-
-		private void btnRedo_Click(object sender, EventArgs e)
-		{
-			if (mRedo == null) {
-				return;
-			}
-
-			mRedo.Item1.Execute(mRedo.Item2);
-			mUndoBuffer.Add(mRedo);
-			mRedo = null;
-		}
-
-		private void btnShow_Click(object sender, EventArgs e)
-		{
-			// variables
-			ShowEventArgs args = new ShowEventArgs();
-
-			// set arguments
-			args.Type = (string)this.cmbType.SelectedItem;
-			args.Timezone = (TimeZoneInfo)this.cmbTimezone.SelectedItem;
-			args.X = (int)this.numPosX.Value;
-			args.Y = (int)this.numPosY.Value;
-
-			// call command
-			mCommands["show"].Execute(args);
-		}
-
-		private void btnShowAll_Click(object sender, EventArgs e)
-		{
-			// variables
-			ICommand show = mCommands["show"];
-			int current = 0;
-
-			// show all
-			foreach (TimeZoneInfo item in this.cmbTimezone.Items) {
-				if (current == item.BaseUtcOffset.Hours) {
-					continue;
-				}
-
-				ShowEventArgs args = new ShowEventArgs();
-
-				args.Type = (string)this.cmbType.SelectedItem;
-				args.Timezone = item;
-				args.X = -1; // position is system defined
-				args.Y = -1; // position is system defined
-				current = item.BaseUtcOffset.Hours;
-				
-				show.Execute(args);
-			}
-		}
-
-		private void btnHelp_Click(object sender, EventArgs e)
-		{
-			MessageBox.Show("This program is pretty much straight forward.", "Help");
-		}
-
-		private Dictionary<string, ICommand> mCommands = new Dictionary<string, ICommand>();
-		private List<Tuple<ICommand, EventArgs>> mUndoBuffer = new List<Tuple<ICommand, EventArgs>>();
-		private Tuple<ICommand, EventArgs> mRedo = new Tuple<ICommand, EventArgs>(null, null);
 	}
 }

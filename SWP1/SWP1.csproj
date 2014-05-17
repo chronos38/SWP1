@@ -60,6 +60,7 @@
     <Compile Include="DigitalForm.Designer.cs">
       <DependentUpon>DigitalForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainControl.cs" />
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>

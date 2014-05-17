@@ -43,6 +43,7 @@
 			this.btnDec = new System.Windows.Forms.Button();
 			this.btnInc = new System.Windows.Forms.Button();
 			this.grpUndoRedo = new System.Windows.Forms.GroupBox();
+			this.btnHelp = new System.Windows.Forms.Button();
 			this.btnShowAll = new System.Windows.Forms.Button();
 			this.btnRedo = new System.Windows.Forms.Button();
 			this.btnUndo = new System.Windows.Forms.Button();
@@ -56,7 +57,6 @@
 			this.label4 = new System.Windows.Forms.Label();
 			this.cmbType = new System.Windows.Forms.ComboBox();
 			this.btnShow = new System.Windows.Forms.Button();
-			this.btnHelp = new System.Windows.Forms.Button();
 			this.grpSet.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numSetSeconds)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numSetMinutes)).BeginInit();
@@ -140,7 +140,6 @@
 			this.btnSet.TabIndex = 0;
 			this.btnSet.Text = "Set";
 			this.btnSet.UseVisualStyleBackColor = true;
-			this.btnSet.Click += new System.EventHandler(this.btnSet_Click);
 			// 
 			// grpIncDec
 			// 
@@ -194,7 +193,6 @@
 			this.btnDec.TabIndex = 1;
 			this.btnDec.Text = "Decrement";
 			this.btnDec.UseVisualStyleBackColor = true;
-			this.btnDec.Click += new System.EventHandler(this.btnDec_Click);
 			// 
 			// btnInc
 			// 
@@ -204,7 +202,6 @@
 			this.btnInc.TabIndex = 0;
 			this.btnInc.Text = "Increment";
 			this.btnInc.UseVisualStyleBackColor = true;
-			this.btnInc.Click += new System.EventHandler(this.btnInc_Click);
 			// 
 			// grpUndoRedo
 			// 
@@ -219,6 +216,15 @@
 			this.grpUndoRedo.TabStop = false;
 			this.grpUndoRedo.Text = "Various";
 			// 
+			// btnHelp
+			// 
+			this.btnHelp.Location = new System.Drawing.Point(252, 19);
+			this.btnHelp.Name = "btnHelp";
+			this.btnHelp.Size = new System.Drawing.Size(75, 23);
+			this.btnHelp.TabIndex = 3;
+			this.btnHelp.Text = "Help";
+			this.btnHelp.UseVisualStyleBackColor = true;
+			// 
 			// btnShowAll
 			// 
 			this.btnShowAll.Location = new System.Drawing.Point(171, 19);
@@ -227,17 +233,6 @@
 			this.btnShowAll.TabIndex = 2;
 			this.btnShowAll.Text = "Show All";
 			this.btnShowAll.UseVisualStyleBackColor = true;
-			this.btnShowAll.Click += new System.EventHandler(this.btnShowAll_Click);
-			// 
-			// btnShowAll
-			// 
-			this.btnShowAll.Location = new System.Drawing.Point(171, 19);
-			this.btnShowAll.Name = "btnShowAll";
-			this.btnShowAll.Size = new System.Drawing.Size(75, 23);
-			this.btnShowAll.TabIndex = 2;
-			this.btnShowAll.Text = "Show All";
-			this.btnShowAll.UseVisualStyleBackColor = true;
-			this.btnShowAll.Click += new System.EventHandler(this.btnShowAll_Click);
 			// 
 			// btnRedo
 			// 
@@ -247,7 +242,6 @@
 			this.btnRedo.TabIndex = 1;
 			this.btnRedo.Text = "Redo";
 			this.btnRedo.UseVisualStyleBackColor = true;
-			this.btnRedo.Click += new System.EventHandler(this.btnRedo_Click);
 			// 
 			// btnUndo
 			// 
@@ -257,7 +251,6 @@
 			this.btnUndo.TabIndex = 0;
 			this.btnUndo.Text = "Undo";
 			this.btnUndo.UseVisualStyleBackColor = true;
-			this.btnUndo.Click += new System.EventHandler(this.btnUndo_Click);
 			// 
 			// grpShow
 			// 
@@ -376,19 +369,8 @@
 			this.btnShow.TabIndex = 0;
 			this.btnShow.Text = "Show";
 			this.btnShow.UseVisualStyleBackColor = true;
-			this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
 			// 
-			// btnHelp
-			// 
-			this.btnHelp.Location = new System.Drawing.Point(252, 19);
-			this.btnHelp.Name = "btnHelp";
-			this.btnHelp.Size = new System.Drawing.Size(75, 23);
-			this.btnHelp.TabIndex = 3;
-			this.btnHelp.Text = "Help";
-			this.btnHelp.UseVisualStyleBackColor = true;
-			this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
-			// 
-			// Form1
+			// MainWindow
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -400,9 +382,8 @@
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.HelpButton = true;
 			this.MaximizeBox = false;
-			this.Name = "Form1";
+			this.Name = "MainWindow";
 			this.Text = "SWP1";
-			this.Load += new System.EventHandler(this.Form1_Load);
 			this.grpSet.ResumeLayout(false);
 			this.grpSet.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numSetSeconds)).EndInit();
