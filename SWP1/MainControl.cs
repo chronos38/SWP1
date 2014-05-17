@@ -191,8 +191,8 @@ namespace SWP1
 			MessageBox.Show("Window program is pretty much straight forward.", "Help");
 		}
 
-		private Dictionary<string, ICommand> mCommands = new Dictionary<string, ICommand>();
-		private List<Tuple<ICommand, EventArgs>> mUndoBuffer = new List<Tuple<ICommand, EventArgs>>();
+		private IDictionary<string, ICommand> mCommands = new Dictionary<string, ICommand>();
+		private IList<Tuple<ICommand, EventArgs>> mUndoBuffer = new List<Tuple<ICommand, EventArgs>>();
 		private Tuple<ICommand, EventArgs> mRedo = new Tuple<ICommand, EventArgs>(null, null);
 	}
 }
