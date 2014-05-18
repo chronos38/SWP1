@@ -4,9 +4,11 @@ using SWP1;
 
 namespace Tests
 {
+	//! Diese Testklasse überprüft die SchoEventArgs
 	[TestClass]
 	public class ShowEventArgsTest
 	{
+		//! Testcase überprüft ob die Standardwerte korrekt gesetzt wurden.
 		[TestMethod]
 		public void ShowEventArgsContructorCreatesCorrectValues()
 		{
@@ -17,6 +19,7 @@ namespace Tests
 			Assert.AreEqual(null, args.Type);
 		}
 
+		//! Testcase überprüft ob die Klasse Werteänderungen erlaubt.
 		[TestMethod]
 		public void ShowEventArgsAttributesAreSetable()
 		{
