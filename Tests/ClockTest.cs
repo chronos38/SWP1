@@ -8,12 +8,15 @@ using Tests.Mock;
 
 namespace Tests
 {
+	//! Diese Testklasse implementiert Unittests für Clock
 	[TestClass]
 	public class ClockTest
 	{
+		//! Clock-Instanz fürs testen
 		Clock _clock;
 		//IDisposable _shimCon;
 
+		//! Initialisiert die Testklasse
 		[TestInitialize]
 		public void ClockTestSetup()
 		{
@@ -25,18 +28,25 @@ namespace Tests
 				};*/
 		}
 
+		//! Beendet die Testklasse
 		[TestCleanup]
 		public void ClockTestCleanup()
 		{
 			//_shimCon.Dispose();
 		}
 
+		//! Überprüft ob die Clock-Instanz ein Singleton ist.
 		[TestMethod]
 		public void ClockIsSingleton()
 		{
 			Assert.AreSame(Clock.Instance, _clock);
 		}
 
+		/*! Testcase überprüft allgemein die Set-Funktion der Clock-Instanz
+		 * 
+		 * Zuerst werden positive Zahlen im gültigen Wertebereich getestet, dann
+		 * werden negative Zahlen im ungültigen Wertebereich getestet.
+		 */
 		[TestMethod]
 		public void SetIsSettingTimeWorksCorrectly()
 		{
@@ -62,6 +72,13 @@ namespace Tests
 			Assert.AreEqual(1, _clock.Second);
 		}
 
+		/*! Testcase überprüft das untere Ende des Wertebereichs für die Stunden
+		 * 
+		 * Verwendet wurden die Zahlen int.MinValue, -1, 0, 1. Im gültigen Wertebereich
+		 * befinden sich 0 und 1. Von daher wurde getestet ob die Zahlen gleichwertig
+		 * sind. Bei int.MinValue und -1 wurde getestet ob die Zahlen nicht gleichtwertig
+		 * sind.
+		 */
 		[TestMethod]
 		public void SetHourIntervalBeginTest()
 		{
@@ -82,6 +99,12 @@ namespace Tests
 			Assert.AreEqual(1, _clock.Hour);
 		}
 
+		/*! Testcase überprüft die mitte des Wertebereichs für die Stunden
+		 * 
+		 * Verwendet wurden die Zahlen 11, 12, 13. Alle Werte sollten sich im
+		 * gültigen Wertebereich befinden. Von daher sollen die Werte
+		 * gleichwertig den gesetzten Werten sein.
+		 */
 		[TestMethod]
 		public void SetHourIntervalMiddleTest()
 		{
@@ -98,6 +121,13 @@ namespace Tests
 			Assert.AreEqual(13, _clock.Hour);
 		}
 
+		/*! Testcase überprüft das obere Ende des Wertebereichs für die Stunden
+		 * 
+		 * Verwendet wurden die Zahlen 23, 24, 25, int.MaxValue. Im gültigen Wertebereich
+		 * befinden sich 23 und 24. Von daher wurde getestet ob die Zahlen gleichwertig
+		 * sind. Bei int.MaxValue und 25 wurde getestet ob die Zahlen nicht gleichtwertig
+		 * sind.
+		 */
 		[TestMethod]
 		public void SetHourIntervalEndTest()
 		{
@@ -119,6 +149,13 @@ namespace Tests
 			Assert.AreNotEqual(int.MaxValue, _clock.Hour);
 		}
 
+		/*! Testcase überprüft das untere Ende des Wertebereichs für die Minuten
+		 * 
+		 * Verwendet wurden die Zahlen int.MinValue, -1, 0, 1. Im gültigen Wertebereich
+		 * befinden sich 0 und 1. Von daher wurde getestet ob die Zahlen gleichwertig
+		 * sind. Bei int.MinValue und -1 wurde getestet ob die Zahlen nicht gleichtwertig
+		 * sind.
+		 */
 		[TestMethod]
 		public void SetMinuteIntervalBeginTest()
 		{
@@ -139,6 +176,12 @@ namespace Tests
 			Assert.AreEqual(1, _clock.Minute);
 		}
 
+		/*! Testcase überprüft die mitte des Wertebereichs für die Minuten
+		 * 
+		 * Verwendet wurden die Zahlen 29, 30, 31. Alle Werte sollten sich im
+		 * gültigen Wertebereich befinden. Von daher sollen die Werte
+		 * gleichwertig den gesetzten Werten sein.
+		 */
 		[TestMethod]
 		public void SetMinuteIntervalMiddleTest()
 		{
@@ -155,6 +198,13 @@ namespace Tests
 			Assert.AreEqual(31, _clock.Minute);
 		}
 
+		/*! Testcase überprüft das obere Ende des Wertebereichs für die Minuten
+		 * 
+		 * Verwendet wurden die Zahlen 59, 60, 61, int.MaxValue. Im gültigen Wertebereich
+		 * befinden sich 59 und 60. Von daher wurde getestet ob die Zahlen gleichwertig
+		 * sind. Bei int.MaxValue und 61 wurde getestet ob die Zahlen nicht gleichtwertig
+		 * sind.
+		 */
 		[TestMethod]
 		public void SetMinuteIntervalEndTest()
 		{
@@ -176,6 +226,13 @@ namespace Tests
 			Assert.AreNotEqual(int.MaxValue, _clock.Minute);
 		}
 
+		/*! Testcase überprüft das untere Ende des Wertebereichs für die Sekunden
+		 * 
+		 * Verwendet wurden die Zahlen int.MinValue, -1, 0, 1. Im gültigen Wertebereich
+		 * befinden sich 0 und 1. Von daher wurde getestet ob die Zahlen gleichwertig
+		 * sind. Bei int.MinValue und -1 wurde getestet ob die Zahlen nicht gleichtwertig
+		 * sind.
+		 */
 		[TestMethod]
 		public void SetSecondIntervalBeginTest()
 		{
@@ -196,6 +253,12 @@ namespace Tests
 			Assert.AreEqual(1, _clock.Second);
 		}
 
+		/*! Testcase überprüft die mitte des Wertebereichs für die Sekunden
+		 * 
+		 * Verwendet wurden die Zahlen 29, 30, 31. Alle Werte sollten sich im
+		 * gültigen Wertebereich befinden. Von daher sollen die Werte
+		 * gleichwertig den gesetzten Werten sein.
+		 */
 		[TestMethod]
 		public void SetSecondIntervalMiddleTest()
 		{
@@ -212,6 +275,13 @@ namespace Tests
 			Assert.AreEqual(31, _clock.Second);
 		}
 
+		/*! Testcase überprüft das obere Ende des Wertebereichs für die Sekunden
+		 * 
+		 * Verwendet wurden die Zahlen 59, 60, 61, int.MaxValue. Im gültigen Wertebereich
+		 * befinden sich 59 und 60. Von daher wurde getestet ob die Zahlen gleichwertig
+		 * sind. Bei int.MaxValue und 61 wurde getestet ob die Zahlen nicht gleichtwertig
+		 * sind.
+		 */
 		[TestMethod]
 		public void SetSecondIntervalEndTest()
 		{
@@ -233,6 +303,15 @@ namespace Tests
 			Assert.AreNotEqual(int.MaxValue, _clock.Second);
 		}
 
+		/*! Dieser Testcase überprüft ob die IncDec-Funktion
+		 * 
+		 * Überprüft wird ob die Funktion die Werte im gültigen Wertebereich
+		 * inkrementiert. Hierfür werden zuerst die Werte auf 0 gesetzt. Danach
+		 * werden die Sekunden 120 mal inkrementiert. Die gültigen Werte sollten
+		 * also für die Stunden 0, die Minuten 2 und die Sekunden 0 sein.
+		 * 
+		 * Analoges wird für die Minuten und Stunden durchgeführt.
+		 */
 		[TestMethod]
 		public void IncDecIsProperlyRollingOverWhenIncrementing()
 		{
@@ -268,6 +347,15 @@ namespace Tests
 			Assert.AreEqual(0, _clock.Second);
 		}
 
+		/*! Dieser Testcase überprüft ob die IncDec-Funktion
+		 * 
+		 * Überprüft wird ob die Funktion die Werte im gültigen Wertebereich
+		 * dekrementiert. Hierfür werden zuerst die Werte auf 0 gesetzt. Danach
+		 * werden die Sekunden 120 mal dekrementiert. Die gültigen Werte sollten
+		 * also für die Stunden 23, die Minuten 58 und die Sekunden 0 sein.
+		 * 
+		 * Analoges wird für die Minuten und Stunden durchgeführt.
+		 */
 		[TestMethod]
 		public void IncDecIsProperlyRollingOverWhenDecrementing()
 		{
@@ -303,6 +391,13 @@ namespace Tests
 			Assert.AreEqual(0, _clock.Second);
 		}
 
+		/*! Dieser Testcase testet die Wertebereiche der IncDec Funktion für die Stunden
+		 * 
+		 * Überprüft wurden die Werte int.MinValue, -1, 0, 1, int.MaxValue.
+		 * Bei allen Werten unter 0 sollten dekrementiert werden, bei allen
+		 * Werten über 0 sollte inkrementiert werden. Bei den Wert 0 sollte
+		 * die Funktion keine Änderung machen.
+		 */
 		[TestMethod]
 		public void IncDecHourIntervalTest()
 		{
@@ -324,6 +419,13 @@ namespace Tests
 			Assert.AreEqual(12, _clock.Hour);
 		}
 
+		/*! Dieser Testcase testet die Wertebereiche der IncDec Funktion für die Minuten
+		 * 
+		 * Überprüft wurden die Werte int.MinValue, -1, 0, 1, int.MaxValue.
+		 * Bei allen Werten unter 0 sollten dekrementiert werden, bei allen
+		 * Werten über 0 sollte inkrementiert werden. Bei den Wert 0 sollte
+		 * die Funktion keine Änderung machen.
+		 */
 		[TestMethod]
 		public void IncDecMinuteIntervalTest()
 		{
@@ -345,6 +447,13 @@ namespace Tests
 			Assert.AreEqual(30, _clock.Minute);
 		}
 
+		/*! Dieser Testcase testet die Wertebereiche der IncDec Funktion für die Sekunden
+		 * 
+		 * Überprüft wurden die Werte int.MinValue, -1, 0, 1, int.MaxValue.
+		 * Bei allen Werten unter 0 sollten dekrementiert werden, bei allen
+		 * Werten über 0 sollte inkrementiert werden. Bei den Wert 0 sollte
+		 * die Funktion keine Änderung machen.
+		 */
 		[TestMethod]
 		public void IncDecSecondIntervalTest()
 		{
@@ -366,6 +475,7 @@ namespace Tests
 			Assert.AreEqual(30, _clock.Second);
 		}
 
+		//! Testcase überprüft Detach für einen Observer.
 		[TestMethod]
 		[ExpectedException(typeof(ApplicationException))]
 		public void DetachThrowsExceptionWhenDetachingUnknownObserver()
@@ -374,6 +484,7 @@ namespace Tests
 			_clock.Detach(observer);
 		}
 
+		//! Testcase überprüft IncDec für einen Observer.
 		[TestMethod]
 		public void ObserverGetsUpdatedByIncDecAndSet()
 		{
@@ -391,6 +502,7 @@ namespace Tests
 
 		}
 
+		//! Testcase überprüft ob Update korrekt für Observer funktioniert.
 		[TestMethod]
 		public void OberserverGetsUpdatedByTimer()
 		{
@@ -413,6 +525,7 @@ namespace Tests
 			}
 		}
 
+		//! Testcase überprüft ...
 		private bool ObserverUpdated(MockOberserver observer)
 		{
 			bool ret = false;

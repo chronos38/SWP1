@@ -7,11 +7,13 @@ using Microsoft.QualityTools.Testing.Fakes;
 
 namespace Tests
 {
+	//! Testklasse implementiert Unittests für Command
 	[TestClass]
 	public class CommandTest
 	{
 		IDisposable _context;
 
+		//! Initialisiert Testklasse für Command
 		[TestInitialize]
 		public void CommandTestSetup()
 		{
@@ -22,12 +24,14 @@ namespace Tests
 			};*/
 		}
 
+		//! Beendet die Testklasse
 		[TestCleanup]
 		public void CommandTestCleanup()
 		{
 			//_context.Dispose();
 		}
 
+		//! Überprüft ob das CommandSet korrekt ausgeführt wird.
 		[TestMethod]
 		public void CommandSetExecutesCorrectly()
 		{
@@ -44,6 +48,7 @@ namespace Tests
 			MockClock.Instance.ResetMock();
 		}
 
+		//! Überprüft ob das CommandIncDec korrekt ausgeführt wird.
 		[TestMethod]
 		public void CommandIncDecExecutesCorrectly()
 		{
@@ -59,6 +64,7 @@ namespace Tests
 			MockClock.Instance.ResetMock();
 		}
 
+		//! Überprüft den Anfang des Wertebereichs für die Stunden.
 		[TestMethod]
 		public void CommandSetHourIntervalBeginTest()
 		{
@@ -82,6 +88,7 @@ namespace Tests
 			Assert.AreEqual(1, com.Clock.Hour);
 		}
 
+		//! Überprüft die Mitte des Wertebereichs für die Stunden.
 		[TestMethod]
 		public void CommandSetHourIntervalMiddleTest()
 		{
@@ -101,6 +108,7 @@ namespace Tests
 			Assert.AreEqual(13, com.Clock.Hour);
 		}
 
+		//! Überprüft das Ende des Wertebereichs für die Stunden.
 		[TestMethod]
 		public void CommandSetHourIntervalEndTest()
 		{
@@ -125,6 +133,7 @@ namespace Tests
 			Assert.AreNotEqual(int.MaxValue, com.Clock.Hour);
 		}
 
+		//! Überprüft den Anfang des Wertebereichs für die Minuten.
 		[TestMethod]
 		public void CommandSetMinuteIntervalBeginTest()
 		{
@@ -148,6 +157,7 @@ namespace Tests
 			Assert.AreEqual(1, com.Clock.Minute);
 		}
 
+		//! Überprüft die Mitte des Wertebereichs für die Minuten.
 		[TestMethod]
 		public void CommandSetMinuteIntervalMiddleTest()
 		{
@@ -167,6 +177,7 @@ namespace Tests
 			Assert.AreEqual(31, com.Clock.Minute);
 		}
 
+		//! Überprüft das Ende des Wertebereichs für die Minuten.
 		[TestMethod]
 		public void CommandSetMinuteIntervalEndTest()
 		{
@@ -191,6 +202,7 @@ namespace Tests
 			Assert.AreNotEqual(int.MaxValue, com.Clock.Minute);
 		}
 
+		//! Überprüft den Anfang des Wertebereichs für die Sekunden.
 		[TestMethod]
 		public void CommandSetSecondIntervalBeginTest()
 		{
@@ -214,6 +226,7 @@ namespace Tests
 			Assert.AreEqual(1, com.Clock.Second);
 		}
 
+		//! Überprüft die Mitte des Wertebereichs für die Sekunden.
 		[TestMethod]
 		public void CommandSetSecondIntervalMiddleTest()
 		{
@@ -233,6 +246,7 @@ namespace Tests
 			Assert.AreEqual(31, com.Clock.Second);
 		}
 
+		//! Überprüft das Ende des Wertebereichs für die Sekunden.
 		[TestMethod]
 		public void CommandSetSecondIntervalEndTest()
 		{
@@ -257,6 +271,7 @@ namespace Tests
 			Assert.AreNotEqual(int.MaxValue, com.Clock.Second);
 		}
 
+		//! Überprüft IncDec für die Stunden.
 		[TestMethod]
 		public void IncDecHourIntervalTest()
 		{
@@ -285,6 +300,7 @@ namespace Tests
 			Assert.AreEqual(12, com.Clock.Hour);
 		}
 
+		//! Überprüft IncDec für die Minuten.
 		[TestMethod]
 		public void IncDecMinuteIntervalTest()
 		{
@@ -313,6 +329,7 @@ namespace Tests
 			Assert.AreEqual(30, com.Clock.Minute);
 		}
 
+		//! Überprüft IncDec für die Sekunden.
 		[TestMethod]
 		public void IncDecSecondIntervalTest()
 		{
